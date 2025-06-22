@@ -1,0 +1,18 @@
+.pageFooter {
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+  height: 60px;
+}
+
+.footerBrand {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f6ad55;
+}

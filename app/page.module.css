@@ -1,0 +1,34 @@
+.bookForLap {
+    /* height: 100vh; */
+}
+
+.bookForMob {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+}
+
+@media (max-width: 768px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+}
