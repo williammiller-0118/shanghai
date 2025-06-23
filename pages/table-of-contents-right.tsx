@@ -12,6 +12,7 @@ import Header from "@/components/header"
 interface TableOfContentsProps {
   onBackClick: () => void
   onStartReading: () => void
+  colorMode: string
 }
 
 const tableOfContentsData = {
@@ -90,7 +91,7 @@ const tableOfContentsData = {
   ],
 }
 
-export default function RightTableOfContents({ onBackClick, onStartReading }: TableOfContentsProps) {
+export default function RightTableOfContents({ onBackClick, onStartReading, colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>
@@ -112,9 +113,25 @@ export default function RightTableOfContents({ onBackClick, onStartReading }: Ta
     <PageLayout>
       <div className={originstyles.bookLayout}>
         {/* Navigation Header */}
-        <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="right" />
+        {/* <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="right" /> */}
+        <div style={{display:"flex"}}>
+          <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingRight: "20px", textAlign: "right"}}>
+            <span>
+                 Table of contents
+            </span>
+            <span style={{paddingLeft: "10px", paddingRight: "10px"}}>|</span>
+            <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
+              PREPARATIONS
+            </span>
+          </div>
+          <div style={{backgroundColor: "#ccc"}}>
+            <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
+              9
+            </p>
+          </div>
+        </div>
 
-        <div className={styles.contentArea}>
+        <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
           <div className={styles.rightpage}>
             {/* Column 4 */}
             <div className={styles.column4}>

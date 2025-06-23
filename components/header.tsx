@@ -3,6 +3,14 @@
 import styles from "@/styles/header.module.css"
 import React from "react"
 
+import { ThemeProvider } from "next-themes";
+import {
+  SidebarProvider,
+  SidebarInset,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/app-sidebar";
+
 interface HeaderProps {
     sectionTitle: React.ReactNode,
     pageNumber: React.ReactNode,

@@ -28,22 +28,22 @@ export default function HistoryLeftPage2({ onBackClick, onNextClick }: HistoryPa
     <PageLayout>
       <div className={originstyles.bookLayout}>
         <Header sectionTitle={"PREPARATIONS | History"} pageNumber={32} part="left" />
-        <div>
-          <div className={styles.globeLogo}>
-            <div>
-              <img
-                src="images/globe.png"
-                alt="Fantasy Globe"
-                style={{
-                  height: '40px',
-                  objectFit: 'cover',
-                }}
-              />
-            </div>
-          </div>
-        </div>
       
         <div className={styles.history2Page}>
+          <div>
+            <div className={styles.globeLogo}>
+              <div style={{position: 'relative', left: '15%'}}>
+                <img
+                  src="images/globe.png"
+                  alt="Fantasy Globe"
+                  style={{
+                    height: '40px',
+                    objectFit: 'cover',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
           {/* Main Content Layout - 4 Columns */}
           <div className={styles.contentLayout}>
             {/* Column 1 - Text content */}

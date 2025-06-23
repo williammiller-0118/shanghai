@@ -30,31 +30,31 @@ export default function PeopleCultureRightPage({ onBackClick, onNextClick }: Peo
         {/* Header Navigation */}
         <Header sectionTitle={"PREPARATIONS | People and culture"} pageNumber={36} part="right" />
 
-        {/* Info Button with Hover Info Box */}
-        <div style={{display: "flex"}}>
-          <div className={styles.infoSection}>
-            <div className={styles.infoButtonContainer}>
-              <button className={styles.infoButton} aria-label="Information">
-                <Info size={20} />
-              </button>
-              <div className={styles.infoBoxContainer}>
-                <div className={styles.infoBoxContent}>
-                  <div className={styles.infoIcon}>
-                    <Info size={20} />
+        
+        {/* Main Content Layout */}
+        <div className={styles.peopleCulturePage}>
+          {/* Info Button with Hover Info Box */}
+          <div>
+            <div className={styles.infoSection}>
+              <div className={styles.infoButtonContainer}>
+                <button className={styles.infoButton} aria-label="Information">
+                  <Info size={20} />
+                </button>
+                <div className={styles.infoBoxContainer}>
+                  <div className={styles.infoBoxContent}>
+                    <div className={styles.infoIcon}>
+                      <Info size={20} />
+                    </div>
+                    <p className={styles.infoBoxText}>
+                      Foreigners are often referred to as laowai or waiguoren, which literally mean old foreigner and foreign
+                      country person respectively. Though sometimes used with derision, they have no specific negative
+                      connotation.
+                    </p>
                   </div>
-                  <p className={styles.infoBoxText}>
-                    Foreigners are often referred to as laowai or waiguoren, which literally mean old foreigner and foreign
-                    country person respectively. Though sometimes used with derision, they have no specific negative
-                    connotation.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Main Content Layout */}
-        <div className={styles.peopleCulturePage}>
           {/* Main Content Layout - 4 Columns */}
           <div className={styles.contentLayout}>
             {/* Columns 3-4 with video at bottom */}

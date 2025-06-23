@@ -28,29 +28,29 @@ export default function HistoryRightPage2({ onBackClick, onNextClick }: HistoryP
     <PageLayout>
       <div className={originstyles.bookLayout}>
         <Header sectionTitle={"PREPARATIONS | History"} pageNumber={32} part="right" />
-        <div>
-          <div className={styles.infoSection}>
-            <div className={styles.infoButtonContainer}>
-              <button className={styles.infoButton} aria-label="Information">
-                <Info size={20} />
-              </button>
-              <div className={styles.infoBoxContainer}>
-                <div className={styles.infoBoxContent}>
-                  <div className={styles.infoIcon}>
-                    <Info size={20} />
+
+        <div className={styles.history2Page}>
+          <div>
+            <div className={styles.infoSection}>
+              <div className={styles.infoButtonContainer}>
+                <button className={styles.infoButton} aria-label="Information">
+                  <Info size={20} />
+                </button>
+                <div className={styles.infoBoxContainer}>
+                  <div className={styles.infoBoxContent}>
+                    <div className={styles.infoIcon}>
+                      <Info size={20} />
+                    </div>
+                    <p className={styles.infoBoxText}>
+                      While at times spectacular, Shanghai’s incredibly rapid rise can make it feel like the latest thing, 
+                      a city about the here and now rather than a place with its own character; and at times it just feels 
+                      like a giant construction site. 
+                    </p>
                   </div>
-                  <p className={styles.infoBoxText}>
-                    While at times spectacular, Shanghai’s incredibly rapid rise can make it feel like the latest thing, 
-                    a city about the here and now rather than a place with its own character; and at times it just feels 
-                    like a giant construction site. 
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className={styles.history2Page}>
           {/* Main Content Layout - 4 Columns */}
           <div className={styles.contentLayout}>
             {/* Column 3 - Text content */}

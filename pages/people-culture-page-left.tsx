@@ -29,22 +29,24 @@ export default function PeopleCultureLeftPage({ onBackClick, onNextClick }: Peop
       <div className={originstyles.bookLayout}>
         <Header sectionTitle={"PREPARATIONS | People and culture"} pageNumber={36} part="left" />
         
-        {/* Global Logo */}
-        <div style={{display: "flex"}}>
-          <div className={styles.globeLogo}>
-            <img
-              src="images/globe.png"
-              alt="Fantasy Globe"
-              style={{
-                height: '40px',
-                objectFit: 'cover',
-              }}
-            />
-          </div>
-        </div>
         
         {/* Main Content Layout */}
         <div className={styles.peopleCulturePage}>
+          {/* Global Logo */}
+          <div>
+            <div className={styles.globeLogo}>
+              <img
+                src="images/globe.png"
+                alt="Fantasy Globe"
+                style={{
+                  height: '40px',
+                  objectFit: 'cover',
+                  position: 'relative',
+                  left: '15%'
+                }}
+              />
+            </div>
+          </div>
           {/* Main Content Layout - 4 Columns */}
           <div className={styles.contentLayout}>
             {/* Column 1 - Text content */}

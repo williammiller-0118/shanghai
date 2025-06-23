@@ -532,6 +532,9 @@
   .contentArea {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .column1,
@@ -601,7 +604,6 @@
   .column4 {
     width: 100%;
     max-width: 100%;
-    padding: 0 1rem;
     box-sizing: border-box;
   }
 
@@ -688,7 +690,6 @@
   .column4 {
     width: 100%;
     max-width: 100%;
-    padding: 0 1rem;
     box-sizing: border-box;
     flex-wrap: nowrap;
   }
@@ -752,4 +753,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .contentArea {
+    height: 50px;
+    width: auto;
+  }
 }

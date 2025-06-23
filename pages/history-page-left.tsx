@@ -19,21 +19,23 @@ export default function HistoryLeftPage({ onBackClick, onNextClick }: HistoryPag
       <div className={originstyles.bookLayout}>
         {/* Header Navigation */}
         <Header sectionTitle={"PREPARATIONS | History"} pageNumber={30} part="left" />
-        <div>
-          <div className={styles.globeLogo}>
-            <img
-              src="images/globe.png"
-              alt="Fantasy Globe"
-              style={{
-                height: '40px',
-                objectFit: 'cover',
-              }}
-            />
-          </div>
-        </div>
 
         <div className={styles.historyPage}>
           {/* Main Content Layout - 4 Columns */}
+          <div>
+            <div className={styles.globeLogo}>
+              <img
+                src="images/globe.png"
+                alt="Fantasy Globe"
+                style={{
+                  height: '40px',
+                  objectFit: 'cover',
+                  left: '15%',
+                  position: 'relative'
+                }}
+              />
+            </div>
+          </div>
           <div className={styles.contentLayout}>
             {/* Column 1 - Video at top, text below */}
             <div className={styles.column1}>

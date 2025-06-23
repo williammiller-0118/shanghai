@@ -19,6 +19,8 @@
     flex: 1;
     gap: 1rem;
     padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Column 1 - Text content */
@@ -64,7 +66,6 @@
 .infoSection {
   display: flex;
   justify-content: right;
-  right: 0;
   padding: 0.3rem;
   position: relative;
   background: white;
@@ -73,6 +74,7 @@
 
 .infoButtonContainer {
   position: relative;
+  right: 15%;
 }
 
 .infoButton {
@@ -98,7 +100,7 @@
 .infoBoxContainer {
   position: absolute;
   top: 50px;
-  left: 0%;
+  right: 15%;
   transform: translateX(0%);
   z-index: 21;
   opacity: 0;
@@ -137,7 +139,6 @@
   height: 40px;
   border-radius: 50%;
   display: flex;
-  left: 15%;
   justify-content: left;
   margin-top: 0.5rem;
 }
@@ -333,7 +334,6 @@
   .contentLayout {
     gap: 0.75rem;
     padding: 0.75rem;
-    overflow: auto;
   }
 
   .infoBoxContainer {
@@ -379,18 +379,19 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0.5rem;
-    overflow-y:auto;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .peopleCulturePage {
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 110px);
     background: white;
     color: #2d3748;
     font-family: "Georgia", "Times New Roman", serif;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
   }
@@ -428,6 +429,8 @@
   }
   
   .infoButton {
+    position: relative;
+    right: 15%;
     width: 35px;
     height: 35px;
   }
@@ -435,8 +438,8 @@
   .infoButtonContainer {
     position: absolute;
     top: 0.5rem;
-    right: -10%;
-    transform: translateX(100%);
+    right: 0%;
+    transform: translateX(0%);
     z-index: 20;
   }
 
@@ -469,7 +472,6 @@
     height: 40px;
     border-radius: 50%;
     display: flex;
-    left: 10%;
     justify-content: left;
     margin: 0.5rem;
   }

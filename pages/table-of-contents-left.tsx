@@ -8,11 +8,12 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight, Play, Volume2, Maximize, MoreHorizontal } from "lucide-react"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
-import PageControls from "@/components/buttonbar"
+import PageControls from "@/components/pagecontroller"
 
 interface TableOfContentsProps {
   onBackClick: () => void
   onStartReading: () => void
+  colorMode: string
 }
 
 const tableOfContentsData = {
@@ -91,7 +92,7 @@ const tableOfContentsData = {
   ],
 }
 
-export default function LeftTableOfContents({ onBackClick, onStartReading }: TableOfContentsProps) {
+export default function LeftTableOfContents({ onBackClick, onStartReading, colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>
@@ -113,9 +114,25 @@ export default function LeftTableOfContents({ onBackClick, onStartReading }: Tab
     <PageLayout>
       <div className={originstyles.bookLayout}>
         {/* Navigation Header */}
-        <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="left" />
+        {/* <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="left" /> */}
+        <div style={{display:"flex"}}>
+          <div style={{backgroundColor: "#ccc"}}>
+            <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
+              8
+            </p>
+          </div>
+          <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingLeft: "10px"}}>
+            <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
+              PREPARATIONS
+            </span>
+            <span style={{paddingLeft: "10px", paddingRight: "10px"}}>|</span>
+            <span>
+                 Table of contents
+            </span>
+          </div>
+        </div>
         {/* <PageControls /> */}
-        <div className={styles.contentArea}>
+        <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
           <div className={styles.leftpage}>
             {/* Featured Image - Spans columns 1-2 */}
             <div className={styles.responsiveMediaWrapper}>

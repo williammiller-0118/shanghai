@@ -19,36 +19,36 @@ export default function HistoryRightPage({ onBackClick, onNextClick }: HistoryPa
       <div className={originstyles.bookLayout}>
         {/* Header Navigation */}
         <Header sectionTitle={"PREPARATIONS | History"} pageNumber={30} part="right" />
-        <div style={{display: "flex"}}>
-          <div className={styles.infoSection}>
-            <div className={styles.infoButtonContainer}>
-              <button className={styles.infoButton} aria-label="Information">
-                <Info size={20} />
-              </button>
-              <div className={styles.infoBoxContainer}>
-                <div className={styles.infoBoxContent}>
-                  <div className={styles.infoIcon}>
-                    <Info size={20} />
+
+        <div className={styles.historyPage}>
+          {/* Main Content Layout - 4 Columns */}
+          <div>
+            <div className={styles.infoSection}>
+              <div className={styles.infoButtonContainer}>
+                <button className={styles.infoButton} aria-label="Information">
+                  <Info size={20} />
+                </button>
+                <div className={styles.infoBoxContainer}>
+                  <div className={styles.infoBoxContent}>
+                    <div className={styles.infoIcon}>
+                      <Info size={20} />
+                    </div>
+                    <p className={styles.infoBoxText}>
+                      The Chinese are extremely proud of their history, though in Shanghai that history is fast being
+                      replaced by modern architecture.
+                    </p>
+                    <div className={styles.infoIcon}>
+                      <Info size={20} />
+                    </div>
+                    <p className={styles.infoBoxText}>
+                      Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
+                      interpretations of Chinese history are not always welcome.
+                    </p>
                   </div>
-                  <p className={styles.infoBoxText}>
-                    The Chinese are extremely proud of their history, though in Shanghai that history is fast being
-                    replaced by modern architecture.
-                  </p>
-                  <div className={styles.infoIcon}>
-                    <Info size={20} />
-                  </div>
-                  <p className={styles.infoBoxText}>
-                    Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
-                    interpretations of Chinese history are not always welcome.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className={styles.historyPage}>
-          {/* Main Content Layout - 4 Columns */}
           <div className={styles.contentLayout}>
             {/* Column 3 - Text content */}
             <div className={styles.column3}>
@@ -133,7 +133,7 @@ export default function HistoryRightPage({ onBackClick, onNextClick }: HistoryPa
         </div>
 
         {/* Footer */}
-        {/* <Footer part="right" /> */}
+        <Footer part="right" />
       </div>
     </PageLayout>
   )

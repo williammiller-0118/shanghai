@@ -35,8 +35,8 @@ export default function ShanghaiPage({ onPowerButtonClick }: ShanghaiPageProps) 
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
           >
-            <source src="/videos/cover.mp4" media="(min-width: 769px)" type="video/mp4" />
-            <source src="/videos/cover-mobile.mp4" media="(max-width: 768px)" type="video/mp4" />
+            <source src="/videos/cover_laptop_final.mp4" media="(min-width: 769px)" type="video/mp4" />
+            <source src="/videos/cover_mobile_final.mp4" media="(max-width: 768px)" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </section>
