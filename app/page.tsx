@@ -39,6 +39,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
@@ -243,6 +245,7 @@ export default function Home() {
                   maxWidth={1000}
                   minHeight={400}
                   maxHeight={1533}
+                  maxShadowOpacity={0.5}
                   mobileScrollSupport={true}
                   className="mx-auto"
                   disableFlipByClick={false}
@@ -251,7 +254,9 @@ export default function Home() {
                 >
                   <SinglePage number="1">
                     <div>
+                      <Header sectionTitle="LIVING THE LIFE | Asian escapes" pageNumber="412" part="left" />
                       <LeftTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <Footer part="left" />
                     </div>
                   </SinglePage>
                   <SinglePage number="2">
