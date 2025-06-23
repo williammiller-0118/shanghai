@@ -111,9 +111,9 @@
   background: linear-gradient(to bottom, #e5e7eb, #9ca3af);
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .powerButton {
-    top: 1.5rem;
+    top: 3.5rem;
     width: 3.5rem;
     height: 3.5rem;
     border-width: 3px;
