@@ -25,6 +25,7 @@ declare module 'react-pageflip' {
         useMouseEvents?: boolean;
         swipeDistance?: number;
         showPageCorners?: boolean;
+        flippingTime?: number;
         disableFlipByClick?: boolean;
         children?: React.ReactNode;
         onFlip?: (e: any) => void;

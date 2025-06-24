@@ -249,7 +249,9 @@ export default function Home() {
                   mobileScrollSupport={true}
                   className="mx-auto"
                   disableFlipByClick={false}
-                  useMouseEvents={false}
+                  // flippingTime={10000}
+                  swipeDistance={10000}
+                  useMouseEvents={true}
                   ref={bookRef1}
                 >
                   <SinglePage number="1">
