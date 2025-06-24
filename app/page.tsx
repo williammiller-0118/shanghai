@@ -77,6 +77,7 @@ export default function Home() {
       bookRef1.current?.pageFlip().turnToPage(lapPageNum + 5);
     }
     if (previous === true) {
+      console.log("previous")
       bookRef.current?.pageFlip().flipPrev();
       bookRef1.current?.pageFlip().flipPrev();
       setPrevious(false)
@@ -144,7 +145,7 @@ export default function Home() {
               <div className="mx-auto">
                 <HTMLFlipBook
                   width={400}
-                  height={1000}
+                  height={1500}
                   size="stretch"
                   minWidth={315}
                   maxWidth={1000}
@@ -152,10 +153,9 @@ export default function Home() {
                   maxHeight={1533}
                   mobileScrollSupport={true}
                   className="mx-auto"
-                  disableFlipByClick={true}
                   onChangeOrientation={e => setViewMode(e.data)}
                   // flippingTime={10000}
-                  usePortrait={true}
+                  // usePortrait={false}
                   useMouseEvents={false}
                   ref={bookRef1}
                 >
@@ -163,7 +163,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <LeftTableOfContents colorMode={contentColor} />
                       <Footer 
-                        part={ viewmode === "landscape" ? "left" : "mobile"}
+                        part={ viewmode === "landscape" ? "left" : ""}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
