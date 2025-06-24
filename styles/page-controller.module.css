@@ -3,9 +3,25 @@
     width: 50px;
 }
 
+.barPos {
+    translate: -25vw;
+}
+
+.leftHidden {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .btnSize {
         width: 35px;
         height: 35px;
+    }
+
+    .barPos {
+        translate: 0;
+    }
+
+    .leftHidden {
+        display: flex;
     }
 }

@@ -62,7 +62,6 @@ export default function MapLeftPage({ onBackClick, onNextClick }: MapPageProps) 
     }, [])
 
   return (
-    <div>
       <div className={`${styles.rightHalf} ${styles.pageContainer}`}>
         {/* Page Header */}
         <Header sectionTitle="SOFT LANDING | Former French Concession" pageNumber="220" part="left" />
@@ -163,6 +162,5 @@ export default function MapLeftPage({ onBackClick, onNextClick }: MapPageProps) 
           </div>
         </div>
       </div>
-    </div>
   )
 }

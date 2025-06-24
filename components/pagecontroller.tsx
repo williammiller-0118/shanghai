@@ -14,8 +14,10 @@ interface PageControllerProps {
 
 const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, part }: PageControllerProps) => {
   return (
-    <div className="bottom-4 transition-opacity duration-300 bg-white bg-opacity-40 hover:bg-opacity-80 rounded-full px-6 py-2 flex gap-3 z-50">
-      <div>
+    <div 
+      className={`${styles.barPos} ${part === "left" ? `${styles.leftHidden}` : ""} bottom-4 transition-opacity duration-300 bg-white bg-opacity-40 hover:bg-opacity-80 rounded-full px-6 py-1 flex gap-3 z-50`}
+    >
+      {/* <div className= {part === "right" ? `${styles.left}` : ""}> */}
         <button
           onClick={() => click10Previous(true)}
           className="text-white text-lg hover:scale-110 transition-transform"
@@ -37,8 +39,8 @@ const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevio
         >
           <img src="icons/1-left.png" alt="icon" className={styles.btnSize} />
         </button>
-      </div>
-      <div>
+      {/* </div> */}
+      {/* <div className={part === "left" ? `${styles.right}` : ""}> */}
         <button
           onClick={() => clickNext(true)}
           className="text-white text-lg hover:scale-110 transition-transform"
@@ -60,7 +62,7 @@ const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevio
         >
           <img src="icons/10.png" alt="icon" className={styles.btnSize} />
         </button>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
