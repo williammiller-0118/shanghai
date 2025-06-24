@@ -4,7 +4,6 @@
   height: 100vh;
   background: linear-gradient(135deg, #8b9dc3 0%, #6b7ba3 100%);
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -16,7 +15,6 @@
   height: 100vh;
   background: linear-gradient(135deg, #8b9dc3 0%, #6b7ba3 100%);
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   position: relative;
   overflow: hidden;
   display: flex;

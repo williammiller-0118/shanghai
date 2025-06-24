@@ -5,7 +5,6 @@
   height: 100vh;
   background: white;
   color: #2d3748;
-  font-family: "Georgia", "Times New Roman", serif;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -389,7 +388,6 @@
     height: calc(100vh - 110px);
     background: white;
     color: #2d3748;
-    font-family: "Georgia", "Times New Roman", serif;
     position: relative;
     overflow-y: auto;
     display: flex;
