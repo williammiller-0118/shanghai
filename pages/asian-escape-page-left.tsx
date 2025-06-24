@@ -71,19 +71,10 @@ export default function AsianEscapesLeftPage({ onBackClick, onNextClick }: Asian
               <div className={styles.playOverlay}>
                 <Play className="w-8 h-8 text-white" />
               </div>
-              {/* <div className={styles.channelInfo}>
-                <div className={styles.channelAvatar}>
-                  <span>banyan</span>
-                  <span className={styles.subscriberCount}>group</span>
-                </div>
-                <span className={styles.videoTitle}>Banyan ...</span>
-              </div> */}
             </div>
           </div>
         </div>
       </div>
-
-      <Footer part="left" />
     </div>
   )
 }

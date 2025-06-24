@@ -79,25 +79,10 @@ export default function BookIntroductionRightPage({ onBackClick, onNextClick }: 
                       ))}
                     </div>
                   </div>
-
-                  {/* Globe Logo */}
-                  {/* <div className={styles.globeLogo}>
-                    <img
-                      src="images/globe.png"
-                      alt="Fantasy Globe"
-                      style={{
-                        height: '100px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Footer */}
-          <Footer part="right" />
         </div>
       </div>
     </PageLayout>

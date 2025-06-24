@@ -144,7 +144,7 @@ export default function RightTableOfContents({ onBackClick, onStartReading, colo
         </div>
 
         {/* Footer */}
-        <Footer part="right" />
+        {/* <Footer part="right" /> */}
       </div>
     </PageLayout>
   )

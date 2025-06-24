@@ -184,7 +184,7 @@ export default function LeftTableOfContents({ onBackClick, onStartReading, color
         </div>
 
         {/* Footer */}
-        <Footer part="left" />
+        {/* <Footer part="left" /> */}
       </div>
     </PageLayout>
   )

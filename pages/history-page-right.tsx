@@ -131,9 +131,6 @@ export default function HistoryRightPage({ onBackClick, onNextClick }: HistoryPa
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <Footer part="right" />
       </div>
     </PageLayout>
   )

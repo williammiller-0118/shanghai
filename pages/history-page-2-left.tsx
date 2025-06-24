@@ -96,16 +96,10 @@ export default function HistoryLeftPage2({ onBackClick, onNextClick }: HistoryPa
                   new enterprises and infrastructure, while hundreds of thousands of Chinese laborers migrated from their
                   homes across the country to Shanghai to build it.
                 </p>
-
-                
-
               </div>
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <Footer part="left" />
       </div>
     </PageLayout>
   )

@@ -121,9 +121,6 @@ export default function PeopleCultureRightPage({ onBackClick, onNextClick }: Peo
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <Footer part="right" />
       </div>
     </PageLayout>
   )

@@ -83,9 +83,6 @@ export default function BookIntroductionLeftPage({ onBackClick, onNextClick }: B
               </div>
             </div>
           </div>
-
-          {/* Footer */}
-          <Footer part="left" />
         </div>
       </div>
     </PageLayout>

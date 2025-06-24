@@ -97,10 +97,6 @@ export default function EducationRightPage({ onBackClick, onNextClick }: Educati
             </div>
           </div>
         </div>
-        {/* </div> */}
-
-        {/* Bottom Section */}
-        <Footer part="left" />
       </div>
     </PageLayout>
   )

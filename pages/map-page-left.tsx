@@ -162,9 +162,6 @@ export default function MapLeftPage({ onBackClick, onNextClick }: MapPageProps) 
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <Footer part="left"  />
       </div>
     </div>
   )

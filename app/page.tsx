@@ -51,24 +51,6 @@ export default function Home() {
   const [previous10, setPrevious10] = useState(false);
   const [next10, setNext10] = useState(false);
 
-  const [contentColor, setContentColor] = useState("");
-  const { theme, resolvedTheme } = useTheme();
-
-  // const divref = useRef<any>(null)
-  const bookRef = useRef<HTMLFlipBookElement | null>(null);
-  const bookRef1 = useRef<HTMLFlipBookElement | null>(null);
-
-  const goToNextPage = () => {
-    bookRef.current?.pageFlip().flipNext();
-  };
-
-
-  useEffect(() => {
-    console.log("Current theme:", theme);
-    console.log("Resolved theme:", resolvedTheme);
-  }, []);
-
-
   useEffect(() => {
     let mobPageNum = 0;
     let lapPageNum = 0;
@@ -110,6 +92,18 @@ export default function Home() {
       setFastPrevious(false)
     }
   }, [next, fastnext, previous, fastprevious])
+
+  const [contentColor, setContentColor] = useState("");
+  const { theme, resolvedTheme } = useTheme();
+
+  // const divref = useRef<any>(null)
+  const bookRef = useRef<HTMLFlipBookElement | null>(null);
+  const bookRef1 = useRef<HTMLFlipBookElement | null>(null);
+
+  useEffect(() => {
+    // console.log("Current theme:", theme);
+    // console.log("Resolved theme:", resolvedTheme);
+  }, []);
 
   const handleVideoEnd = () => {
     setCurrentPage("shanghai")
@@ -245,25 +239,39 @@ export default function Home() {
                   maxWidth={1000}
                   minHeight={400}
                   maxHeight={1533}
-                  maxShadowOpacity={0.5}
                   mobileScrollSupport={true}
                   className="mx-auto"
                   disableFlipByClick={false}
                   // flippingTime={10000}
-                  swipeDistance={10000}
                   useMouseEvents={true}
                   ref={bookRef1}
                 >
                   <SinglePage number="1">
                     <div>
-                      <Header sectionTitle="LIVING THE LIFE | Asian escapes" pageNumber="412" part="left" />
                       <LeftTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
-                      <Footer part="left" />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="2">
                     <div>
                       <RightTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="3">
@@ -338,7 +346,7 @@ export default function Home() {
                   </SinglePage>
                 </HTMLFlipBook>
               </div>
-              <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
+              {/* <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
                 <PageControls
                   clickNext={setNext}
                   clickFastNext={setFastNext}
@@ -347,27 +355,14 @@ export default function Home() {
                   click10Previous={setPrevious10}
                   click10Next={setNext10}
                 />
-              </div>
+              </div> */}
             </div>
             <div>
               <div className={styles.bookForMob}>
                 <HTMLFlipBook width={300} height={800} size="stretch" mobileScrollSupport={true}
-                  minWidth={300} maxWidth={1000} minHeight={600} maxHeight={1800} disableFlipByClick={false} useMouseEvents={false}
+                  minWidth={300} maxWidth={1000} minHeight={600} maxHeight={1800} disableFlipByClick={true} useMouseEvents={true}
                   ref={bookRef}
                 >
-                  {/* <HTMLFlipBook
-                  width={300}
-                  height={800}
-                  size="stretch"
-                  minWidth={300}
-                  maxWidth={1000}
-                  minHeight={600}
-                  maxHeight={1800}
-                  disableFlipByClick={true}
-                  useMouseEvents={false}
-                  mobileScrollSupport={true}
-                  ref={bookRef} // ✅ attaches correctly
-                > */}
                   <SinglePage number="1">
                     <div>
                       <LeftTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
@@ -445,7 +440,7 @@ export default function Home() {
                   </SinglePage>
                 </HTMLFlipBook>
               </div>
-              <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
+              {/* <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
                 <PageControls
                   clickNext={setNext}
                   clickFastNext={setFastNext}
@@ -454,7 +449,7 @@ export default function Home() {
                   click10Previous={setPrevious10}
                   click10Next={setNext10}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </SidebarInset>

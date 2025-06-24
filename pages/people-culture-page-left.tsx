@@ -104,9 +104,6 @@ export default function PeopleCultureLeftPage({ onBackClick, onNextClick }: Peop
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <Footer part="left" />
       </div>
     </PageLayout>
   )

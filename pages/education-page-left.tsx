@@ -51,9 +51,6 @@ export default function EducationLeftPage({ onBackClick, onNextClick }: Educatio
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
-        <Footer part="left" />
       </div>
     </PageLayout>
   )

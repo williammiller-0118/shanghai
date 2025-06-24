@@ -54,7 +54,7 @@ export default function AsianEscapesRightPage({ onBackClick, onNextClick }: Asia
               <video
                 ref={videoRef}
                 className={styles.video}
-                poster="/images/introduction.png"
+                // poster="/images/introduction.png"
                 onClick={handlePlayPause}
               >
                 <source src="/videos/cover.mp4" type="video/mp4" />
@@ -86,8 +86,6 @@ export default function AsianEscapesRightPage({ onBackClick, onNextClick }: Asia
           </div>
         </div>
       </div>
-
-      <Footer part="left" />
     </div>
   )
 }
