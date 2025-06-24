@@ -42,6 +42,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer"
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
   const [next, setNext] = useState(false);
   const [fastnext, setFastNext] = useState(false);
   const [previous, setPrevious] = useState(false);
@@ -49,6 +50,10 @@ export default function Home() {
   const [previous10, setPrevious10] = useState(false);
   const [next10, setNext10] = useState(false);
   const [viewmode, setViewMode] = useState("");
+  const [contentColor, setContentColor] = useState("");
+
+  const bookRef = useRef<HTMLFlipBookElement | null>(null);
+  const bookRef1 = useRef<HTMLFlipBookElement | null>(null);
 
   useEffect(() => {
     let mobPageNum = 0;
@@ -93,22 +98,33 @@ export default function Home() {
     }
   }, [next, fastnext, previous, fastprevious, next10, previous10])
 
-  const [contentColor, setContentColor] = useState("");
   const { theme, resolvedTheme } = useTheme();
-
-  // const divref = useRef<any>(null)
-  const bookRef = useRef<HTMLFlipBookElement | null>(null);
-  const bookRef1 = useRef<HTMLFlipBookElement | null>(null);
 
   useEffect(() => {
     // console.log("Current theme:", theme);
     // console.log("Resolved theme:", resolvedTheme);
   }, []);
 
+  const handleVideoEnd = () => {
+    setCurrentPage("shanghai")
+  }
+
+  const handlePowerButtonClick = () => {
+    setCurrentPage("next")
+  }
+
   const handleNavigateToContents = () => {
     if (bookRef.current) bookRef.current?.pageFlip().turnToPage(0);
     if (bookRef1.current) bookRef1.current?.pageFlip().turnToPage(0);
   };
+  
+  if (currentPage === "video") {
+    return <VideoIntro onVideoEnd={handleVideoEnd} />
+  }
+
+  if (currentPage === "shanghai") {
+    return <ShanghaiPage onPowerButtonClick={handlePowerButtonClick} />
+  }
 
   return (
     <ThemeProvider
@@ -136,11 +152,11 @@ export default function Home() {
                   maxHeight={1533}
                   mobileScrollSupport={true}
                   className="mx-auto"
-                  disableFlipByClick={false}
+                  disableFlipByClick={true}
                   onChangeOrientation={e => setViewMode(e.data)}
                   // flippingTime={10000}
-                  // usePortrait={true}
-                  useMouseEvents={true}
+                  usePortrait={true}
+                  useMouseEvents={false}
                   ref={bookRef1}
                 >
                   <SinglePage number="1">
