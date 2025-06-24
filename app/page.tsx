@@ -39,17 +39,16 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
   const [next, setNext] = useState(false);
   const [fastnext, setFastNext] = useState(false);
   const [previous, setPrevious] = useState(false);
   const [fastprevious, setFastPrevious] = useState(false);
   const [previous10, setPrevious10] = useState(false);
   const [next10, setNext10] = useState(false);
+  const [viewmode, setViewMode] = useState("");
 
   useEffect(() => {
     let mobPageNum = 0;
@@ -138,6 +137,7 @@ export default function Home() {
                   mobileScrollSupport={true}
                   className="mx-auto"
                   disableFlipByClick={false}
+                  onChangeOrientation={e => setViewMode(e.data)}
                   // flippingTime={10000}
                   // usePortrait={true}
                   useMouseEvents={true}
@@ -147,7 +147,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <LeftTableOfContents colorMode={contentColor} />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -161,7 +161,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <RightTableOfContents colorMode={contentColor} />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -175,7 +175,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <BookIntroductionLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -189,7 +189,7 @@ export default function Home() {
                     <div  style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <BookIntroductionRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -203,7 +203,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -217,7 +217,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -231,7 +231,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryLeftPage2 />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -245,7 +245,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryRightPage2 />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -259,7 +259,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <PeopleCultureLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -273,7 +273,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <PeopleCultureRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -287,7 +287,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <AsianEscapesLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -301,7 +301,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <AsianEscapesRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -315,7 +315,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <EducationLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -329,7 +329,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <EducationRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -343,7 +343,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <MapLeftPage />
                       <Footer 
-                        part="left"
+                        part={ viewmode === "landscape" ? "left" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
@@ -357,7 +357,7 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <MapRightPage />
                       <Footer 
-                        part="right"
+                        part={ viewmode === "landscape" ? "right" : "mobile"}
                         clickNext={setNext}
                         clickFastNext={setFastNext}
                         clickPrevious={setPrevious}
