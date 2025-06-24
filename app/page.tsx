@@ -55,13 +55,14 @@ export default function Home() {
     let mobPageNum = 0;
     let lapPageNum = 0;
 
-    if (bookRef.current && bookRef1.current) {
+    if (!bookRef.current?.pageFlip() && !bookRef1.current?.pageFlip()) return;
+
+    if (bookRef.current?.pageFlip() && bookRef1.current?.pageFlip()) {
       mobPageNum = bookRef.current.pageFlip().getCurrentPageIndex();
       lapPageNum = bookRef1.current.pageFlip().getCurrentPageIndex();
     }
 
     if (next === true) {
-      console.log("next")
       bookRef.current?.pageFlip().flipNext();
       bookRef1.current?.pageFlip().flipNext();
       setNext(false)
@@ -91,7 +92,7 @@ export default function Home() {
       if (lapPageNum > 10) bookRef1.current?.pageFlip().turnToPage(lapPageNum + 10);
       setFastPrevious(false)
     }
-  }, [next, fastnext, previous, fastprevious])
+  }, [next, fastnext, previous, fastprevious, next10, previous10])
 
   const [contentColor, setContentColor] = useState("");
   const { theme, resolvedTheme } = useTheme();
@@ -111,10 +112,6 @@ export default function Home() {
   };
 
   return (
-    // <RightTableOfContents onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
-    // <EducationRightPage />
-    // <PeopleCultureLeftPage onBackClick={handleCultureBack} onNextClick={handleCultureNext} />
-    // <BookIntroductionLeftPage onBackClick={handleCultureBack} onNextClick={handleCultureNext}  />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"
@@ -128,7 +125,7 @@ export default function Home() {
             <SidebarTrigger className="-ml-1" />
           </div>
           <div className="overflow-hidden">
-            <div className={`w-full pb-[30px] px-[100px] h-full ${styles.Laptop}`}>
+            <div className={`w-full h-full`}>
               <div className="mx-auto">
                 <HTMLFlipBook
                   width={400}
@@ -142,11 +139,12 @@ export default function Home() {
                   className="mx-auto"
                   disableFlipByClick={false}
                   // flippingTime={10000}
+                  // usePortrait={true}
                   useMouseEvents={true}
                   ref={bookRef1}
                 >
                   <SinglePage number="1">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <LeftTableOfContents colorMode={contentColor} />
                       <Footer 
                         part="left"
@@ -160,7 +158,7 @@ export default function Home() {
                     </div>
                   </SinglePage>
                   <SinglePage number="2">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <RightTableOfContents colorMode={contentColor} />
                       <Footer 
                         part="right"
@@ -174,181 +172,203 @@ export default function Home() {
                     </div>
                   </SinglePage>
                   <SinglePage number="3">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <BookIntroductionLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="4">
-                    <div>
+                    <div  style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <BookIntroductionRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="5">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="6">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="7">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryLeftPage2 />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="8">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <HistoryRightPage2 />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="9">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <PeopleCultureLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="10">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <PeopleCultureRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="11">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <AsianEscapesLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="12">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <AsianEscapesRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="13">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <EducationLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="14">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <EducationRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="15">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <MapLeftPage />
+                      <Footer 
+                        part="left"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                   <SinglePage number="16">
-                    <div>
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <MapRightPage />
+                      <Footer 
+                        part="right"
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
                     </div>
                   </SinglePage>
                 </HTMLFlipBook>
               </div>
-              {/* <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
-                <PageControls
-                  clickNext={setNext}
-                  clickFastNext={setFastNext}
-                  clickPrevious={setPrevious}
-                  clickFastPrevious={setFastPrevious}
-                  click10Previous={setPrevious10}
-                  click10Next={setNext10}
-                />
-              </div> */}
-            </div>
-            <div>
-              <div className={styles.bookForMob}>
-                <HTMLFlipBook width={300} height={800} size="stretch" mobileScrollSupport={true}
-                  minWidth={300} maxWidth={1000} minHeight={600} maxHeight={1800} disableFlipByClick={true} useMouseEvents={true}
-                  ref={bookRef}
-                >
-                  <SinglePage number="1">
-                    <div>
-                      <LeftTableOfContents colorMode={contentColor} />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="2">
-                    <div>
-                      <RightTableOfContents colorMode={contentColor} />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="3">
-                    <div>
-                      <BookIntroductionLeftPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="4">
-                    <div>
-                      <BookIntroductionRightPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="5">
-                    <div>
-                      <HistoryLeftPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="6">
-                    <div>
-                      <HistoryRightPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="7">
-                    <div>
-                      <HistoryLeftPage2 />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="8">
-                    <div>
-                      <HistoryRightPage2 />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="9">
-                    <div>
-                      <PeopleCultureLeftPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="10">
-                    <div>
-                      <PeopleCultureRightPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="11">
-                    <div>
-                      <AsianEscapesLeftPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="12">
-                    <div>
-                      <AsianEscapesRightPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="13">
-                    <div>
-                      <EducationLeftPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="14">
-                    <div>
-                      <EducationRightPage />
-                    </div>
-                  </SinglePage>
-                  <SinglePage number="15">
-                    <div>
-                      <MapPage />
-                    </div>
-                  </SinglePage>
-                </HTMLFlipBook>
-              </div>
-              {/* <div className="container mt-3" style={{ backgroundColor: "white", zIndex: 10 }}>
-                <PageControls
-                  clickNext={setNext}
-                  clickFastNext={setFastNext}
-                  clickPrevious={setPrevious}
-                  clickFastPrevious={setFastPrevious}
-                  click10Previous={setPrevious10}
-                  click10Next={setNext10}
-                />
-              </div> */}
             </div>
           </div>
         </SidebarInset>

@@ -13,13 +13,13 @@ interface FooterProps {
   click10Next: (value: boolean) => void
 }
 
-export default function Footer({part, clickNext, clickPrevious, clickFastPrevious, click10Previous, click10Next} : FooterProps) {
+export default function Footer({part, clickNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, clickFastNext} : FooterProps) {
   return (
       <div className={styles.pageFooter}>
         <PageControls 
           part={part}
           clickNext={clickNext}
-          clickFastNext={clickNext}
+          clickFastNext={clickFastNext}
           clickPrevious={clickPrevious}
           clickFastPrevious={clickFastPrevious}
           click10Previous={click10Previous}

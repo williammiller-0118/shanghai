@@ -14,7 +14,7 @@ interface PageControllerProps {
 
 const PageControls = ({  clickNext, clickFastNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, part }: PageControllerProps) => {
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 transition-opacity duration-300 bg-black bg-opacity-40 hover:bg-opacity-80 rounded-full px-6 py-2 flex gap-3 z-50">
+    <div className="bottom-4 transition-opacity duration-300 bg-white bg-opacity-40 hover:bg-opacity-80 rounded-full px-6 py-2 flex gap-3 z-50">
       <div className={part === "left" ? "" : "hidden"}>
         <button
           onClick={() => click10Previous(true)}
