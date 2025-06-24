@@ -32,7 +32,7 @@ const preparationsContent = [
   { title: "Education", page: 86 },
 ]
 
-export default function BookIntroductionRightPage({ onBackClick, onNextClick }: BookIntroductionPageProps) {
+export default function BookIntroductionRightPage() {
   return (
     <PageLayout>
       <div className="">

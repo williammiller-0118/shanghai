@@ -105,111 +105,10 @@ export default function Home() {
     // console.log("Resolved theme:", resolvedTheme);
   }, []);
 
-  const handleVideoEnd = () => {
-    setCurrentPage("shanghai")
-  }
-
-  const handlePowerButtonClick = () => {
-    setCurrentPage("next")
-  }
-
-  const handleViewContents = () => {
-    setCurrentPage("introduction")
-  }
-
-  if (currentPage === "video") {
-    return <VideoIntro onVideoEnd={handleVideoEnd} />
-  }
-
-  if (currentPage === "shanghai") {
-    return <ShanghaiPage onPowerButtonClick={handlePowerButtonClick} />
-  }
-
-  const handleIntroductionBack = () => {
-    setCurrentPage("contents")
-  }
-
-  const handleViewHistory = () => {
-    setCurrentPage("history")
-  }
-
-  const handleIntroductionNext = () => {
-    setCurrentPage("history2")
-  }
-
-  const handleHistoryBack = () => {
-    setCurrentPage("introduction")
-  }
-
-  const handleHistory2Back = () => {
-    setCurrentPage("history")
-  }
-
-  const handleHistory2Next = () => {
-    setCurrentPage("culture")
-  }
-
-  const handleCultureBack = () => {
-    setCurrentPage("history2")
-  }
-
-  const handleCultureNext = () => {
-    setCurrentPage("culture")
-  }
-
-  if (currentPage === "introduction") {
-    return <BookIntroductionPage onBackClick={handleIntroductionBack} onNextClick={handleViewHistory} />
-  }
-  if (currentPage === "history") {
-    return <HistoryLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
-  }
-
-  if (currentPage === "history2") {
-    return <HistoryLeftPage2 onBackClick={handleHistory2Back} onNextClick={handleHistory2Next} />
-  }
-
-  if (currentPage === "culture") {
-    return <PeopleCultureLeftPage onBackClick={handleCultureBack} onNextClick={handleCultureNext} />
-  }
-
   const handleNavigateToContents = () => {
     if (bookRef.current) bookRef.current?.pageFlip().turnToPage(0);
     if (bookRef1.current) bookRef1.current?.pageFlip().turnToPage(0);
   };
-
-  // return <RightTableOfContents onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
-  // return <HistoryLeftPage2 onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
-
-  // return (
-  //   <HTMLFlipBook
-  //     width={300}
-  //     height={500}
-  //     size="fixed"
-  //     showCover={true}
-  //     className="demo-book"
-  //     style={{}}
-  //     startPage={0}
-  //     mobileScrollSupport={true}
-  //     minWidth={300}
-  //     maxWidth={1000}
-  //     minHeight={400}
-  //     maxHeight={1536}
-  //     maxShadowOpacity={0.5}
-  //     usePortrait={true}
-  //     startZIndex={0}
-  //     autoSize={true}
-  //     clickEventForward={true}
-  //     useMouseEvents={true}
-  //     swipeDistance={30}
-  //     showPageCorners={true}
-  //     disableFlipByClick={false}
-  //   >
-  //     <div className="page">Page 1</div>
-  //     <div className="page">Page 2</div>
-  //     <div className="page">Page 3</div>
-  //     <div className="page">Page 4</div>
-  //   </HTMLFlipBook>
-  // )
 
   return (
     // <RightTableOfContents onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
@@ -248,7 +147,7 @@ export default function Home() {
                 >
                   <SinglePage number="1">
                     <div>
-                      <LeftTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <LeftTableOfContents colorMode={contentColor} />
                       <Footer 
                         part="left"
                         clickNext={setNext}
@@ -262,7 +161,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="2">
                     <div>
-                      <RightTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <RightTableOfContents colorMode={contentColor} />
                       <Footer 
                         part="right"
                         clickNext={setNext}
@@ -276,42 +175,42 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="3">
                     <div>
-                      <BookIntroductionLeftPage onBackClick={handleIntroductionBack} onNextClick={handleViewHistory} />
+                      <BookIntroductionLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="4">
                     <div>
-                      <BookIntroductionRightPage onBackClick={handleIntroductionBack} onNextClick={handleViewHistory} />
+                      <BookIntroductionRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="5">
                     <div>
-                      <HistoryLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <HistoryLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="6">
                     <div>
-                      <HistoryRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <HistoryRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="7">
                     <div>
-                      <HistoryLeftPage2 onBackClick={handleHistory2Back} onNextClick={handleHistory2Next} />
+                      <HistoryLeftPage2 />
                     </div>
                   </SinglePage>
                   <SinglePage number="8">
                     <div>
-                      <HistoryRightPage2 onBackClick={handleHistory2Back} onNextClick={handleHistory2Next} />
+                      <HistoryRightPage2 />
                     </div>
                   </SinglePage>
                   <SinglePage number="9">
                     <div>
-                      <PeopleCultureLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <PeopleCultureLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="10">
                     <div>
-                      <PeopleCultureRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <PeopleCultureRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="11">
@@ -326,12 +225,12 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="13">
                     <div>
-                      <EducationLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <EducationLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="14">
                     <div>
-                      <EducationRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <EducationRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="15">
@@ -365,52 +264,52 @@ export default function Home() {
                 >
                   <SinglePage number="1">
                     <div>
-                      <LeftTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <LeftTableOfContents colorMode={contentColor} />
                     </div>
                   </SinglePage>
                   <SinglePage number="2">
                     <div>
-                      <RightTableOfContents colorMode={contentColor} onBackClick={handleIntroductionBack} onStartReading={handleViewContents} />
+                      <RightTableOfContents colorMode={contentColor} />
                     </div>
                   </SinglePage>
                   <SinglePage number="3">
                     <div>
-                      <BookIntroductionLeftPage onBackClick={handleIntroductionBack} onNextClick={handleViewHistory} />
+                      <BookIntroductionLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="4">
                     <div>
-                      <BookIntroductionRightPage onBackClick={handleIntroductionBack} onNextClick={handleViewHistory} />
+                      <BookIntroductionRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="5">
                     <div>
-                      <HistoryLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <HistoryLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="6">
                     <div>
-                      <HistoryRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <HistoryRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="7">
                     <div>
-                      <HistoryLeftPage2 onBackClick={handleHistory2Back} onNextClick={handleHistory2Next} />
+                      <HistoryLeftPage2 />
                     </div>
                   </SinglePage>
                   <SinglePage number="8">
                     <div>
-                      <HistoryRightPage2 onBackClick={handleHistory2Back} onNextClick={handleHistory2Next} />
+                      <HistoryRightPage2 />
                     </div>
                   </SinglePage>
                   <SinglePage number="9">
                     <div>
-                      <PeopleCultureLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <PeopleCultureLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="10">
                     <div>
-                      <PeopleCultureRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <PeopleCultureRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="11">
@@ -425,12 +324,12 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="13">
                     <div>
-                      <EducationLeftPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <EducationLeftPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="14">
                     <div>
-                      <EducationRightPage onBackClick={handleHistoryBack} onNextClick={handleIntroductionNext} />
+                      <EducationRightPage />
                     </div>
                   </SinglePage>
                   <SinglePage number="15">

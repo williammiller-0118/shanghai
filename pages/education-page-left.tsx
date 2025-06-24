@@ -13,7 +13,7 @@ interface EducationPageProps {
   onNextClick?: () => void
 }
 
-export default function EducationLeftPage({ onBackClick, onNextClick }: EducationPageProps) {
+export default function EducationLeftPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>

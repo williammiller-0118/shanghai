@@ -10,8 +10,8 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 
 interface TableOfContentsProps {
-  onBackClick: () => void
-  onStartReading: () => void
+  // onBackClick: () => void
+  // onStartReading: () => void
   colorMode: string
 }
 
@@ -91,7 +91,7 @@ const tableOfContentsData = {
   ],
 }
 
-export default function RightTableOfContents({ onBackClick, onStartReading, colorMode }: TableOfContentsProps) {
+export default function RightTableOfContents({ colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>

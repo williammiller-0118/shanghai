@@ -11,8 +11,8 @@ import Header from "@/components/header"
 import PageControls from "@/components/pagecontroller"
 
 interface TableOfContentsProps {
-  onBackClick: () => void
-  onStartReading: () => void
+  // onBackClick: () => void
+  // onStartReading: () => void
   colorMode: string
 }
 
@@ -92,7 +92,7 @@ const tableOfContentsData = {
   ],
 }
 
-export default function LeftTableOfContents({ onBackClick, onStartReading, colorMode }: TableOfContentsProps) {
+export default function LeftTableOfContents({ colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>

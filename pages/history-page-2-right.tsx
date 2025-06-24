@@ -9,21 +9,11 @@ import { ChevronLeft, ChevronRight, Share, Info } from "lucide-react"
 import Footer from "@/components/footer"
 
 interface HistoryPage2Props {
-  onBackClick: () => void
-  onNextClick: () => void
+  // onBackClick: () => void
+  // onNextClick: () => void
 }
 
-export default function HistoryRightPage2({ onBackClick, onNextClick }: HistoryPage2Props) {
-  const handlePrevPage = () => {
-    console.log("Previous page")
-    onBackClick()
-  }
-
-  const handleNextPage = () => {
-    console.log("Next page")
-    onNextClick()
-  }
-
+export default function HistoryRightPage2() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>

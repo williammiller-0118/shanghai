@@ -13,7 +13,7 @@ interface AsianEscapesPageProps {
   onNextClick?: () => void
 }
 
-export default function AsianEscapesRightPage({ onBackClick, onNextClick }: AsianEscapesPageProps) {
+export default function AsianEscapesRightPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
 

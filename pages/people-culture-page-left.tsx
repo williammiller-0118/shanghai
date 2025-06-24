@@ -9,21 +9,11 @@ import { ChevronLeft, ChevronRight, User, Info, Volume2, Maximize, MoreHorizonta
 import Footer from "@/components/footer"
 
 interface PeopleCulturePageProps {
-  onBackClick: () => void
-  onNextClick: () => void
+  // onBackClick: () => void
+  // onNextClick: () => void
 }
 
-export default function PeopleCultureLeftPage({ onBackClick, onNextClick }: PeopleCulturePageProps) {
-  const handlePrevPage = () => {
-    console.log("Previous page")
-    onBackClick()
-  }
-
-  const handleNextPage = () => {
-    console.log("Next page")
-    onNextClick()
-  }
-
+export default function PeopleCultureLeftPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>

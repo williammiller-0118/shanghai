@@ -32,17 +32,7 @@ const preparationsContent = [
   { title: "Education", page: 86 },
 ]
 
-export default function BookIntroductionLeftPage({ onBackClick, onNextClick }: BookIntroductionPageProps) {
-  const handlePrevPage = () => {
-    console.log("Previous page")
-    onBackClick()
-  }
-
-  const handleNextPage = () => {
-    console.log("Next page")
-    onNextClick()
-  }
-
+export default function BookIntroductionLeftPage() {
   return (
     <PageLayout>
       <div className="">

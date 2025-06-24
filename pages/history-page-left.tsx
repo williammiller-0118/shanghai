@@ -9,11 +9,11 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 interface HistoryPageProps {
-  onBackClick: () => void
-  onNextClick: () => void
+  // onBackClick: () => void
+  // onNextClick: () => void
 }
 
-export default function HistoryLeftPage({ onBackClick, onNextClick }: HistoryPageProps) {
+export default function HistoryLeftPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
