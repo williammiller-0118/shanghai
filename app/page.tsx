@@ -40,6 +40,8 @@ import {
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer"
+import EducationListLeftPage from "@/pages/educationlist-page-left"
+import EducationListRightPage from "@/pages/educationlist-page-right"
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
@@ -59,43 +61,36 @@ export default function Home() {
     let mobPageNum = 0;
     let lapPageNum = 0;
 
-    if (!bookRef.current?.pageFlip() && !bookRef1.current?.pageFlip()) return;
+    if (!bookRef1.current?.pageFlip()) return;
 
-    if (bookRef.current?.pageFlip() && bookRef1.current?.pageFlip()) {
-      mobPageNum = bookRef.current.pageFlip().getCurrentPageIndex();
+    if (bookRef1.current?.pageFlip()) {
       lapPageNum = bookRef1.current.pageFlip().getCurrentPageIndex();
     }
 
     if (next === true) {
-      bookRef.current?.pageFlip().flipNext();
       bookRef1.current?.pageFlip().flipNext();
       setNext(false)
     }
     if (fastnext === true) {
       setFastNext(false)
-      bookRef.current?.pageFlip().turnToPage(mobPageNum + 5);
-      bookRef1.current?.pageFlip().turnToPage(lapPageNum + 5);
+      bookRef1.current?.pageFlip().turnToPage(lapPageNum + 4);
     }
     if (previous === true) {
-      console.log("previous")
-      bookRef.current?.pageFlip().flipPrev();
       bookRef1.current?.pageFlip().flipPrev();
       setPrevious(false)
     }
     if (fastprevious === true) {
-      if (mobPageNum > 5) bookRef.current?.pageFlip().turnToPage(mobPageNum - 5);
-      if (lapPageNum > 5) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 5);
+      if (lapPageNum > 3) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 3);
       setFastPrevious(false)
     }
-    if (previous10 === true) {
-      if (mobPageNum > 10) bookRef.current?.pageFlip().turnToPage(mobPageNum - 10);
-      if (lapPageNum > 10) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 10);
-      setFastPrevious(false)
-    }
+    // if (previous10 === true) {
+    //   if (lapPageNum > 10) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 9);
+    //   setPrevious10(false)
+    // }
     if (next10 === true) {
-      if (mobPageNum > 10) bookRef.current?.pageFlip().turnToPage(mobPageNum + 10);
-      if (lapPageNum > 10) bookRef1.current?.pageFlip().turnToPage(lapPageNum + 10);
-      setFastPrevious(false)
+      console.log("fast10Next", mobPageNum, lapPageNum)
+      bookRef1.current?.pageFlip().turnToPage(lapPageNum + 8);
+      setNext10(false)
     }
   }, [next, fastnext, previous, fastprevious, next10, previous10])
 
@@ -128,6 +123,7 @@ export default function Home() {
   }
 
   return (
+    // <EducationListLeftPage />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"
@@ -357,6 +353,35 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="15">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                      <EducationListLeftPage />
+                      <Footer 
+                        part={ "left"}
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
+                    </div>
+                  </SinglePage>
+                  <SinglePage number="16">
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                      <EducationListRightPage />
+                      <Footer 
+                        part={ "right"}
+                        clickNext={setNext}
+                        clickFastNext={setFastNext}
+                        clickPrevious={setPrevious}
+                        clickFastPrevious={setFastPrevious}
+                        click10Previous={setPrevious10}
+                        click10Next={setNext10} 
+                      />
+                    </div>
+                  </SinglePage>
+                  
+                  {/* <SinglePage number="15">
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
                       <MapLeftPage />
                       <Footer 
                         part={ "left" }
@@ -382,7 +407,7 @@ export default function Home() {
                         click10Next={setNext10} 
                       />
                     </div>
-                  </SinglePage>
+                  </SinglePage> */}
                 </HTMLFlipBook>
               </div>
             </div>
