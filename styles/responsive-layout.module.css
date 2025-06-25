@@ -113,7 +113,7 @@
 
 @media (max-width: 640px) {
   .powerButton {
-    top: 3rem;
+    top: 5rem;
     width: 3.5rem;
     height: 3.5rem;
     border-width: 3px;
