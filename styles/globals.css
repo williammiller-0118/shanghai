@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url('/fonts/_Frutiger LT 55 Roman.ttf') format('truetype');
+  src: url('/fonts/FrutigerLT55Roman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

@@ -406,7 +406,8 @@
 }
 
 .sectionHeader {
-  background-color: #4a5568;
+  background-color: #000;
+  text-decoration: underline;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
@@ -420,7 +421,8 @@
 }
 
 .sectionNumber {
-  background-color: #2d3748;
+  background-color: rgb(170, 171, 173);
+  text-decoration: none;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   font-size: 0.8rem;

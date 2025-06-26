@@ -95,7 +95,7 @@ const tableOfContentsData = {
 export default function LeftTableOfContents({ colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
-      <div className={styles.sectionHeader}>
+      <div className={styles.sectionHeader} style={{display: "flex"}}>
         <span>{title}</span>
         {pageNumber && <span className={styles.sectionNumber}>{pageNumber}</span>}
       </div>
@@ -137,13 +137,10 @@ export default function LeftTableOfContents({ colorMode }: TableOfContentsProps)
             {/* Featured Image - Spans columns 1-2 */}
             <div className={styles.responsiveMediaWrapper}>
               <Image
-                src="/images/shanghai-skyline-night.png"
+                src="/images/contents.png"
                 alt="Shanghai skyline at night"
                 fill
               />
-              <div className={styles.imageOverlay}>
-                <h1 className={styles.contentsTitle}>CONTENTS</h1>
-              </div>
 
               {/* Video Controls */}
               <div className={styles.videoControls}>

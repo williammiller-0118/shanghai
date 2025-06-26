@@ -19,58 +19,29 @@ const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevio
     >
       {/* Center Controls */}
       <div className="flex">
-        <div style={{marginRight: "1rem"}}>
-          <ControlButton onClick={clickPrevious}><ChevronsLeft size={30} /></ControlButton>
-          <ControlButton onClick={clickNext}><ChevronsRight size={30} /></ControlButton>
+        <div style={{marginRight: "1rem", display: "flex", gap: "0.5rem"}}>
+          <div style={{ cursor: "pointer"}} onClick={() => clickPrevious(true)}>
+            <img src="images/btn/previous.png" style={{width: "50px"}} />
+          </div>
+          <div style={{cursor: "pointer"}} onClick={() => clickNext(true)}>
+            <img src="images/btn/next.png" style={{width: "50px"}} />
+          </div>
         </div>
-        <div>
-          <ControlButton onClick={clickFastPrevious}>-5</ControlButton>
-          <ControlButton onClick={clickFastNext}>+5</ControlButton>
-          <ControlButton onClick={click10Next}>+10</ControlButton>
+        <div style={{marginRight: "1rem", display: "flex", gap: "0.5rem"}}>
+          
+          <div style={{cursor: "pointer"}} onClick={() => clickFastPrevious(true)}>
+            <img src="images/btn/-5.png" style={{width: "50px"}} />
+          </div>
+          
+          <div style={{cursor: "pointer"}} onClick={() => clickFastNext(true)}>
+            <img src="images/btn/+5.png" style={{width: "50px"}} />
+          </div>
+          
+          <div style={{cursor: "pointer"}} onClick={() => click10Next(true)}>
+            <img src="images/btn/+10.png" style={{width: "50px"}} />
+          </div>
         </div>
       </div>
-        {/* <button
-          onClick={() => click10Previous(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go back several pages"
-        >-10
-          <img src="icons/10-left.png" alt="icon" className={styles.btnSize} />
-        </button>
-        <button
-          onClick={() => clickFastPrevious(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go back several pages"
-        >
-          <img src="icons/5-left.png" alt="icon" className={styles.btnSize} />
-        </button>
-        <button
-          onClick={() => clickPrevious(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go back one page"
-        >
-          <img src="icons/1-left.png" alt="icon" className={styles.btnSize} />
-        </button>
-        <button
-          onClick={() => clickNext(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go forward one page"
-        >
-          <img src="icons/1.png" alt="icon" className={styles.btnSize} />
-        </button>
-        <button
-          onClick={() => clickFastNext(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go forward several pages"
-        >
-          <img src="icons/5.png" alt="icon" className={styles.btnSize} />
-        </button>
-        <button
-          onClick={() => click10Next(true)}
-          className="text-white text-lg hover:scale-110 transition-transform"
-          title="Go forward several pages"
-        >
-          <img src="icons/10.png" alt="icon" className={styles.btnSize} />
-        </button> */}
     </div>
   );
 };

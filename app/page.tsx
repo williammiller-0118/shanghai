@@ -125,6 +125,18 @@ export default function Home() {
 
   return (
     // <EducationListLeftPage />
+    // <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+    //   <LeftTableOfContents colorMode={contentColor} />
+    //   <Footer 
+    //     part={ "right" }
+    //     clickNext={setNext}
+    //     clickFastNext={setFastNext}
+    //     clickPrevious={setPrevious}
+    //     clickFastPrevious={setFastPrevious}
+    //     click10Previous={setPrevious10}
+    //     click10Next={setNext10} 
+    //   />
+    // </div>
     <ThemeProvider
       attribute="class"
       defaultTheme="light"
@@ -153,7 +165,7 @@ export default function Home() {
                   className="mx-auto"
                   onChangeOrientation={e => setViewMode(e.data)}
                   flippingTime={1000}
-                  // usePortrait={false}
+                  usePortrait={true}
                   useMouseEvents={false}
                   ref={bookRef1}
                 >
