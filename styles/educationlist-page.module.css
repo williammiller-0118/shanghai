@@ -60,10 +60,12 @@
 
 .mainContent {
   display: flex;
+  flex-direction: row;
+  column-count: 2;
   height: calc(100vh - 110px);
   padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   gap: 1rem;
 }
 

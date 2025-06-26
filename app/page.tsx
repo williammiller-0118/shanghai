@@ -42,6 +42,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer"
 import EducationListLeftPage from "@/pages/educationlist-page-left"
 import EducationListRightPage from "@/pages/educationlist-page-right"
+import Header from "@/components/header"
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
@@ -148,9 +149,10 @@ export default function Home() {
                   minHeight={400}
                   maxHeight={1533}
                   mobileScrollSupport={true}
+                  disableFlipByClick={false}
                   className="mx-auto"
                   onChangeOrientation={e => setViewMode(e.data)}
-                  // flippingTime={10000}
+                  flippingTime={1000}
                   // usePortrait={false}
                   useMouseEvents={false}
                   ref={bookRef1}
@@ -353,6 +355,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="15">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                      <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" />
                       <EducationListLeftPage />
                       <Footer 
                         part={ "left"}
@@ -367,6 +370,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="16">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                      <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" />
                       <EducationListRightPage />
                       <Footer 
                         part={ "right"}
