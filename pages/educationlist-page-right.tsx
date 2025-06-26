@@ -83,14 +83,6 @@ export default function EducationListRightPage() {
                 <h1 className="text-l font-semibold">
                   Western International School of Shanghai
                 </h1>
-                <div className="flex items-center space-x-4 mb-3">
-                  <a href="#">
-                    <Mail size={20} />
-                  </a>
-                  <a href="#">
-                    <Globe size={20} />
-                  </a>
-                </div>
               </div>
 
               {/* Icons Row */}
@@ -126,6 +118,12 @@ export default function EducationListRightPage() {
                 <Linkedin size={20} />
                 <Youtube size={20} />
                 <Instagram size={20} />
+                <a href="#">
+                    <Mail size={20} />
+                  </a>
+                  <a href="#">
+                    <Globe size={20} />
+                  </a>
               </div>
             </div>
           </div>
