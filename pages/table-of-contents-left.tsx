@@ -92,11 +92,11 @@ const tableOfContentsData = {
   ],
 }
 
-export default function LeftTableOfContents({ colorMode }: TableOfContentsProps) {
+export default function LeftTableOfContents() {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div style={{display: "flex"}}>
-        <span style={{backgroundColor: "black", color: "white", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
+        <span style={{color: "white", backgroundColor: "black", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
         {pageNumber && <span style={{backgroundColor: "#ccc", flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
@@ -111,8 +111,7 @@ export default function LeftTableOfContents({ colorMode }: TableOfContentsProps)
   )
 
   return (
-    <PageLayout>
-      <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
+      <div className={`${styles.contentArea} bg-white`}>
         <div className={styles.leftpage}>
           {/* Featured Image - Spans columns 1-2 */}
           <div className={styles.responsiveMediaWrapper}>
@@ -159,6 +158,5 @@ export default function LeftTableOfContents({ colorMode }: TableOfContentsProps)
           </div>
         </div>
       </div>
-    </PageLayout>
   )
 }

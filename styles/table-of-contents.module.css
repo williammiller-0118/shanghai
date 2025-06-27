@@ -251,7 +251,7 @@
 }
 
 .contentArea {
-  height: calc(100vh - 110px);
+  height: 100vh;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
   padding-top: 1rem;
@@ -755,11 +755,4 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@media (max-width: 768px) {
-  .contentArea {
-    height: 50px;
-    width: auto;
-  }
 }
