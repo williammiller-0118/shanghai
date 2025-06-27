@@ -30,9 +30,6 @@ export default function AsianEscapesRightPage() {
 
   return (
     <div className={styles.pageContainer}>
-      {/* Page Header */}
-      <Header sectionTitle="LIVING THE LIFE | Asian escapes" pageNumber="412" part="left" />
-
       {/* Main Content */}
       <div className={styles.mainContent}>
 

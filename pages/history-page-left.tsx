@@ -17,8 +17,6 @@ export default function HistoryLeftPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        {/* Header Navigation */}
-        <Header sectionTitle={"PREPARATIONS | History"} pageNumber={30} part="left" />
 
         <div className={styles.historyPage}>
           {/* Main Content Layout - 4 Columns */}

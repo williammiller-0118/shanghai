@@ -17,8 +17,6 @@ export default function HistoryLeftPage2() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        <Header sectionTitle={"PREPARATIONS | History"} pageNumber={32} part="left" />
-      
         <div className={styles.history2Page}>
           <div>
             <div className={styles.globeLogo}>

@@ -17,9 +17,6 @@ export default function HistoryRightPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        {/* Header Navigation */}
-        <Header sectionTitle={"PREPARATIONS | History"} pageNumber={30} part="right" />
-
         <div className={styles.historyPage}>
           {/* Main Content Layout - 4 Columns */}
           <div>

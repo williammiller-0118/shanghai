@@ -95,9 +95,9 @@ const tableOfContentsData = {
 export default function LeftTableOfContents({ colorMode }: TableOfContentsProps) {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
-      <div className={styles.sectionHeader} style={{display: "flex"}}>
-        <span>{title}</span>
-        {pageNumber && <span className={styles.sectionNumber}>{pageNumber}</span>}
+      <div style={{display: "flex"}}>
+        <span style={{backgroundColor: "black", color: "white", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
+        {pageNumber && <span style={{backgroundColor: "#ccc", flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
         {entries.map((entry, index) => (
@@ -112,76 +112,52 @@ export default function LeftTableOfContents({ colorMode }: TableOfContentsProps)
 
   return (
     <PageLayout>
-      <div className={originstyles.bookLayout}>
-        {/* Navigation Header */}
-        {/* <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="left" /> */}
-        <div style={{display:"flex"}}>
-          <div style={{backgroundColor: "#ccc"}}>
-            <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
-              8
-            </p>
-          </div>
-          <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingLeft: "10px"}}>
-            <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
-              PREPARATIONS
-            </span>
-            <span style={{paddingLeft: "10px", paddingRight: "10px"}}>|</span>
-            <span>
-                 Table of contents
-            </span>
-          </div>
-        </div>
-        {/* <PageControls /> */}
-        <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
-          <div className={styles.leftpage}>
-            {/* Featured Image - Spans columns 1-2 */}
-            <div className={styles.responsiveMediaWrapper}>
-              <Image
-                src="/images/contents.png"
-                alt="Shanghai skyline at night"
-                fill
-              />
+      <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
+        <div className={styles.leftpage}>
+          {/* Featured Image - Spans columns 1-2 */}
+          <div className={styles.responsiveMediaWrapper}>
+            <Image
+              src="/images/contents.png"
+              alt="Shanghai skyline at night"
+              fill
+            />
 
-              {/* Video Controls */}
-              <div className={styles.videoControls}>
-                <div className={styles.playButton}>
-                  <Play size={20} fill="white" />
-                </div>
-                <span className={styles.timeDisplay}>1:19 / 1:19</span>
-                <div className={styles.progressBar}>
-                  <div className={styles.progressFill}></div>
-                </div>
-                <Volume2 size={20} />
-                <Maximize size={20} />
-                <MoreHorizontal size={20} />
+            {/* Video Controls */}
+            <div className={styles.videoControls}>
+              <div className={styles.playButton}>
+                <Play size={20} fill="white" />
               </div>
+              <span className={styles.timeDisplay}>1:19 / 1:19</span>
+              <div className={styles.progressBar}>
+                <div className={styles.progressFill}></div>
+              </div>
+              <Volume2 size={20} />
+              <Maximize size={20} />
+              <MoreHorizontal size={20} />
             </div>
-            <div className={styles.dividerow}>
-              {/* Column 1 - Below image */}
-              <div className={styles.column1}>{renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}</div>
+          </div>
+          <div className={styles.dividerow}>
+            {/* Column 1 - Below image */}
+            <div className={styles.column1}>{renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}</div>
 
-              {/* Column 2 - Below image */}
-              <div className={styles.column2}>
-                {renderSection("", tableOfContentsData.relocationItems)}
+            {/* Column 2 - Below image */}
+            <div className={styles.column2}>
+              {renderSection("", tableOfContentsData.relocationItems)}
 
-                {/* Globe Logo */}
-                <div className={styles.globeLogo}>
-                  <img
-                    src="images/globe.png"
-                    alt="Fantasy Globe"
-                    style={{
-                      height: '100px',
-                      objectFit: 'cover',
-                    }}
-                  />
-                </div>
+              {/* Globe Logo */}
+              <div className={styles.globeLogo}>
+                <img
+                  src="images/globe.png"
+                  alt="Fantasy Globe"
+                  style={{
+                    height: '100px',
+                    objectFit: 'cover',
+                  }}
+                />
               </div>
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        {/* <Footer part="left" /> */}
       </div>
     </PageLayout>
   )

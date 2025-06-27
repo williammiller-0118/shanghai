@@ -17,10 +17,6 @@ export default function EducationRightPage({ onBackClick, onNextClick }: Educati
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" />
-
-        {/* Main Content Layout */}
-        {/* <div className={styles.educationPage}> */}
 
         {/* Right Column */}
         <div className={styles.educationPage}>

@@ -17,9 +17,6 @@ export default function PeopleCultureLeftPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        <Header sectionTitle={"PREPARATIONS | People and culture"} pageNumber={36} part="left" />
-        
-        
         {/* Main Content Layout */}
         <div className={styles.peopleCulturePage}>
           {/* Global Logo */}

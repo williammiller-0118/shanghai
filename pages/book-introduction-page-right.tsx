@@ -37,9 +37,6 @@ export default function BookIntroductionRightPage() {
     <PageLayout>
       <div className="">
         <div className={originstyles.bookLayout}>
-          {/* Header Navigation */}
-          <Header sectionTitle={"PREPARATIONS"} pageNumber={28} part="right" />
-
           <div className={styles.pageContent}>
 
             {/* Main Content Area */}

@@ -63,8 +63,6 @@ export default function MapRightPage({ onBackClick, onNextClick }: MapPageProps)
 
     return (
     <div className={styles.pageContainer}  style={{clipPath: 'inset(0 0 0 50%)', transform: 'translateX(-50%)' }}>
-      {/* Page Header */}
-        <Header sectionTitle="SOFT LANDING | Former French Concession" pageNumber="220" part="left" />
 
       {/* Main Content */}
       <div className={styles.mainContent}>

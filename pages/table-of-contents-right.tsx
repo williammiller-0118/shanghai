@@ -92,11 +92,11 @@ const tableOfContentsData = {
 }
 
 export default function RightTableOfContents({ colorMode }: TableOfContentsProps) {
-  const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
+  const renderSection = (title: string, entries: Array<{ title: string; page: number }>, maincolor: string, pagecolor: string, pageNumber?: string) => (
     <div className={styles.section}>
-      <div className={styles.sectionHeader}>
-        <span>{title}</span>
-        {pageNumber && <span className={styles.sectionNumber}>{pageNumber}</span>}
+      <div style={{display: "flex"}}>
+        <span style={{backgroundColor: maincolor, color: "white", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
+        {<span style={{width: "100%", backgroundColor: pagecolor, flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
         {entries.map((entry, index) => (
@@ -113,38 +113,18 @@ export default function RightTableOfContents({ colorMode }: TableOfContentsProps
     <PageLayout>
       <div className={originstyles.bookLayout}>
         {/* Navigation Header */}
-        {/* <Header sectionTitle={"PREPARATIONS | Table of contents"} pageNumber={8} part="right" /> */}
-        <div style={{display:"flex"}}>
-          <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingRight: "20px", textAlign: "right"}}>
-            <span>
-                 Table of contents
-            </span>
-            <span style={{paddingLeft: "10px", paddingRight: "10px"}}>|</span>
-            <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
-              PREPARATIONS
-            </span>
-          </div>
-          <div style={{backgroundColor: "#ccc"}}>
-            <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
-              9
-            </p>
-          </div>
-        </div>
 
         <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
           <div className={styles.rightpage}>
             {/* Column 4 */}
             <div className={styles.column4}>
-              {renderSection("SOFT LANDING", tableOfContentsData.softLanding, "142")}
-              {renderSection("LIVING THE LIFE", tableOfContentsData.livingTheLife1, "288")}
-              {renderSection("", tableOfContentsData.livingTheLife2)}
-              {renderSection("MAPS", tableOfContentsData.maps)}
+              {renderSection("SOFT LANDING", tableOfContentsData.softLanding, "#3a4c63", "#9e9277", "142")}
+              {renderSection("LIVING THE LIFE", tableOfContentsData.livingTheLife1, "#282a40", "#2da5d2", "288")}
+              {renderSection("", tableOfContentsData.livingTheLife2,"#282a40", "#2da5d2")}
+              {renderSection("MAPS", tableOfContentsData.maps,"#675950", "#a1ac99")}
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        {/* <Footer part="right" /> */}
       </div>
     </PageLayout>
   )

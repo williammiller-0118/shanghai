@@ -17,8 +17,6 @@ export default function PeopleCultureRightPage() {
   return (
     <PageLayout>
       <div className={originstyles.bookLayout}>
-        {/* Header Navigation */}
-        <Header sectionTitle={"PREPARATIONS | People and culture"} pageNumber={36} part="right" />
 
         
         {/* Main Content Layout */}

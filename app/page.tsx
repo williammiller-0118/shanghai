@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import React, { ComponentType, ReactNode, useEffect, useRef, useState } from "react"
 import VideoIntro from "@/pages/video-intro"
 import ShanghaiPage from "@/pages/shanghai-page"
 import LeftTableOfContents from "@/pages/table-of-contents-left"
@@ -43,6 +43,27 @@ import Footer from "@/components/footer"
 import EducationListLeftPage from "@/pages/educationlist-page-left"
 import EducationListRightPage from "@/pages/educationlist-page-right"
 import Header from "@/components/header"
+
+const BookList = [
+  {page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86"},
+  {page: RightTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "87"},
+  {page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28"},
+  {page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29"},
+  {page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30"},
+  {page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31"},
+  {page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32"},
+  {page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33"},
+  {page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36"},
+  {page: PeopleCultureRightPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "37"},
+  {page: AsianEscapesLeftPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "412"},
+  {page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413"},
+  {page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86"},
+  {page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87"},
+  {page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222"},
+  {page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223"},
+  {page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220"},
+  {page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221"},
+]
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"video" | "shanghai" | "next" | "contents" | "history" | "history2" | "culture" | "reading" | "introduction">("video")
@@ -123,9 +144,42 @@ export default function Home() {
     return <ShanghaiPage onPowerButtonClick={handlePowerButtonClick} />
   }
 
+  const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
+    
+    return <div style={{display: "flex", flexDirection: "column", height: "100vh", border: "1px solid #ccc"}}>
+      <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
+      <Page colorMode={contentColor} />
+      <Footer 
+        part={ part }
+        clickNext={setNext}
+        clickFastNext={setFastNext}
+        clickPrevious={setPrevious}
+        clickFastPrevious={setFastPrevious}
+        click10Previous={setPrevious10}
+        click10Next={setNext10} 
+      />
+    </div>
+  }
+
   return (
     // <EducationListLeftPage />
     // <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+    //   <div style={{display:"flex"}}>
+    //     <div style={{backgroundColor: "#ccc"}}>
+    //       <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
+    //         8
+    //       </p>
+    //     </div>
+    //     <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingLeft: "10px"}}>
+    //       <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
+    //         PREPARATIONS
+    //       </span>
+    //       <span style={{paddingLeft: "10px", paddingRight: "10px"}}>|</span>
+    //       <span>
+    //             Table of contents
+    //       </span>
+    //     </div>
+    //   </div>
     //   <LeftTableOfContents colorMode={contentColor} />
     //   <Footer 
     //     part={ "right" }
@@ -169,8 +223,17 @@ export default function Home() {
                   useMouseEvents={false}
                   ref={bookRef1}
                 >
-                  <SinglePage number="1">
-                    <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                  {
+                    BookList.map((page,index) => {
+                      console.log(page)
+                      return <SinglePage number={`${index + 1}`} key={index}>
+                        {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
+                      </SinglePage>
+                    })
+                  }
+                  {/* <SinglePage number="1">
+                    <div style={{display: "flex", flexDirection: "column", height: "100vh", border: "1px solid #ccc"}}>
+                      <Header sectionTitle={"PREPARATIONS"} subTitle={"Table of contents"} pageNumber={86} part="left" />
                       <LeftTableOfContents colorMode={contentColor} />
                       <Footer 
                         part={ "left" }
@@ -185,6 +248,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="2">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
+                      <Header sectionTitle={"PREPARATIONS"} subTitle={"Table of contents"} pageNumber={86} part="right" />
                       <RightTableOfContents colorMode={contentColor} />
                       <Footer 
                         part={ "right" }
@@ -367,7 +431,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="15">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
-                      <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" />
+                      <Header sectionTitle={"PREPARATIONS"} subTitle={"Education"} pageNumber={86} part="left" />
                       <EducationListLeftPage />
                       <Footer 
                         part={ "left"}
@@ -382,7 +446,7 @@ export default function Home() {
                   </SinglePage>
                   <SinglePage number="16">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
-                      <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" />
+                      <Header sectionTitle={"PREPARATIONS"} subTitle={"Education"} pageNumber={86} part="left" />
                       <EducationListRightPage />
                       <Footer 
                         part={ "right"}
@@ -394,7 +458,7 @@ export default function Home() {
                         click10Next={setNext10} 
                       />
                     </div>
-                  </SinglePage>
+                  </SinglePage> */}
                   
                   {/* <SinglePage number="15">
                     <div style={{display: "flex", flexDirection: "column", height: "100vh"}}>
