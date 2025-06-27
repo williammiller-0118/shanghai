@@ -101,6 +101,6 @@ body {
   }
 }
 .demoPage {
-  height: 100dvh !important
-  /* @apply max-h-dvh; */
+  /* height: 100dvh !important */
+  @apply max-h-dvh;
 }

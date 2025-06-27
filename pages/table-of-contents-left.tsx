@@ -114,25 +114,27 @@ export default function LeftTableOfContents() {
       <div className={`${styles.contentArea} bg-white`}>
         <div className={styles.leftpage}>
           {/* Featured Image - Spans columns 1-2 */}
-          <div className={styles.responsiveMediaWrapper}>
-            <Image
-              src="/images/contents.png"
-              alt="Shanghai skyline at night"
-              fill
-            />
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className={styles.responsiveMediaWrapper}>
+              <Image
+                src="/images/contents.png"
+                alt="Shanghai skyline at night"
+                fill
+              />
 
-            {/* Video Controls */}
-            <div className={styles.videoControls}>
-              <div className={styles.playButton}>
-                <Play size={20} fill="white" />
+              {/* Video Controls */}
+              <div className={styles.videoControls}>
+                <div className={styles.playButton}>
+                  <Play size={20} fill="white" />
+                </div>
+                <span className={styles.timeDisplay}>1:19 / 1:19</span>
+                <div className={styles.progressBar}>
+                  <div className={styles.progressFill}></div>
+                </div>
+                <Volume2 size={20} />
+                <Maximize size={20} />
+                <MoreHorizontal size={20} />
               </div>
-              <span className={styles.timeDisplay}>1:19 / 1:19</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progressFill}></div>
-              </div>
-              <Volume2 size={20} />
-              <Maximize size={20} />
-              <MoreHorizontal size={20} />
             </div>
           </div>
           <div className={styles.dividerow}>
