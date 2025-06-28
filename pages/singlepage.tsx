@@ -9,7 +9,7 @@ interface PageProps {
 const SinglePage = React.forwardRef<HTMLDivElement, PageProps>(
   ({ number, children }, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-      <div className={`demoPage ${styles.page} page-cover bg-white border-1 border border-black`} ref={ref}>
+      <div className={`demoPage ${styles.page} page-cover bg-white border-1 border border-red`} ref={ref}>
         <div>{children}</div>
       </div>
     );

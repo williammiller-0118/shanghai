@@ -45,24 +45,24 @@ import EducationListRightPage from "@/pages/educationlist-page-right"
 import Header from "@/components/header"
 
 const BookList = [
-  {page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86"},
-  {page: RightTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "87"},
-  {page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28"},
-  {page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29"},
-  {page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30"},
-  {page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31"},
-  {page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32"},
-  {page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33"},
-  {page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36"},
-  {page: PeopleCultureRightPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "37"},
-  {page: AsianEscapesLeftPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "412"},
-  {page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413"},
-  {page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86"},
-  {page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87"},
-  {page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222"},
-  {page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223"},
-  {page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220"},
-  {page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221"},
+  { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
+  { page: RightTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "87" },
+  { page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28" },
+  { page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29" },
+  { page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30" },
+  { page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31" },
+  { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
+  { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
+  { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
+  { page: PeopleCultureRightPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "37" },
+  { page: AsianEscapesLeftPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "412" },
+  { page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413" },
+  { page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86" },
+  { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
+  { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
+  { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
+  { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
+  { page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221" },
 ]
 
 export default function Home() {
@@ -135,7 +135,7 @@ export default function Home() {
     if (bookRef.current) bookRef.current?.pageFlip().turnToPage(0);
     if (bookRef1.current) bookRef1.current?.pageFlip().turnToPage(0);
   };
-  
+
   if (currentPage === "video") {
     return <VideoIntro onVideoEnd={handleVideoEnd} />
   }
@@ -145,18 +145,19 @@ export default function Home() {
   }
 
   const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
-    
-    return <div style={{display: "flex", flexDirection: "column", height: "100vh", border: "1px solid #ccc"}}>
+
+    // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
+     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="h-dvh">
       <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       <Page />
-      <Footer 
-        part={ part }
+      <Footer
+        part={part}
         clickNext={setNext}
         clickFastNext={setFastNext}
         clickPrevious={setPrevious}
         clickFastPrevious={setFastPrevious}
         click10Previous={setPrevious10}
-        click10Next={setNext10} 
+        click10Next={setNext10}
       />
     </div>
   }
@@ -197,7 +198,7 @@ export default function Home() {
                   ref={bookRef1}
                 >
                   {
-                    BookList.map((page,index) => {
+                    BookList.map((page, index) => {
                       console.log(page)
                       return <SinglePage number={`${index + 1}`} key={index}>
                         {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
