@@ -110,22 +110,12 @@ export default function RightTableOfContents({ colorMode }: TableOfContentsProps
   )
 
   return (
-    <PageLayout>
-      <div className={originstyles.bookLayout}>
-        {/* Navigation Header */}
-
-        <div className={`${styles.contentArea} ${colorMode === "dark" ? "bg-[#222]" : "bg-white"}`}>
-          <div className={styles.rightpage}>
-            {/* Column 4 */}
-            <div className={styles.column4}>
-              {renderSection("SOFT LANDING", tableOfContentsData.softLanding, "#3a4c63", "#9e9277", "142")}
-              {renderSection("LIVING THE LIFE", tableOfContentsData.livingTheLife1, "#282a40", "#2da5d2", "288")}
-              {renderSection("", tableOfContentsData.livingTheLife2,"#282a40", "#2da5d2")}
-              {renderSection("MAPS", tableOfContentsData.maps,"#675950", "#a1ac99")}
-            </div>
-          </div>
-        </div>
-      </div>
-    </PageLayout>
+    <div className={styles.rightpage}>
+      {/* Column 4 */}
+        {renderSection("SOFT LANDING", tableOfContentsData.softLanding, "#3a4c63", "#9e9277", "142")}
+        {renderSection("LIVING THE LIFE", tableOfContentsData.livingTheLife1, "#282a40", "#2da5d2", "288")}
+        {renderSection("", tableOfContentsData.livingTheLife2,"#282a40", "#2da5d2")}
+        {renderSection("MAPS", tableOfContentsData.maps,"#675950", "#a1ac99")}
+    </div>
   )
 }

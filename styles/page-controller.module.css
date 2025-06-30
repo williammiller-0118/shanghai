@@ -5,8 +5,12 @@
     margin-right: 0.3rem;
 }
 
-.barPos {
-    translate: -25vw;
+.leftbarPos {
+    translate: 25dvw;
+}
+
+.rightbarPos {
+    translate: -25dvw;
 }
 
 .leftHidden {
@@ -15,16 +19,23 @@
 
 @media (max-width: 768px) {
     .btnSize {
-        width: 35px;
-        height: 35px;
-        font-size: 15px;
+        width: 10%;
+        height: fit-content;
     }
 
     .barPos {
         translate: 0;
     }
 
-    .leftHidden {
-        display: flex;
+    .leftbarPos {
+        width: 80dvw;
+        translate: 0dvw;
+        height: 60%;
+    }
+
+    .rightbarPos {
+        width: 80dvw;
+        height: 60%;
+        translate: 0dvw;
     }
 }

@@ -147,23 +147,29 @@ export default function Home() {
   const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
 
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
-     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="h-dvh">
-      <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
-      <Page />
-      <Footer
-        part={part}
-        clickNext={setNext}
-        clickFastNext={setFastNext}
-        clickPrevious={setPrevious}
-        clickFastPrevious={setFastPrevious}
-        click10Previous={setPrevious10}
-        click10Next={setNext10}
-      />
+    return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
+      <div style={{ height: "10dvh"}}>
+        <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
+      </div>
+      <div style={{ height: "84dvh", overflow: "auto" }}>
+        <Page />
+      </div>
+      <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+        <Footer
+          part={part}
+          clickNext={setNext}
+          clickFastNext={setFastNext}
+          clickPrevious={setPrevious}
+          clickFastPrevious={setFastPrevious}
+          click10Previous={setPrevious10}
+          click10Next={setNext10}
+        />
+      </div>
     </div>
   }
 
   return (
-    // <LeftTableOfContents />
+    // <RightTableOfContents colorMode={""} />
     // <EducationListRightPage />
     <ThemeProvider
       attribute="class"

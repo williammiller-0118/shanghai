@@ -3,14 +3,6 @@
 import styles from "@/styles/header.module.css"
 import React from "react"
 
-import { ThemeProvider } from "next-themes";
-import {
-  SidebarProvider,
-  SidebarInset,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
-import {AppSidebar} from "@/components/app-sidebar";
-
 interface HeaderProps {
     sectionTitle: React.ReactNode,
     pageNumber: React.ReactNode,
@@ -20,15 +12,15 @@ interface HeaderProps {
 
 export default function Header({sectionTitle, subTitle, pageNumber, part}: HeaderProps) {
     return (
-        <div>
+        <div className={styles.header}>
             { part === "left" ? <div style={{display:"flex"}}>
-                <div style={{backgroundColor: "#ccc"}}>
-                    <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
+                <div style={{backgroundColor: "#ccc", height: "10dvh"}}>
+                    <p style={{fontSize: "100%", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "4dvh", paddingRight: "2dvh", color: "white"}}>
                     {pageNumber}
                     </p>
                 </div>
-                <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingLeft: "10px"}}>
-                    <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
+                <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "1dvh", height: "10dvh"}}>
+                    <span style={{fontSize: "120%", fontWeight: "400", textDecoration: "underline"}}>
                     {sectionTitle}
                     </span>
                     <span style={{paddingLeft: "10px", paddingRight: "10px", display:`${subTitle == "" ? "none" : ""}`}}>|</span>
@@ -37,18 +29,18 @@ export default function Header({sectionTitle, subTitle, pageNumber, part}: Heade
                     </span>
                 </div>
             </div> :
-            <div style={{display:"flex"}}>
-              <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "0.1rem", paddingTop: "30px", paddingRight: "20px", textAlign: "right"}}>
+            <div style={{display:"flex", height: "10dvh"}}>
+              <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "5dvh", paddingRight: "2dvh", textAlign: "right"}}>
                 <span>
                      {subTitle}
                 </span>
-                <span style={{paddingLeft: "10px", paddingRight: "10px", display:`${subTitle == "" ? "none" : ""}`}}>|</span>
-                <span style={{fontSize: "larger", fontWeight: "400", textDecoration: "underline"}}>
+                <span style={{paddingLeft: "2dvh", paddingRight: "1dvh", display:`${subTitle == "" ? "none" : ""}`}}>|</span>
+                <span style={{fontSize: "120%", fontWeight: "400", textDecoration: "underline"}}>
                   {sectionTitle}
                 </span>
               </div>
               <div style={{backgroundColor: "#ccc"}}>
-                <p style={{fontSize: "20px", padding: "0.1rem", paddingTop: "30px", paddingLeft: "40px", paddingRight: "20px", color: "white"}}>
+                <p style={{fontSize: "100%", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "4dvh", paddingRight: "2dvh", color: "white"}}>
                   {pageNumber}
                 </p>
               </div>

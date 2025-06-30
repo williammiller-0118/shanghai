@@ -111,52 +111,30 @@ export default function LeftTableOfContents() {
   )
 
   return (
-      <div className={`${styles.contentArea} bg-white`}>
-        <div className={styles.leftpage}>
-          {/* Featured Image - Spans columns 1-2 */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className={styles.responsiveMediaWrapper}>
-              <Image
-                src="/images/contents.png"
-                alt="Shanghai skyline at night"
-                fill
-              />
-
-              {/* Video Controls */}
-              <div className={styles.videoControls}>
-                <div className={styles.playButton}>
-                  <Play size={20} fill="white" />
-                </div>
-                <span className={styles.timeDisplay}>1:19 / 1:19</span>
-                <div className={styles.progressBar}>
-                  <div className={styles.progressFill}></div>
-                </div>
-                <Volume2 size={20} />
-                <Maximize size={20} />
-                <MoreHorizontal size={20} />
-              </div>
-            </div>
+      <div className={styles.leftpage}>
+        {/* Featured Image - Spans columns 1-2 */}
+        <div className="bg-white rounded-lg shadow-md p-6 h-[40dvh]">
+          <div className={styles.responsiveMediaWrapper}>
+            <img
+              src="/images/contents.png"
+              alt="Shanghai skyline at night"
+            />
           </div>
-          <div className={styles.dividerow}>
-            {/* Column 1 - Below image */}
-            <div className={styles.column1}>{renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}</div>
-
-            {/* Column 2 - Below image */}
-            <div className={styles.column2}>
-              {renderSection("", tableOfContentsData.relocationItems)}
-
-              {/* Globe Logo */}
-              <div className={styles.globeLogo}>
-                <img
-                  src="images/globe.png"
-                  alt="Fantasy Globe"
-                  style={{
-                    height: '100px',
-                    objectFit: 'cover',
-                  }}
-                />
-              </div>
-            </div>
+        </div>
+        <div className={styles.dividerow}>
+          {/* Column 1 - Below image */}
+          {renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}
+          {renderSection("", tableOfContentsData.relocationItems)}
+          <div>
+            <img
+              src="images/globe.png"
+              alt="Fantasy Globe"
+              style={{
+                height: '100px',
+                objectFit: 'cover',
+                margin: "auto"
+              }}
+            />
           </div>
         </div>
       </div>

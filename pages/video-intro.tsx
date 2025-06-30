@@ -2,9 +2,12 @@
 
 import React from "react";
 import { useEffect, useRef } from "react"
+import style from "@/styles/video-intro.module.css"
+
 interface VideoIntroProps {
   onVideoEnd: () => void
 }
+
 export default function VideoIntro({ onVideoEnd }: VideoIntroProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -28,10 +31,10 @@ export default function VideoIntro({ onVideoEnd }: VideoIntroProps) {
   }, [onVideoEnd])
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section>
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-contain"
+        className={style.fullscreenVideo}
         autoPlay
         muted
         playsInline
@@ -39,8 +42,8 @@ export default function VideoIntro({ onVideoEnd }: VideoIntroProps) {
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
       >
-        <source src="/videos/going-global-intro.mp4" media="(min-width: 769px)" type="video/mp4" />
-        <source src="/videos/going_global_mobile.mp4" media="(max-width: 768px)" type="video/mp4" />
+        <source src="/videos/World Logo Reveal Version 03.mp4" media="(min-width: 769px)" type="video/mp4" />
+        <source src="/videos/World Logo Reveal Version 03.mp4" media="(max-width: 768px)" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>

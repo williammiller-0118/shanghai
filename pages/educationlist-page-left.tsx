@@ -22,9 +22,9 @@ interface AsianEscapesPageProps {
 
 function InfoRow({ label, value, isLink = false, isRange = false }: { label: string; value: string; isLink?: boolean; isRange?: boolean }) {
   return (
-    <div className="flex items-start px-[10px]" style={{borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem", position: "relative"}}>
+    <div className="flex items-start px-[10px]" style={{ borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem", position: "relative" }}>
       <span className="font-semibold w-60">{label}:</span>
-      <div style={{right: "1rem", textAlign: "right", position: "absolute", width: "50vw"}}>
+      <div style={{ right: "1rem", textAlign: "right", position: "absolute", width: "50vw" }}>
         {isLink ? (
           <a href="#" className="text-blue-600 underline">{value}</a>
         ) : isRange ? (
@@ -56,94 +56,91 @@ export default function EducationListLeftPage() {
   }
 
   return (
-    <div className={originstyles.bookLayout} style={{color: "black"}}>
-      {/* <Header sectionTitle={"PREPARATIONS | Education"} pageNumber={86} part="left" /> */}
-      <div className={styles.mainContent}>
-        <div style={{flex: "1"}}>
-          <div className="max-w-4xl mx-auto mb-6">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              {/* Header */}
-              <div className="flex items-center space-x-4 mb-3">
-                <div className="w-12 h-12 rounded">
-                  <a href="#">
-                    <img src="/images/westernSchool.png" alt="no image" />
-                  </a>
-                </div>
-                <h1 className="text-l font-semibold">
-                  Western International School of Shanghai
-                </h1>
+    <div className={styles.mainContent}>
+      <div style={{ flex: "1" }}>
+        <div className="max-w-4xl mx-auto mb-6">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            {/* Header */}
+            <div className="flex items-center space-x-4 mb-3">
+              <div className="w-12 h-12 rounded">
+                <a href="#">
+                  <img src="/images/westernSchool.png" alt="no image" />
+                </a>
               </div>
+              <h1 className="text-l font-semibold">
+                Western International School of Shanghai
+              </h1>
+            </div>
 
-              <div style={{marginBottom: "1rem"}} className="text-sm">
-                <div style={{fontWeight: "bold", marginBottom: "1rem"}}>Welcome message from the principal</div>
-                <p style={{marginBottom: "1rem"}}>
-                  Wellington College Shanghai has a reputation for excellence and forward-thinking education of the highest quality. We want our young people to 
-                  become the very best they can be. Independent, inquisitive, intellectual adults with strong core values. A proud tradition of values shared with 
-                  Wellington College UK and all Wellington College China schools: courage, kindness, integrity, responsibility and respect. At Wellington in 
-                  Shanghai, we also benefit from the inclusivity of our international community and our position in China today.
-                </p>
-                <p>
-                  We have high expectations for our pupils and ourselves, striving to achieve excellence in all that we do together. It is our ambition that every child 
-                  leaves Wellington ready to embrace all opportunities and challenges: to lead and live well.
-                </p>
-              </div>
+            <div style={{ marginBottom: "1rem" }} className="text-sm">
+              <div style={{ fontWeight: "bold", marginBottom: "1rem" }}>Welcome message from the principal</div>
+              <p style={{ marginBottom: "1rem" }}>
+                Wellington College Shanghai has a reputation for excellence and forward-thinking education of the highest quality. We want our young people to
+                become the very best they can be. Independent, inquisitive, intellectual adults with strong core values. A proud tradition of values shared with
+                Wellington College UK and all Wellington College China schools: courage, kindness, integrity, responsibility and respect. At Wellington in
+                Shanghai, we also benefit from the inclusivity of our international community and our position in China today.
+              </p>
+              <p>
+                We have high expectations for our pupils and ourselves, striving to achieve excellence in all that we do together. It is our ambition that every child
+                leaves Wellington ready to embrace all opportunities and challenges: to lead and live well.
+              </p>
+            </div>
 
-              <div className="grid grid-cols-5 gap-2 text-2xl mb-3" style={{borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem"}}>
-                <div className={styles.iconBox}><Globe size={20} /></div>
-                <div className={styles.iconBox}><Youtube size={20} /></div>
-                <div className={styles.iconBox}><Facebook size={20} /></div>
-                <div className={styles.iconBox}><Linkedin size={20} /></div>
-                <div className={styles.iconBox}><Instagram size={20} /></div>
-              </div>
+            <div className="grid grid-cols-5 gap-2 text-2xl mb-3" style={{ borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem" }}>
+              <div className={styles.iconBox}><Globe size={20} /></div>
+              <div className={styles.iconBox}><Youtube size={20} /></div>
+              <div className={styles.iconBox}><Facebook size={20} /></div>
+              <div className={styles.iconBox}><Linkedin size={20} /></div>
+              <div className={styles.iconBox}><Instagram size={20} /></div>
+            </div>
 
-              {/* Info Grid */}
-              <div className="grid grid-cols-1 gap-x-10 text-sm">
-                <InfoRow label="Curriculum" value="IB, British, and International" isLink />
-                <InfoRow label="Diploma" value="IGCSE and IB Diploma " isLink />
-                <InfoRow label="Enrollment" value="1600  Age range: (2-18)" />
-                <InfoRow label="Nationalities" value="40" />
-                <InfoRow label="Tuition" value="RMB305,400-379,600" />
-              </div>
+            {/* Info Grid */}
+            <div className="grid grid-cols-1 gap-x-10 text-sm">
+              <InfoRow label="Curriculum" value="IB, British, and International" isLink />
+              <InfoRow label="Diploma" value="IGCSE and IB Diploma " isLink />
+              <InfoRow label="Enrollment" value="1600  Age range: (2-18)" />
+              <InfoRow label="Nationalities" value="40" />
+              <InfoRow label="Tuition" value="RMB305,400-379,600" />
             </div>
           </div>
         </div>
-        <div style={{flex: "1"}}>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="mb-[2rem]">
-              <p style={{padding: "1rem"}}>Address: No. 1500 Yao Long Road (near the Oriental Sports Center) Pudong</p>
-              <div className="w-full h-[30vh] rounded-2xl overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.9505705298343!2d121.4716977!3d31.1507666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b27b135fa047d9%3A0x68a557f589b29783!2sShanghai%20Wellington%20International%20School!5e0!3m2!1sen!2sus!4v1685846812345!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+      </div>
+      <div style={{ flex: "1" }}>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="mb-[2rem]">
+            <p style={{ padding: "1rem" }}>Address: No. 1500 Yao Long Road (near the Oriental Sports Center) Pudong</p>
+            <div className="w-full h-[30vh] rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.9505705298343!2d121.4716977!3d31.1507666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b27b135fa047d9%3A0x68a557f589b29783!2sShanghai%20Wellington%20International%20School!5e0!3m2!1sen!2sus!4v1685846812345!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-            <div className="mb-[2rem]">
-              <p style={{padding: "1rem"}}>Address: No. 195 Tongwan Road, Pudong New District</p>
-              <div className="w-full h-[30vh] rounded-2xl overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps/place/Tong+Wan+Lu,+Pu+Dong+Xin+Qu,+Shang+Hai+Shi,+China/@31.1477446,121.4665697,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27b6a7af31859:0xacccc8f958656227!8m2!3d31.14774!4d121.46915!16s%2Fg%2F11c61z1j9r?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+          </div>
+          <div className="mb-[2rem]">
+            <p style={{ padding: "1rem" }}>Address: No. 195 Tongwan Road, Pudong New District</p>
+            <div className="w-full h-[30vh] rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/place/Tong+Wan+Lu,+Pu+Dong+Xin+Qu,+Shang+Hai+Shi,+China/@31.1477446,121.4665697,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27b6a7af31859:0xacccc8f958656227!8m2!3d31.14774!4d121.46915!16s%2Fg%2F11c61z1j9r?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-            <div>
-              <div style={{display:"flex", marginBottom: "1rem"}}>
-                <Mail size={20} />
-                <p className="ml-[1rem]">info.shanghai@wellingtoncollege.cn</p>
-              </div>
-              <div style={{display: "flex"}}>
-                <Phone size={20} />
-                <p className="ml-[1rem]">tel:86-21-5185-3866</p>
-              </div>
+          </div>
+          <div>
+            <div style={{ display: "flex", marginBottom: "1rem" }}>
+              <Mail size={20} />
+              <p className="ml-[1rem]">info.shanghai@wellingtoncollege.cn</p>
+            </div>
+            <div style={{ display: "flex" }}>
+              <Phone size={20} />
+              <p className="ml-[1rem]">tel:86-21-5185-3866</p>
             </div>
           </div>
         </div>

@@ -34,44 +34,32 @@ const preparationsContent = [
 
 export default function BookIntroductionLeftPage() {
   return (
-    <PageLayout>
-      <div className="">
-        <div className={originstyles.bookLayout}>
-          <div className={styles.pageContent}>
-
-            {/* Main Content Area */}
-            <div className={styles.contentArea}>
-              <div className={styles.leftPage}>
-                {/* Left Sidebar - Introduction */}
-                <div className={styles.leftSidebar}>
-                  <div className={styles.lionStatue}></div>
-                </div>
-                <div className={styles.videoSection}>
-                  <div className={styles.verticalTitle}>INTRODUCTION</div>
-                  {/* Video/Image Area */}
-                  <div className={styles.videoArea}>
-                    <div className={styles.videoOverlay}></div>
-                    <div className={styles.videoControls}>
-                      <button className={styles.playButton}>
-                        <Play size={20} fill="white" />
-                      </button>
-                      <span className={styles.timeDisplay}>0:00</span>
-                      <div className={styles.progressBar}>
-                        <div className={styles.progressFill}></div>
-                      </div>
-                      <div className={styles.volumeControls}>
-                        <Volume2 size={20} />
-                        <Maximize size={20} />
-                        <Settings size={20} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div className={styles.leftPage}>
+      {/* Left Sidebar - Introduction */}
+      <div className={styles.leftSidebar}>
+        <div className={styles.lionStatue}></div>
+      </div>
+      <div className={styles.videoSection}>
+        <div className={styles.verticalTitle}>INTRODUCTION</div>
+        {/* Video/Image Area */}
+        <div className={styles.videoArea}>
+          <div className={styles.videoOverlay}></div>
+          <div className={styles.videoControls}>
+            <button className={styles.playButton}>
+              <Play size={20} fill="white" />
+            </button>
+            <span className={styles.timeDisplay}>0:00</span>
+            <div className={styles.progressBar}>
+              <div className={styles.progressFill}></div>
+            </div>
+            <div className={styles.volumeControls}>
+              <Volume2 size={20} />
+              <Maximize size={20} />
+              <Settings size={20} />
             </div>
           </div>
         </div>
       </div>
-    </PageLayout>
+    </div>
   )
 }

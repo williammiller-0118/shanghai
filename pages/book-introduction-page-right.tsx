@@ -34,54 +34,48 @@ const preparationsContent = [
 
 export default function BookIntroductionRightPage() {
   return (
-    <PageLayout>
-      <div className="">
-        <div className={originstyles.bookLayout}>
-          <div className={styles.pageContent}>
+    <div className={styles.pageContent}>
 
-            {/* Main Content Area */}
-            <div className={styles.contentArea}>
-              <div className={styles.rightPage}>
-                {/* Center Content */}
-                <div className={styles.centerContent}>
+      {/* Main Content Area */}
+      <div className={styles.contentArea}>
+        <div className={styles.rightPage}>
+          {/* Center Content */}
+          <div className={styles.centerContent}>
 
-                  {/* Introduction Text */}
-                  <div className={styles.introductionText}>
-                    <h2 className={styles.introTitle}>Introduction</h2>
-                    <div className={styles.introContent}>
-                      <p>
-                        As you progress through this section, your understanding of the city you will soon call home will
-                        flourish; and while you may have visited Shanghai in the past or possess previous knowledge to some
-                        degree, you can trust that you will be seeing things in a new light from now on.
-                      </p>
-                      <p>
-                        Successful relocations begin with knowledge and are fuelled by planning and preparation. Start your
-                        preparations early and be meticulous in your planning. This will develop your confidence, which is a
-                        key element in reducing the stress that is often associated with a major life transition.
-                      </p>
-                      <p>Going Global is designed to make a difference – take advantage of it, and we know it will.</p>
-                    </div>
+            {/* Introduction Text */}
+            <div className={styles.introductionText}>
+              <h2 className={styles.introTitle}>Introduction</h2>
+              <div className={styles.introContent}>
+                <p>
+                  As you progress through this section, your understanding of the city you will soon call home will
+                  flourish; and while you may have visited Shanghai in the past or possess previous knowledge to some
+                  degree, you can trust that you will be seeing things in a new light from now on.
+                </p>
+                <p>
+                  Successful relocations begin with knowledge and are fuelled by planning and preparation. Start your
+                  preparations early and be meticulous in your planning. This will develop your confidence, which is a
+                  key element in reducing the stress that is often associated with a major life transition.
+                </p>
+                <p>Going Global is designed to make a difference – take advantage of it, and we know it will.</p>
+              </div>
+            </div>
+          </div>
+          {/* Right Sidebar - Contents */}
+          <div className={styles.rightSidebar}>
+            <div className={styles.contentsSection}>
+              <div className={styles.contentsHeader}>Preparations</div>
+              <div className={styles.contentsList}>
+                {preparationsContent.map((item, index) => (
+                  <div key={index} className={styles.contentsEntry}>
+                    <span className={styles.entryTitle}>{item.title}</span>
+                    <span className={styles.entryPage}>{item.page}</span>
                   </div>
-                </div>
-                {/* Right Sidebar - Contents */}
-                <div className={styles.rightSidebar}>
-                  <div className={styles.contentsSection}>
-                    <div className={styles.contentsHeader}>Preparations</div>
-                    <div className={styles.contentsList}>
-                      {preparationsContent.map((item, index) => (
-                        <div key={index} className={styles.contentsEntry}>
-                          <span className={styles.entryTitle}>{item.title}</span>
-                          <span className={styles.entryPage}>{item.page}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </PageLayout>
+    </div>
   )
 }

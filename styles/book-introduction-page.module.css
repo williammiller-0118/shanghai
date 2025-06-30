@@ -19,7 +19,6 @@
 }
 
 .pageContent {
-  height: calc(100vh - 110px);
   overflow: auto;
 }
 
@@ -97,7 +96,6 @@
 .contentArea {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 120px);
   gap: 1rem;
   padding: 1.5rem;
 }
@@ -113,7 +111,7 @@
 .lionStatue {
   width: 200px;
   height: calc(100vh - 450px);
-  background-image: url("/images/china-lion.png");
+  background-image: url("/images/Isolated fu dog.png");
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -521,9 +519,8 @@
   }
 
   .lionStatue {
-    width: 150px;
+    width: 500px;
     height: 300px;
-    background-image: url("/images/china-lion.png");
     background-size: cover;
     background-position: center;
     border-radius: 8px;
