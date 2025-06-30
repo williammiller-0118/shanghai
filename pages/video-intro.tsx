@@ -42,8 +42,8 @@ export default function VideoIntro({ onVideoEnd }: VideoIntroProps) {
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
       >
-        <source src="/videos/World Logo Reveal Version 04.mp4" media="(min-width: 769px)" type="video/mp4" />
-        <source src="/videos/World Logo Reveal Version 04.mp4" media="(max-width: 768px)" type="video/mp4" />
+        <source src="/videos/World logo reveal 4 sec logo.mp4" media="(min-width: 769px)" type="video/mp4" />
+        <source src="/videos/World logo reveal 4 sec logo.mp4" media="(max-width: 768px)" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
