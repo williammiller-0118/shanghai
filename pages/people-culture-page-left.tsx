@@ -19,7 +19,7 @@ export default function PeopleCultureLeftPage() {
       <div>
         <div className={styles.globeLogo}>
           <img
-            src="images/globe.png"
+            src="images/newGlobe.jpeg"
             alt="Fantasy Globe"
             style={{
               height: '40px',

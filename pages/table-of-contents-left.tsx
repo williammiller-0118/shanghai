@@ -127,7 +127,7 @@ export default function LeftTableOfContents() {
           {renderSection("", tableOfContentsData.relocationItems)}
           <div>
             <img
-              src="images/globe.png"
+              src="images/newGlobe.jpeg"
               alt="Fantasy Globe"
               style={{
                 height: '100px',

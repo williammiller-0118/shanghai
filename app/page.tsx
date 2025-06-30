@@ -180,8 +180,6 @@ export default function Home() {
   }
 
   const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
-
-    // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
       <div style={{ height: "8dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />

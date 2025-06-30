@@ -15,7 +15,7 @@ interface PeopleCulturePageProps {
 
 export default function PeopleCultureRightPage() {
   return (
-    <div>
+    <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
       <div>
         <div className={styles.infoSection}>
           <div className={styles.infoButtonContainer}>

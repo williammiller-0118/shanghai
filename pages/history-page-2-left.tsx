@@ -20,7 +20,7 @@ export default function HistoryLeftPage2() {
         <div className={styles.globeLogo}>
           <div style={{position: 'relative', left: '15%'}}>
             <img
-              src="images/globe.png"
+              src="images/newGlobe.jpeg"
               alt="Fantasy Globe"
               style={{
                 height: '40px',

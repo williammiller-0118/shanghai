@@ -548,6 +548,9 @@
     width: 100%;
     max-width: 100%;
     padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
     flex-direction: column;
     display: flex;
   }
