@@ -118,11 +118,13 @@ export default function Home() {
   }, [next, fastnext, previous, fastprevious, next10, previous10])
 
   useEffect(() => {
-    console.log("specific page:", specificPage)
     if (!bookRef1.current?.pageFlip()) return;
-
-    if(specificPage > 0) bookRef1.current?.pageFlip().flip(specificPage);
-    setSpecPage(-1)
+    
+    if(specificPage > 0) {
+      bookRef1.current?.pageFlip().turnToPage(specificPage);
+      console.log("specific page:", specificPage, bookRef1.current?.pageFlip)
+      setSpecPage(-1)
+    }
   }, [specificPage])
 
   const { theme, resolvedTheme } = useTheme();
@@ -214,7 +216,7 @@ export default function Home() {
       console.log(window.innerWidth)
       let div = []
       for(let index = 0 ; index < BookList.length ; index += 2){
-        div.push(<SinglePage number={`${index / 2 + 1}`} key={index / 2}>
+        div.push(<SinglePage number={`${index / 2}`} key={index / 2}>
           {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, BookList[index].pageNubmer, "left")}
         </SinglePage>)
       }

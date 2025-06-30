@@ -28,7 +28,18 @@ const SchoolCard = ({
   return (
     <div className={styles.card}>
       <div className={styles.cardLeft}>
-        <div className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 gap-[1rem]' style={{padding: "1rem", fontSize: "1rem", display: "flex", cursor: "pointer"}} onClick={() => onClick(linkpage)}> <SchoolIcon size={20} /> {name}</div>
+        <div className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 gap-[1rem]' style={{padding: "1rem", fontSize: "1rem", display: "flex", cursor: "pointer"}} 
+          onClick={() => {
+            if(window.innerWidth > 768){
+              onClick(linkpage); 
+            } else {
+              onClick(Math.floor(linkpage / 2));
+            }
+          }}
+        > 
+          <SchoolIcon size={20} /> 
+          {name}
+        </div>
         <p style={{paddingTop: "1rem", paddingBottom: "1rem"}}>{description}</p>
       </div>
       <div className={styles.cardRight}>
