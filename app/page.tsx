@@ -4,17 +4,14 @@ import React, { ComponentType, ReactNode, useEffect, useRef, useState } from "re
 import VideoIntro from "@/pages/video-intro"
 import ShanghaiPage from "@/pages/shanghai-page"
 import LeftTableOfContents from "@/pages/table-of-contents-left"
-import BookIntroductionPage from "@/pages/book-introduction-page-left"
 import HistoryLeftPage from "@/pages/history-page-left"
 import HistoryLeftPage2 from "@/pages/history-page-2-left"
 import PeopleCultureLeftPage from "@/pages/people-culture-page-left"
-import type { PageFlip } from 'page-flip';
 
 // import HTMLFlipBook from 'react-pageflip';
 import HTMLFlipBook, { HTMLFlipBookElement } from 'react-pageflip';
 import SinglePage from '@/pages/singlepage';
 
-import styles from './page.module.css'
 import sidebarStyle from '@/styles/sidebar.module.css'
 
 import PeopleCultureRightPage from "@/pages/people-culture-page-right"
@@ -23,7 +20,6 @@ import HistoryRightPage from "@/pages/history-page-right"
 import RightTableOfContents from "@/pages/table-of-contents-right"
 import BookIntroductionRightPage from "@/pages/book-introduction-page-right"
 import BookIntroductionLeftPage from "@/pages/book-introduction-page-left"
-import PageControls from "@/components/pagecontroller"
 import AsianEscapesLeftPage from "@/pages/asian-escape-page-left"
 import AsianEscapesRightPage from "@/pages/asian-escape-page-right"
 import EducationLeftPage from "@/pages/education-page-left"
@@ -181,6 +177,51 @@ export default function Home() {
     </div>
   }
 
+  const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
+
+    // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
+    return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
+      <div style={{ height: "8dvh"}}>
+        <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
+      </div>
+      <div style={{ height: "84dvh", overflow: "auto" }}>
+        <LeftPage linkClick={setSpecPage} />
+        <RightPage linkClick={setSpecPage} />
+      </div>
+      <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+        <Footer
+          part={part}
+          clickNext={setNext}
+          clickFastNext={setFastNext}
+          clickPrevious={setPrevious}
+          clickFastPrevious={setFastPrevious}
+          click10Previous={setPrevious10}
+          click10Next={setNext10}
+        />
+      </div>
+    </div>
+  }
+
+  const chooseView = () => {
+    if(window.innerWidth > 768){
+      return BookList.map((page, index) => {
+        console.log(window.innerWidth)
+        return <SinglePage number={`${index + 1}`} key={index}>
+          {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
+        </SinglePage>
+      })
+    } else {
+      console.log(window.innerWidth)
+      let div = []
+      for(let index = 0 ; index < BookList.length ; index += 2){
+        div.push(<SinglePage number={`${index / 2 + 1}`} key={index / 2}>
+          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, BookList[index].pageNubmer, "left")}
+        </SinglePage>)
+      }
+      return div
+    }
+  }
+
   return (
     // <RightTableOfContents colorMode={""} />
     // <HistoryLeftPage />
@@ -217,11 +258,13 @@ export default function Home() {
                   ref={bookRef1}
                 >
                   {
-                    BookList.map((page, index) => {
-                      return <SinglePage number={`${index + 1}`} key={index}>
-                        {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
-                      </SinglePage>
-                    })
+                    chooseView()
+                    // BookList.map((page, index) => {
+                    //   console.log(window.innerWidth)
+                    //   return <SinglePage number={`${index + 1}`} key={index}>
+                    //     {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
+                    //   </SinglePage>
+                    // })
                   }
                 </HTMLFlipBook>
               </div>
