@@ -8,9 +8,9 @@
   z-index: -1;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .fullscreenVideo {
     object-fit: contain;
-    background-color: black; /* optional, fills the space around */
+    background-color: black;
   }
-}
+} */

@@ -15,7 +15,7 @@ interface PeopleCulturePageProps {
 
 export default function PeopleCultureRightPage() {
   return (
-    <div className={styles.contentLayout}>
+    <div>
       <div>
         <div className={styles.infoSection}>
           <div className={styles.infoButtonContainer}>

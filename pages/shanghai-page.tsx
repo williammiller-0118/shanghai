@@ -12,8 +12,6 @@ export default function ShanghaiPage({ onPowerButtonClick }: ShanghaiPageProps) 
   const videoRef = useRef<HTMLVideoElement>(null)
 
   return (
-    <div className={styles.pageLayout}>
-      {/* Power Button */}
       <div className={styles.bookLayout}>
 
         <button onClick={onPowerButtonClick} className={styles.powerButton}>
@@ -45,6 +43,5 @@ export default function ShanghaiPage({ onPowerButtonClick }: ShanghaiPageProps) 
           <div className={styles.overlay}></div>
         </div>
       </div>
-    </div>
   )
 }

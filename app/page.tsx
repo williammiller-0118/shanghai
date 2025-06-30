@@ -61,8 +61,8 @@ const BookList = [
   { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
   { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
   { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
-  { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
-  { page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221" },
+  // { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
+  // { page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221" },
 ]
 
 export default function Home() {
@@ -148,10 +148,10 @@ export default function Home() {
 
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-      <div style={{ height: "10dvh"}}>
+      <div style={{ height: "8dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "84dvh", overflow: "auto" }}>
+      <div style={{ height: "84dvh" }}>
         <Page />
       </div>
       <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
@@ -170,7 +170,7 @@ export default function Home() {
 
   return (
     // <RightTableOfContents colorMode={""} />
-    // <EducationListRightPage />
+    // <HistoryLeftPage />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"

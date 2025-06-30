@@ -14,12 +14,12 @@ export default function Header({sectionTitle, subTitle, pageNumber, part}: Heade
     return (
         <div className={styles.header}>
             { part === "left" ? <div style={{display:"flex"}}>
-                <div style={{backgroundColor: "#ccc", height: "10dvh"}}>
+                <div style={{backgroundColor: "#ccc", height: "8dvh"}}>
                     <p style={{fontSize: "100%", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "4dvh", paddingRight: "2dvh", color: "white"}}>
                     {pageNumber}
                     </p>
                 </div>
-                <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "1dvh", height: "10dvh"}}>
+                <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "5dvh", paddingLeft: "1dvh", height: "8dvh"}}>
                     <span style={{fontSize: "120%", fontWeight: "400", textDecoration: "underline"}}>
                     {sectionTitle}
                     </span>
@@ -29,7 +29,7 @@ export default function Header({sectionTitle, subTitle, pageNumber, part}: Heade
                     </span>
                 </div>
             </div> :
-            <div style={{display:"flex", height: "10dvh"}}>
+            <div style={{display:"flex", height: "8dvh"}}>
               <div style={{flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "5dvh", paddingRight: "2dvh", textAlign: "right"}}>
                 <span>
                      {subTitle}
