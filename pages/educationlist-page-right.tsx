@@ -283,7 +283,7 @@ export default function EducationListRightPage() {
         </div>
         <div style={{flex: "1", display: "flex", flexDirection: "column"}}>
           <div className="max-w-4xl" style={{flex: "1"}}>
-            <div className="bg-white h-full rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-6">
               {/* Header */}
               <div className="flex items-center space-x-4 mb-3">
                 <div className="w-12 h-12 rounded">
@@ -337,6 +337,9 @@ export default function EducationListRightPage() {
                   <Globe size={20} />
                 </a>
               </div>
+            </div>
+            <div>
+              <img src={"images/world.jpg"} />
             </div>
           </div>
         </div>

@@ -14,3 +14,11 @@
     background-color: black;
   }
 } */
+
+@media (max-width: 768px) {
+  .fullscreenVideo {
+    width: 100%;
+    object-fit: cover;
+    background-color: black; /* optional letterboxing */
+  }
+}

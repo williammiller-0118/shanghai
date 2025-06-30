@@ -43,6 +43,7 @@ import Footer from "@/components/footer"
 import EducationListLeftPage from "@/pages/educationlist-page-left"
 import EducationListRightPage from "@/pages/educationlist-page-right"
 import Header from "@/components/header"
+import educationMainPage from "@/pages/education-main-page"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -59,6 +60,8 @@ const BookList = [
   { page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413" },
   { page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86" },
   { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
+  { page: educationMainPage, sectionTitle: "Education", subTitle: "Education Main", pageNubmer: "224", link: 10 },
+  { page: educationMainPage, sectionTitle: "Education", subTitle: "Education Main", pageNubmer: "225", link: 10 },
   { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
   { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
   // { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
@@ -75,6 +78,8 @@ export default function Home() {
   const [next10, setNext10] = useState(false);
   const [viewmode, setViewMode] = useState("");
   const [contentColor, setContentColor] = useState("");
+
+  const [specificPage, setSpecPage] = useState(-1);
 
   const bookRef = useRef<HTMLFlipBookElement | null>(null);
   const bookRef1 = useRef<HTMLFlipBookElement | null>(null);
@@ -116,6 +121,14 @@ export default function Home() {
     }
   }, [next, fastnext, previous, fastprevious, next10, previous10])
 
+  useEffect(() => {
+    console.log("specific page:", specificPage)
+    if (!bookRef1.current?.pageFlip()) return;
+
+    if(specificPage > 0) bookRef1.current?.pageFlip().flip(specificPage);
+    setSpecPage(-1)
+  }, [specificPage])
+
   const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
@@ -151,8 +164,8 @@ export default function Home() {
       <div style={{ height: "8dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "84dvh" }}>
-        <Page />
+      <div style={{ height: "84dvh", overflow: "auto" }}>
+        <Page linkClick={setSpecPage} />
       </div>
       <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
         <Footer
@@ -205,7 +218,6 @@ export default function Home() {
                 >
                   {
                     BookList.map((page, index) => {
-                      console.log(page)
                       return <SinglePage number={`${index + 1}`} key={index}>
                         {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
                       </SinglePage>

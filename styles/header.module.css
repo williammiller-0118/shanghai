@@ -3,3 +3,11 @@
   height: 10dvh;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 70%;
+    height: 10dvh;
+    color: white;
+  }
+}
