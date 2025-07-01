@@ -25,7 +25,7 @@ export default function HistoryLeftPage() {
             <div className={styles.sectionIcon}>
               <BookOpen size={16} />
             </div>
-            <h1 style={{fontSize: "2rem", borderTop: "5px solid black", borderBottom: "1px solid black"}} className={styles.sectionHeaderTitle}>History</h1>
+            <h1 style={{ fontSize: "2rem", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
           </div>
 
           {/* Paragraph Subheading */}

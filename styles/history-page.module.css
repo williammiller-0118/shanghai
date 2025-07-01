@@ -252,6 +252,7 @@
   color: #4a5568;
   margin-bottom: 0.75rem;
   text-align: justify;
+  position: relative;
 }
 
 .mainBodyIntro {
@@ -447,13 +448,14 @@
   .infoButton {
     width: 35px;
     height: 35px;
+    right: 5%;
+    position: absolute;
   }
 
   .infoButtonContainer {
     position: relative;
     top: 0.5rem;
     right: 10%;
-    transform: translateX(100%);
     z-index: 20;
   }
 
@@ -477,7 +479,6 @@
     justify-content: right;
     right: 10%;
     padding: 1.5rem;
-    position: relative;
     background: white;
     z-index: 20;
   }
