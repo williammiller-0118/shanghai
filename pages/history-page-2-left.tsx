@@ -32,7 +32,19 @@ export default function HistoryLeftPage2() {
       </div> */}
       <div className={styles.contentLayout}>
         <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto" }}>
-          <p className={styles.mainBody}>
+          <div className={styles.mainBody}>
+            <div className={`${styles.videoArea} ${styles.videoBackground}`}>
+            <div className={styles.videoOverlay}>
+              <h1 className={styles.videoTitle}>China's Revolutions</h1>
+              <div className={styles.videoControls}>
+                <button className={styles.playButton}>▶</button>
+                <button className={styles.shareButton}>
+                  <Share size={16} style={{ marginRight: "0.5rem" }} />
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
             its first gaslights, electric power, telephones and trams. The city continued to prosper throughout the
             first decade of the 20th century, welcoming Japanese, Russians and other Europeans, each bringing their
             own customs and culture. By the 1920s and 30s, Shanghai had grown into the wealthiest and most
@@ -67,7 +79,7 @@ export default function HistoryLeftPage2() {
             years it had lost during Communism. Tens of thousands of foreign and Chinese investors poured money into
             new enterprises and infrastructure, while hundreds of thousands of Chinese laborers migrated from their
             homes across the country to Shanghai to build it.
-          </p>
+          </div>
 
         </div>
       </div>
