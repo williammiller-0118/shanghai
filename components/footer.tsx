@@ -15,7 +15,7 @@ interface FooterProps {
 
 export default function Footer({part, clickNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, clickFastNext} : FooterProps) {
   return (
-      <div style={{height: "10dvh", position: "relative"}} >
+      <div style={{position: "relative"}} >
         <PageControls 
           part={part}
           clickNext={clickNext}

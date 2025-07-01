@@ -159,13 +159,13 @@ export default function Home() {
 
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-      <div style={{ height: "8dvh"}}>
+      <div style={{ height: "5dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "84dvh", overflow: "auto" }}>
+      <div style={{ height: "90dvh", overflow: "auto" }}>
         <Page linkClick={setSpecPage} />
       </div>
-      <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+      <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
         <Footer
           part={part}
           clickNext={setNext}
@@ -181,14 +181,14 @@ export default function Home() {
 
   const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string) => {
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-      <div style={{ height: "8dvh"}}>
+      <div style={{ height: "6dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "84dvh", overflow: "auto" }}>
+      <div style={{ height: "88dvh", overflow: "auto" }}>
         <LeftPage linkClick={setSpecPage} />
         <RightPage linkClick={setSpecPage} />
       </div>
-      <div style={{ height: "8dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+      <div style={{ height: "6dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
         <Footer
           part={part}
           clickNext={setNext}

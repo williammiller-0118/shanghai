@@ -117,7 +117,7 @@ export default function LeftTableOfContents() {
         <div className={styles.dividerow}>
           {/* Column 1 - Below image */}
           {renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}
-          <div>
+          {/* <div>
             <img
               src="images/newGlobe.jpeg"
               alt="Fantasy Globe"
@@ -127,7 +127,7 @@ export default function LeftTableOfContents() {
                 margin: "auto"
               }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
   )
