@@ -95,7 +95,7 @@ export default function LeftTableOfContents() {
     <div className={styles.section}>
       <div style={{display: "flex"}}>
         {title !== "" && <span style={{color: "white", backgroundColor: "black", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>}
-        {pageNumber && <span style={{backgroundColor: "#ccc", flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
+        {<span style={{backgroundColor: "#ccc", width: "3rem", wordWrap: "break-word", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
         {entries.map((entry, index) => (

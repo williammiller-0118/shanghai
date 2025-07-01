@@ -73,7 +73,7 @@ export default function RightTableOfContents({ colorMode }: TableOfContentsProps
     <div className={styles.section}>
       <div style={{display: "flex"}}>
         <span style={{backgroundColor: maincolor, color: "white", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
-        {<span style={{width: "100%", backgroundColor: pagecolor, flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
+        {<span style={{width: "3rem", backgroundColor: pagecolor, padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
         {entries.map((entry, index) => (
