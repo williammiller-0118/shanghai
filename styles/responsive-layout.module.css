@@ -89,7 +89,7 @@
 /* Power Button Styles */
 .powerButton {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -119,23 +119,23 @@
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .powerButton {
     top: 12.5rem;
     width: 4rem;
     height: 4rem;
     border-width: 4px;
   }
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .powerButton {
     top: 2rem;
     width: 6rem;
     height: 6rem;
     border-width: 4px;
   }
-}
+} */
 
 /* Shanghai Page Specific Styles */
 .shanghaiBackground {
