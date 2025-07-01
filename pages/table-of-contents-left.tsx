@@ -111,10 +111,8 @@ export default function LeftTableOfContents() {
   return (
       <div className={styles.leftpage}>
         {/* Featured Image - Spans columns 1-2 */}
-        <div className="bg-white rounded-lg shadow-md p-6 h-[40dvh]">
-          <div className="videoWrapper" style={{height: "100%"}}>
-            <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
-          </div>
+        <div className="videoWrapper" style={{height: "100%"}}>
+          <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
         </div>
         <div className={styles.dividerow}>
           {/* Column 1 - Below image */}

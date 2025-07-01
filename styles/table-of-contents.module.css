@@ -448,8 +448,8 @@
 }
 
 .videoWrapper {
-  height: 300px;
-  width: calc(300px * 16 / 9);
+  width: 100dvh;
+  height: calc(100dvh * 16 / 9);
   max-width: 100%;
   overflow: hidden;
 }
