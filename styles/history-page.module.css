@@ -4,6 +4,13 @@
   height: 85dvh;
 }
 
+.videoWrapper {
+  width: 100dvh;
+  height: calc(100dvh * 16 / 9);
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .historyWrapper {
   height: 100%;
 }

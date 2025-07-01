@@ -32,13 +32,9 @@ export default function HistoryLeftPage() {
           <h2 className={styles.paragraphSubheading}>A Brief history of China</h2>
           <div className={styles.mainBody}>
             <div className={`${styles.videoArea} ${styles.videoArea1}`}>
-              <div className={styles.videoOverlay}>
-                <h1 className={styles.videoTitle}>History of China</h1>
-                <div className={styles.videoControls}>
-                  <button className={styles.playButton}>
-                    <Play size={16} fill="white" />
-                  </button>
-                  <span className={styles.timeDisplay}>0:00</span>
+              <div>
+                <div className="videoWrapper" style={{height: "100%"}}>
+                  <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
                 </div>
               </div>
             </div>
