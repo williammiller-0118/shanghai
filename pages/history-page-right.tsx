@@ -48,16 +48,9 @@ export default function HistoryRightPage() {
               plentiful labor from impoverished rural areas and the city's relative peace compared with the rest of
               China in the 19th and 20th centuries.
             </div>
-            <br /><br />
-
-            In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-            five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-            River the Bund, which was later consolidated with the American community to form the International
-            Settlement.
             <br />
 
-            <div style={{}}>
-              In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+            In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
               <div className={styles.infoSection}>
                 <div className={styles.infoButtonContainer}>
                   <button className={styles.infoButton} aria-label="Information">
@@ -83,11 +76,18 @@ export default function HistoryRightPage() {
                   </div>
                 </div>
               </div>
+            five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+            River the Bund, which was later consolidated with the American community to form the International
+            Settlement.
+            <br /><br />
+
+            <div style={{}}>
+              In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
               five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
               River the Bund, which was later consolidated with the American community to form the International
               Settlement.
-              <br />
             </div>
+            <br />
 
             In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
             five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
@@ -95,7 +95,7 @@ export default function HistoryRightPage() {
             Settlement.
             <br />
             
-            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "10.7rem"}}>
+            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "9.3rem"}}>
               <div>
                 <div className="videoWrapper" style={{height: "100%"}}>
                   <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
