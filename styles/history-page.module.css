@@ -157,8 +157,10 @@
   background-position: center;
   border-radius: 8px;
   overflow: hidden;
-  height: 200px;
+  height: calc(25dvw * 9 / 16);
+  width: 100%;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .videoBackground {
@@ -219,13 +221,6 @@
   cursor: pointer;
   backdrop-filter: blur(10px);
   font-weight: 600;
-}
-
-/* Text Content Areas */
-.textContent {
-  break-inside: avoid;
-  overflow-y: auto;
-  padding: 0.5rem 0;
 }
 
 /* Main Body Text */
@@ -352,9 +347,13 @@
   .contentLayout {
     gap: 0.5rem;
     padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     flex-direction: column;
+  }
+
+  .textContent {
+    flex-direction: column;
+    display: flex;
+    overflow-y: hidden;
   }
 
   .historyPage {

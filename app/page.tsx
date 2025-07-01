@@ -44,8 +44,8 @@ import educationMainPage from "@/pages/education-main-page"
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
   { page: RightTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "87" },
-  { page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28" },
-  { page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29" },
+  // { page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28" },
+  // { page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29" },
   { page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30" },
   { page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31" },
   { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
@@ -106,13 +106,13 @@ export default function Home() {
       if (lapPageNum > 3) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 3);
       setFastPrevious(false)
     }
-    // if (previous10 === true) {
-    //   if (lapPageNum > 10) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 9);
-    //   setPrevious10(false)
-    // }
+    if (previous10 === true) {
+      if (lapPageNum > 9) bookRef1.current?.pageFlip().turnToPage(lapPageNum - 9);
+      setPrevious10(false)
+    }
     if (next10 === true) {
       console.log("fast10Next", mobPageNum, lapPageNum)
-      bookRef1.current?.pageFlip().turnToPage(lapPageNum + 8);
+      bookRef1.current?.pageFlip().turnToPage(lapPageNum + 10);
       setNext10(false)
     }
   }, [next, fastnext, previous, fastprevious, next10, previous10])
