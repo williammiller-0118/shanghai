@@ -24,7 +24,7 @@ export default function ShanghaiPage({ onPowerButtonClick }: ShanghaiPageProps) 
           <section className="absolute w-full h-screen overflow-hidden">
             <video
               ref={videoRef}
-              className="absolute inset-0 h-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
               autoPlay
               muted
               loop
