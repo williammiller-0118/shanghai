@@ -19,7 +19,10 @@ export default function HistoryRightPage() {
       <div className={styles.contentLayout}>
         <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto" }}>
           <div className={styles.mainBody}>
-
+            Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
+            the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
+            allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
+            <br /><br />
             After Mao's death in 1976, reformers led by Deng Xiaoping gained prominence and most of the Maoist
             'reforms' associated with the Cultural Revolution had been abandoned by 1978. The economy proceeded to
             blossom under open market reforms and the welcoming of foreign investment.
@@ -92,7 +95,7 @@ export default function HistoryRightPage() {
             Settlement.
             <br />
             
-            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "20rem"}}>
+            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "10.7rem"}}>
               <div>
                 <div className="videoWrapper" style={{height: "100%"}}>
                   <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
