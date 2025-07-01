@@ -31,7 +31,7 @@ export default function VideoIntro({ onVideoEnd }: VideoIntroProps) {
   }, [onVideoEnd])
 
   return (
-    <section style={{width: "200%"}}>
+    <section>
       <video
         ref={videoRef}
         className={style.fullscreenVideo}

@@ -14,6 +14,7 @@ import {
   Flag, Languages, Pencil, GraduationCap, Heart, Clock, Trophy,
   Phone
 } from 'lucide-react';
+import Link from "next/link"
 
 interface AsianEscapesPageProps {
   onBackClick?: () => void
@@ -74,24 +75,34 @@ export default function EducationListLeftPage() {
 
             <div style={{ marginBottom: "1rem" }} className="text-sm">
               <div style={{ fontWeight: "bold", marginBottom: "1rem" }}>Welcome message from the principal</div>
-              <p style={{ marginBottom: "1rem" }}>
+              <p style={{ marginBottom: "1rem", textAlign: "justify" }}>
                 Wellington College Shanghai has a reputation for excellence and forward-thinking education of the highest quality. We want our young people to
                 become the very best they can be. Independent, inquisitive, intellectual adults with strong core values. A proud tradition of values shared with
                 Wellington College UK and all Wellington College China schools: courage, kindness, integrity, responsibility and respect. At Wellington in
                 Shanghai, we also benefit from the inclusivity of our international community and our position in China today.
               </p>
-              <p>
+              <p style={{ marginBottom: "1rem", textAlign: "justify" }}>
                 We have high expectations for our pupils and ourselves, striving to achieve excellence in all that we do together. It is our ambition that every child
                 leaves Wellington ready to embrace all opportunities and challenges: to lead and live well.
               </p>
             </div>
 
             <div className="grid grid-cols-5 gap-2 text-2xl mb-3" style={{ borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem" }}>
-              <div className={styles.iconBox}><Globe size={20} /></div>
-              <div className={styles.iconBox}><Youtube size={20} /></div>
-              <div className={styles.iconBox}><Facebook size={20} /></div>
-              <div className={styles.iconBox}><Linkedin size={20} /></div>
-              <div className={styles.iconBox}><Instagram size={20} /></div>
+              <Link href="https://shanghai.wellingtoncollege.cn/" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Globe size={20} /></div></a>
+              </Link>
+              <Link href="https://www.youtube.com/channel/UC4y-7qy59mkS-Xf949Mecdg" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Youtube size={20} /></div></a>
+              </Link>
+              <Link href="https://www.facebook.com/WellingtonCollegeShanghai" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Facebook size={20} /></div></a>
+              </Link>
+              <Link href="https://www.linkedin.com/school/wellington-college-international-shanghai/" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Linkedin size={20} /></div></a>
+              </Link>
+              <Link href="https://www.instagram.com/wellingtoncollegeshanghai/" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Instagram size={20} /></div></a>
+              </Link>
             </div>
 
             {/* Info Grid */}

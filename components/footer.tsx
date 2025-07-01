@@ -15,7 +15,7 @@ interface FooterProps {
 
 export default function Footer({part, clickNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, clickFastNext} : FooterProps) {
   return (
-      <div style={{height: "10dvh"}}>
+      <div style={{height: "10dvh", position: "relative"}} >
         <PageControls 
           part={part}
           clickNext={clickNext}
@@ -25,6 +25,10 @@ export default function Footer({part, clickNext, clickPrevious, clickFastPreviou
           click10Previous={click10Previous}
           click10Next={click10Next}
         />
+        <div style={{position: "absolute"}}>
+          <img src="images/Going Global Footer white.png" style={{backgroundColor: ""}} />
+          <img src="images/Going Global Footer white.png" style={{backgroundColor: "blue"}} />
+        </div>
       </div>
   )
 }

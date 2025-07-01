@@ -15,7 +15,7 @@ interface HistoryPageProps {
 
 export default function HistoryRightPage() {
   return (
-      <div>
+      <div style={{padding: "1rem"}}>
         <div>
           <div className={styles.infoSection}>
             <div className={styles.infoButtonContainer}>

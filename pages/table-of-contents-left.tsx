@@ -29,8 +29,6 @@ const tableOfContentsData = {
     { title: "Health preparations", page: 60 },
     { title: "Financial preparations", page: 62 },
     { title: "Visas", page: 64 },
-  ],
-  relocationItems: [
     { title: "Relocation checklist", page: 70 },
     { title: "Pet relocation", page: 74 },
     { title: "Look-see trip", page: 82 },
@@ -96,7 +94,7 @@ export default function LeftTableOfContents() {
   const renderSection = (title: string, entries: Array<{ title: string; page: number }>, pageNumber?: string) => (
     <div className={styles.section}>
       <div style={{display: "flex"}}>
-        <span style={{color: "white", backgroundColor: "black", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>
+        {title !== "" && <span style={{color: "white", backgroundColor: "black", padding: "0.5rem", width: "100%", textAlign: "right", textDecoration: "underline"}}>{title}</span>}
         {pageNumber && <span style={{backgroundColor: "#ccc", flex: "1", padding: "0.5rem", color: "white", fontWeight: "600", textAlign: "right"}}>{pageNumber}</span>}
       </div>
       <ul className={styles.entryList}>
@@ -114,17 +112,13 @@ export default function LeftTableOfContents() {
       <div className={styles.leftpage}>
         {/* Featured Image - Spans columns 1-2 */}
         <div className="bg-white rounded-lg shadow-md p-6 h-[40dvh]">
-          <div className={styles.responsiveMediaWrapper}>
-            <img
-              src="/images/contents.png"
-              alt="Shanghai skyline at night"
-            />
+          <div className="videoWrapper" style={{height: "100%"}}>
+            <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
           </div>
         </div>
         <div className={styles.dividerow}>
           {/* Column 1 - Below image */}
           {renderSection("PREPARATIONS", tableOfContentsData.preparations, "26")}
-          {renderSection("", tableOfContentsData.relocationItems)}
           <div>
             <img
               src="images/newGlobe.jpeg"

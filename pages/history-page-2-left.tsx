@@ -15,7 +15,7 @@ interface HistoryPage2Props {
 
 export default function HistoryLeftPage2() {
   return (
-    <div>
+    <div style={{padding: "1rem"}}>
       <div>
         <div className={styles.globeLogo}>
           <div style={{position: 'relative', left: '15%'}}>
@@ -53,23 +53,22 @@ export default function HistoryLeftPage2() {
               crumbling infrastructure left behind.
             </p>
 
-          </div>
-        </div>
-        <div className={styles.column2}>
-          <div className={styles.textContent}>
-            
             <p className={styles.mainBody}>
               While at times spectacularly Shanghai's richly varied rise can make it feel like the latest thing, a
               city about to here and now rather than place with its own character; and at times it just feels like a
               giant construction site.
             </p>
-            
+
             <p className={styles.mainBody}>
               When Richard Nixon visited Shanghai for his historic meeting with Premier Zhou Enlai in 1972, the city
               was completely dark after nightfall. Even in 1988, ten years after Deng Xiaoping launched the economic
               reform era, the tallest building in the city was the Park Hotel, built in 1934.
             </p>
-
+          </div>
+        </div>
+        <div className={styles.column2}>
+          <div className={styles.textContent}>
+            
             <p className={styles.mainBody}>
               In 1990, however, the government in Beijing decreed that Shanghai was to be the epicenter of China's
               ambitions of becoming a global economic powerhouse, allocating national revenue to ramp up neglected
@@ -79,6 +78,9 @@ export default function HistoryLeftPage2() {
               new enterprises and infrastructure, while hundreds of thousands of Chinese laborers migrated from their
               homes across the country to Shanghai to build it.
             </p>
+          </div>
+          <div>
+            <img src="/images/Dragon 1.png" height="200px" /> 
           </div>
         </div>
       </div>

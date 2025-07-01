@@ -49,7 +49,6 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 0 0.5rem;
 }
 
 /* Column 2 - Text content */
@@ -57,7 +56,6 @@
   display: flex;
   width: 50%;
   flex-direction: column;
-  padding: 0 0.5rem;
 }
 
 /* Column 3 - Text content */
@@ -65,7 +63,6 @@
   display: flex;
   width: 50%;
   flex-direction: column;
-  padding: 0 0.5rem;
 }
 
 /* Column 4 - Text content */
@@ -73,7 +70,6 @@
   display: flex;
   width: 50%;
   flex-direction: column;
-  padding: 0 0.5rem;
 }
 
 .infoSection {

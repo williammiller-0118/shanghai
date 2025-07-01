@@ -16,27 +16,6 @@ interface TableOfContentsProps {
 }
 
 const tableOfContentsData = {
-  preparations: [
-    { title: "History", page: 30 },
-    { title: "People and culture", page: 36 },
-    { title: "Language", page: 48 },
-    { title: "Geography", page: 50 },
-    { title: "Cityscape", page: 51 },
-    { title: "Climate", page: 54 },
-    { title: "Police and crime", page: 56 },
-    { title: "Books and films", page: 58 },
-    { title: "Health preparations", page: 60 },
-    { title: "Financial preparations", page: 62 },
-    { title: "Visas", page: 64 },
-  ],
-  relocationItems: [
-    { title: "Relocation checklist", page: 70 },
-    { title: "Pet relocation", page: 74 },
-    { title: "Look-see trip", page: 82 },
-    { title: "Pre-move survey", page: 84 },
-    { title: "Shipping and packing", page: 85 },
-    { title: "Education", page: 86 },
-  ],
   softLanding: [
     { title: "When you arrive", page: 146 },
     { title: "Health care", page: 148 },
@@ -63,8 +42,6 @@ const tableOfContentsData = {
     { title: "Eating and drinking", page: 292 },
     { title: "Nightlife", page: 316 },
     { title: "Shopping", page: 322 },
-  ],
-  livingTheLife2: [
     { title: "Fitness and recreation", page: 342 },
     { title: "Day trips", page: 360 },
     { title: "Family activities", page: 370 },
@@ -114,7 +91,6 @@ export default function RightTableOfContents({ colorMode }: TableOfContentsProps
       {/* Column 4 */}
         {renderSection("SOFT LANDING", tableOfContentsData.softLanding, "#3a4c63", "#9e9277", "142")}
         {renderSection("LIVING THE LIFE", tableOfContentsData.livingTheLife1, "#282a40", "#2da5d2", "288")}
-        {renderSection("", tableOfContentsData.livingTheLife2,"#282a40", "#2da5d2")}
         {renderSection("MAPS", tableOfContentsData.maps,"#675950", "#a1ac99")}
     </div>
   )

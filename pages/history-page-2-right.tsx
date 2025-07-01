@@ -15,7 +15,7 @@ interface HistoryPage2Props {
 
 export default function HistoryRightPage2() {
   return (
-    <div>
+    <div style={{padding: "1rem"}}>
       <div>
         <div className={styles.infoSection}>
           <div className={styles.infoButtonContainer}>
@@ -63,12 +63,6 @@ export default function HistoryRightPage2() {
               relatively hands-off government policy.
             </p>
 
-            
-
-          </div>
-        </div>
-        <div className={styles.column4}>
-          <div className={styles.textContent}>
             <p className={styles.mainBody}>
               Behind Shanghai's modern glitz, there are plenty of relics of the past. The architecture and street
               ambience of the Bund and the French Concession offer visitors a glimpse of Shanghai's colorful past, and
@@ -76,6 +70,11 @@ export default function HistoryRightPage2() {
               City can quickly imagine the historic income disparities of 1920s Shanghai. Those disparities still
               exist today of course and are also worth noting.
             </p>
+
+          </div>
+        </div>
+        <div className={styles.column4}>
+          <div className={styles.textContent}>
             
             <p className={styles.mainBody}>
               Shanghai is sure to dazzle and intrigue any visitor, and it is worth taking a moment to reflect on where

@@ -15,14 +15,14 @@ interface HistoryPageProps {
 
 export default function HistoryLeftPage() {
   return (
-      <div>
+      <div style={{padding: "1rem"}}>
         <div>
           <div className={styles.globeLogo}>
             <img
               src="images/newGlobe.jpeg"
               alt="Fantasy Globe"
               style={{
-                height: '40px',
+                height: '50px',
                 objectFit: 'cover',
                 left: '15%',
                 position: 'relative'

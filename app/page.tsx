@@ -155,7 +155,7 @@ export default function Home() {
     return <ShanghaiPage onPowerButtonClick={handlePowerButtonClick} />
   }
 
-  const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
+  const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string) => {
 
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
@@ -179,7 +179,7 @@ export default function Home() {
     </div>
   }
 
-  const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: string, part: string) => {
+  const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string) => {
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
       <div style={{ height: "8dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
@@ -207,7 +207,7 @@ export default function Home() {
       return BookList.map((page, index) => {
         console.log(window.innerWidth)
         return <SinglePage number={`${index + 1}`} key={index}>
-          {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
+          {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "right")}
         </SinglePage>
       })
     } else {
@@ -215,7 +215,7 @@ export default function Home() {
       let div = []
       for(let index = 0 ; index < BookList.length ; index += 2){
         div.push(<SinglePage number={`${index / 2}`} key={index / 2}>
-          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, BookList[index].pageNubmer, "left")}
+          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, index / 2, "left")}
         </SinglePage>)
       }
       return div
