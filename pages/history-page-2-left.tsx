@@ -33,16 +33,11 @@ export default function HistoryLeftPage2() {
       <div className={styles.contentLayout}>
         <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto" }}>
           <div className={styles.mainBody}>
-            <div className={`${styles.videoArea} ${styles.videoBackground}`}>
-            <div className={styles.videoOverlay}>
-              <h1 className={styles.videoTitle}>China's Revolutions</h1>
-              <div className={styles.videoControls}>
-                <button className={styles.playButton}>▶</button>
-                <button className={styles.shareButton}>
-                  <Share size={16} style={{ marginRight: "0.5rem" }} />
-                  Share
-                </button>
-              </div>
+            <div className={`${styles.videoArea}`}>
+            <div>
+              <div className="videoWrapper" style={{height: "100%"}}>
+                <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
+              </div>  
             </div>
           </div>
             its first gaslights, electric power, telephones and trams. The city continued to prosper throughout the

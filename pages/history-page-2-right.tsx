@@ -69,16 +69,11 @@ export default function HistoryRightPage2() {
             it came from, and where it might be going – since it's evolving daily and what remains of its past is
             fast disappearing amidst a sea of change.
           </div>
-          <div className={`${styles.videoArea} ${styles.videoBackground}`} style={{top: "32rem"}}>
-            <div className={styles.videoOverlay}>
-              <h1 className={styles.videoTitle}>China's Revolutions</h1>
-              <div className={styles.videoControls}>
-                <button className={styles.playButton}>▶</button>
-                <button className={styles.shareButton}>
-                  <Share size={16} style={{ marginRight: "0.5rem" }} />
-                  Share
-                </button>
-              </div>
+          <div className={`${styles.videoArea}`} style={{top: "32rem"}}>
+            <div>
+              <div className="videoWrapper" style={{height: "100%"}}>
+                <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
+              </div>  
             </div>
           </div>
         </div>
