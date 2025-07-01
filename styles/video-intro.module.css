@@ -19,6 +19,6 @@
   .fullscreenVideo {
     width: 100%;
     object-fit: cover;
-    background-color: black; /* optional letterboxing */
+    object-position: 52% center;
   }
 }
