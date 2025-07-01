@@ -15,25 +15,10 @@ interface HistoryPageProps {
 
 export default function HistoryRightPage() {
   return (
-    <div style={{padding: "1rem", paddingBottom: "0", height: "100%"}}>
+    <div className={styles.historyWrapper} style={{padding: "1rem", paddingBottom: "0"}}>
       <div className={styles.contentLayout}>
-        <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto", height: "85dvh" }}>
+        <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto" }}>
           <div className={styles.mainBody}>
-
-            1925, Chiang Kai-shek seized control of the Kuomintang (Nationalist Party or KMT) and brought most of
-            China under his control, eventually turning on the Communist Party.
-            <br /><br />
-            This drove them across China's most desolate terrain to Yan'an on the Long March. From there, the
-            Communist Party regrouped under the leadership of a young Mao Zedong, returned north and succeeded in
-            toppling the KMT and forcing them to the island of Taiwan in 1949 where they remain an active political
-            party to this day.
-            <br /><br />
-
-            Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
-            the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-            allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist
-            elements from Chinese society.
-            <br /><br />
 
             After Mao's death in 1976, reformers led by Deng Xiaoping gained prominence and most of the Maoist
             'reforms' associated with the Cultural Revolution had been abandoned by 1978. The economy proceeded to
@@ -51,45 +36,63 @@ export default function HistoryRightPage() {
             as the First Opium War.
             <br /><br />
 
-            <div className={styles.infoSection}>
-              <div className={styles.infoButtonContainer}>
-                <button className={styles.infoButton} aria-label="Information">
-                  <Info size={20} />
-                </button>
-                <div className={styles.infoBoxContainer}>
-                  <div className={styles.infoBoxContent}>
-                    <div className={styles.infoIcon}>
-                      <Info size={20} />
-                    </div>
-                    <p className={styles.infoBoxText}>
-                      The Chinese are extremely proud of their history, though in Shanghai that history is fast being
-                      replaced by modern architecture.
-                    </p>
-                    <div className={styles.infoIcon}>
-                      <Info size={20} />
-                    </div>
-                    <p className={styles.infoBoxText}>
-                      Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
-                      interpretations of Chinese history are not always welcome.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <h2 className={styles.paragraphSubheading}>A Brief History of Shanghai</h2>
-
-            Shanghai's historical evolution from a sleepy fishing and textile port on the Yangtze Delta to a fully
-            fledged world-class city has been formed by lucrative Chinese-Western trading relationships, cheap and
-            plentiful labor from impoverished rural areas and the city's relative peace compared with the rest of
-            China in the 19th and 20th centuries.
+            <div className={styles.dropCap}>
+              <span className={styles.firstLetter}>S</span>
+              hanghai's historical evolution from a sleepy fishing and textile port on the Yangtze Delta to a fully
+              fledged world-class city has been formed by lucrative Chinese-Western trading relationships, cheap and
+              plentiful labor from impoverished rural areas and the city's relative peace compared with the rest of
+              China in the 19th and 20th centuries.
+            </div>
             <br /><br />
 
             In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
             five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
             River the Bund, which was later consolidated with the American community to form the International
             Settlement.
-            <div className={`${styles.videoArea} ${styles.videoArea2}`}>
+            <br />
+
+            <div style={{}}>
+              In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+              five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+              <div className={styles.infoSection}>
+                <div className={styles.infoButtonContainer}>
+                  <button className={styles.infoButton} aria-label="Information">
+                    <Info size={50} />
+                  </button>
+                  <div className={styles.infoBoxContainer}>
+                    <div className={styles.infoBoxContent}>
+                      <div className={styles.infoIcon}>
+                        <Info size={20} />
+                      </div>
+                      <p className={styles.infoBoxText}>
+                        The Chinese are extremely proud of their history, though in Shanghai that history is fast being
+                        replaced by modern architecture.
+                      </p>
+                      <div className={styles.infoIcon}>
+                        <Info size={20} />
+                      </div>
+                      <p className={styles.infoBoxText}>
+                        Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
+                        interpretations of Chinese history are not always welcome.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              River the Bund, which was later consolidated with the American community to form the International
+              Settlement.
+              <br />
+            </div>
+
+            In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+            five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+            River the Bund, which was later consolidated with the American community to form the International
+            Settlement.
+            <br />
+            
+            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "20rem"}}>
               <div className={styles.videoOverlay}>
                 <h1 className={styles.videoTitle}>Shanghai History</h1>
                 <div className={styles.videoControls}>
