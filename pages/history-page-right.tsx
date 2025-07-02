@@ -15,9 +15,9 @@ interface HistoryPageProps {
 
 export default function HistoryRightPage() {
   return (
-    <div className={styles.historyWrapper} style={{padding: "1rem", paddingBottom: "0"}}>
+    <div className={styles.historyWrapper} style={{ padding: "1rem", color: "black" }}>
       <div className={styles.contentLayout}>
-        <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto" }}>
+        <div className={styles.textContent} style={{ columnCount: 2, columnFill: "auto", position: "relative" }}>
           <div className={styles.mainBody}>
             Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
             the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
@@ -51,31 +51,6 @@ export default function HistoryRightPage() {
             <br />
 
             In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-              <div className={styles.infoSection}>
-                <div className={styles.infoButtonContainer}>
-                  <button className={styles.infoButton} aria-label="Information">
-                    <Info size={50} />
-                  </button>
-                  <div className={styles.infoBoxContainer}>
-                    <div className={styles.infoBoxContent}>
-                      <div className={styles.infoIcon}>
-                        <Info size={20} />
-                      </div>
-                      <p className={styles.infoBoxText}>
-                        The Chinese are extremely proud of their history, though in Shanghai that history is fast being
-                        replaced by modern architecture.
-                      </p>
-                      <div className={styles.infoIcon}>
-                        <Info size={20} />
-                      </div>
-                      <p className={styles.infoBoxText}>
-                        Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
-                        interpretations of Chinese history are not always welcome.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
             River the Bund, which was later consolidated with the American community to form the International
             Settlement.
@@ -94,14 +69,14 @@ export default function HistoryRightPage() {
             River the Bund, which was later consolidated with the American community to form the International
             Settlement.
             <br />
-            
+
           </div>
-          <div style={{position: "absolute", bottom: "3rem"}}>
+          <div style={{ position: "absolute", bottom: "0" }}>
             <div className={`${styles.videoArea} ${styles.videoArea2}`}>
               <div>
-                <div className="videoWrapper" style={{height: "100%"}}>
-                  <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
-                </div>  
+                <div className="videoWrapper" style={{ height: "100%" }}>
+                  <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto" }} controls></video>
+                </div>
               </div>
             </div>
           </div>

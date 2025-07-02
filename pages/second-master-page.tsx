@@ -19,31 +19,6 @@ export default function SecondMasterPage() {
             {/* Left Column */}
             <div className="flex flex-col justify-between w-1/4 text-2xl text-center" style={{gap: "1rem"}}>
                 <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
-                    <div className={styles.leftinfoSection}>
-                        <div className={styles.infoButtonContainer}>
-                            <button className={styles.infoButton} aria-label="Information">
-                                <Info size={50} />
-                            </button>
-                            <div className={styles.leftinfoBoxContainer}>
-                                <div className={styles.infoBoxContent}>
-                                    <div className={styles.infoIcon}>
-                                        <Info size={20} color="black" />
-                                    </div>
-                                    <p className={styles.infoBoxText}>
-                                        The Chinese are extremely proud of their history, though in Shanghai that history is fast being
-                                        replaced by modern architecture.
-                                    </p>
-                                    <div className={styles.infoIcon}>
-                                        <Info size={20} color="black" />
-                                    </div>
-                                    <p className={styles.infoBoxText}>
-                                        Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
-                                        interpretations of Chinese history are not always welcome.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
                             <span className={styles.firstLetter}>
@@ -149,31 +124,6 @@ export default function SecondMasterPage() {
             {/* Right Column */}
             <div className="flex flex-col justify-between w-1/4" style={{gap: "1rem"}}>
                 <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
-                    <div className={styles.infoSection}>
-                        <div className={styles.infoButtonContainer}>
-                            <button className={styles.infoButton} aria-label="Information">
-                                <Info size={50} />
-                            </button>
-                            <div className={styles.rightinfoBoxContainer}>
-                                <div className={styles.infoBoxContent}>
-                                    <div className={styles.infoIcon}>
-                                        <Info size={20} color="black" />
-                                    </div>
-                                    <p className={styles.infoBoxText}>
-                                        The Chinese are extremely proud of their history, though in Shanghai that history is fast being
-                                        replaced by modern architecture.
-                                    </p>
-                                    <div className={styles.infoIcon}>
-                                        <Info size={20} color="black" />
-                                    </div>
-                                    <p className={styles.infoBoxText}>
-                                        Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
-                                        interpretations of Chinese history are not always welcome.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
                         overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in

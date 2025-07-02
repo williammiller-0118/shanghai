@@ -15,7 +15,7 @@ interface HistoryPageProps {
 
 export default function HistoryLeftPage() {
   return (
-    <div className={styles.historyWrapper} style={{ padding: "1rem", paddingBottom: "0" }}>
+    <div className={styles.historyWrapper} style={{ padding: "1rem", color: "black" }}>
       <div className={styles.contentLayout}>
 
         {/* Text Content */}
