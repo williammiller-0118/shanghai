@@ -95,7 +95,9 @@ export default function HistoryRightPage() {
             Settlement.
             <br />
             
-            <div className={`${styles.videoArea} ${styles.videoArea2}`} style={{marginTop: "9.3rem"}}>
+          </div>
+          <div style={{position: "absolute", bottom: "3rem"}}>
+            <div className={`${styles.videoArea} ${styles.videoArea2}`}>
               <div>
                 <div className="videoWrapper" style={{height: "100%"}}>
                   <video src="videos/cover.mp4" style={{height: "100%", margin: "auto"}} controls></video>
