@@ -40,6 +40,8 @@ import EducationListLeftPage from "@/pages/educationlist-page-left"
 import EducationListRightPage from "@/pages/educationlist-page-right"
 import Header from "@/components/header"
 import educationMainPage from "@/pages/education-main-page"
+import SecondMasterPage from "@/pages/second-master-page"
+import ThirdMasterPage from "@/pages/third-master-page"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -60,6 +62,10 @@ const BookList = [
   { page: educationMainPage, sectionTitle: "Education", subTitle: "Education Main", pageNubmer: "225", link: 10 },
   { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
   { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
+  { page: SecondMasterPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223", type: "master" },
+  { page: SecondMasterPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223", type: "master" },
+  { page: ThirdMasterPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223", type: "master" },
+  { page: ThirdMasterPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223", type: "master" },
   // { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
   // { page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221" },
 ]
@@ -155,10 +161,36 @@ export default function Home() {
     return <ShanghaiPage onPowerButtonClick={handlePowerButtonClick} />
   }
 
-  const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string) => {
-
+  const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string, type?: string) => {
+    if(type === "master") {
+      return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
+        <div style={{ height: "5dvh"}}>
+          <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
+        </div>
+        {
+          part === "left" ? 
+          <div style={{ height: "90dvh", overflow: "auto", width: "200dvw" }}>
+            <Page linkClick={setSpecPage} />
+          </div> : 
+          <div style={{ height: "90dvh", overflow: "auto", width: "200dvw", clipPath: 'inset(0 0 0 50dvw)', transform: 'translateX(-50dvw)' }}>
+            <Page linkClick={setSpecPage} />
+          </div>
+        }
+        <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+          <Footer
+            part={part}
+            clickNext={setNext}
+            clickFastNext={setFastNext}
+            clickPrevious={setPrevious}
+            clickFastPrevious={setFastPrevious}
+            click10Previous={setPrevious10}
+            click10Next={setNext10}
+          />
+        </div>
+      </div>
+    }
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
-    return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
+    else return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
       <div style={{ height: "5dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
@@ -207,7 +239,7 @@ export default function Home() {
       return BookList.map((page, index) => {
         console.log(window.innerWidth)
         return <SinglePage number={`${index + 1}`} key={index}>
-          {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "right")}
+          {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "left", page.type) : PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "right", page.type)}
         </SinglePage>
       })
     } else {
@@ -225,6 +257,7 @@ export default function Home() {
   return (
     // <RightTableOfContents colorMode={""} />
     // <HistoryLeftPage />
+    // <SecondMasterPage />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"

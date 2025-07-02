@@ -389,10 +389,6 @@
     height: calc(100vh - 110px);
   }
 
-  .videoArea {
-    height: 500px;
-  }
-
   .videoTitle {
     font-size: 1.5rem;
   }

@@ -256,7 +256,7 @@ export default function EducationListRightPage() {
   }
 
   return (
-      <div className={styles.mainContent}>
+      <div className={styles.mainContent} style={{color: "black"}}>
         <div style={{flex: "1", display: "flex", flexDirection: "column", marginLeft: "auto", marginRight: "auto"}}>
           <div className="mb-6" style={{flex: "1"}}>
             <div className="bg-white rounded-lg shadow-md p-6 h-full">

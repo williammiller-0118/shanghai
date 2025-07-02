@@ -57,7 +57,7 @@ export default function EducationListLeftPage() {
   }
 
   return (
-    <div className={styles.mainContent}>
+    <div className={styles.mainContent} style={{color: "black"}}>
       <div style={{ flex: "1" }}>
         <div className="max-w-4xl mx-auto mb-6">
           <div className="bg-white rounded-lg shadow-md p-6">
