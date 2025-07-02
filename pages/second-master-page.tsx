@@ -27,14 +27,14 @@ export default function SecondMasterPage() {
                             <div className={styles.leftinfoBoxContainer}>
                                 <div className={styles.infoBoxContent}>
                                     <div className={styles.infoIcon}>
-                                        <Info size={20} />
+                                        <Info size={20} color="black" />
                                     </div>
                                     <p className={styles.infoBoxText}>
                                         The Chinese are extremely proud of their history, though in Shanghai that history is fast being
                                         replaced by modern architecture.
                                     </p>
                                     <div className={styles.infoIcon}>
-                                        <Info size={20} />
+                                        <Info size={20} color="black" />
                                     </div>
                                     <p className={styles.infoBoxText}>
                                         Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
@@ -157,14 +157,14 @@ export default function SecondMasterPage() {
                             <div className={styles.rightinfoBoxContainer}>
                                 <div className={styles.infoBoxContent}>
                                     <div className={styles.infoIcon}>
-                                        <Info size={20} />
+                                        <Info size={20} color="black" />
                                     </div>
                                     <p className={styles.infoBoxText}>
                                         The Chinese are extremely proud of their history, though in Shanghai that history is fast being
                                         replaced by modern architecture.
                                     </p>
                                     <div className={styles.infoIcon}>
-                                        <Info size={20} />
+                                        <Info size={20} color="black" />
                                     </div>
                                     <p className={styles.infoBoxText}>
                                         Erring on the side of caution when discussing Chinese history with locals is advisable, as Western
