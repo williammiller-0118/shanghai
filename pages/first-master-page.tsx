@@ -12,7 +12,7 @@ export default function FirstMasterPage() {
                     <div className={styles.sectionIcon}>
                         <BookOpen size={16} />
                     </div>
-                    <h1 style={{ fontSize: "2rem", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
+                    <h1 style={{ fontSize: "1.5rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
                 </div>
                 <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] md:h-[dvh)]">
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
@@ -45,7 +45,6 @@ export default function FirstMasterPage() {
                         The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
                         which are still pervasive throughout modern Chinese society. Emperor Wu, the seventh of the Han
                         emperors, extended the Chinese empire by pushing the invading Huns back into what is now Inner Mongolia.
-                        This enabled the first opening of trade connections between China and the West along the Silk Road.
                         <br />
 
                     </div>
@@ -132,8 +131,6 @@ export default function FirstMasterPage() {
                         <br /><br />
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        In 1966, Mao and his
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
                         <br /><br />
                     </div>

@@ -275,8 +275,8 @@ export default function Home() {
       <SidebarProvider defaultOpen={false} >
         <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
         <SidebarInset>
-          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`}>
-            <SidebarTrigger className="-ml-1" />
+          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "0 7dvh"}}>
+            <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
           </div>
           <div className="overflow-hidden">
             <div className={`w-full h-full`}>
