@@ -20,7 +20,7 @@ export default function Header({ sectionTitle, subTitle, pageNumber, part }: Hea
             {pageNumber}
           </p>
         </div>
-        <div style={{ flex: "1", backgroundColor: "black", color: "white", padding: "1dvh", paddingTop: "2dvh", paddingLeft: "1dvh", height: "5dvh" }}>
+        <div style={{ flex: "1", backgroundColor: "black", color: "white", paddingTop: "2dvh", paddingLeft: "1dvh", height: "5dvh" }}>
           <span style={{ fontSize: "120%", fontWeight: "400", textDecoration: "underline" }}>
             {sectionTitle}
           </span>

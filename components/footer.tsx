@@ -2,6 +2,7 @@
 
 import styles from "@/styles/footer.module.css"
 import PageControls from "./pagecontroller"
+import navbarstyles from '@/styles/page-controller.module.css'
 
 interface FooterProps {
   part: string
@@ -15,7 +16,7 @@ interface FooterProps {
 
 export default function Footer({part, clickNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, clickFastNext} : FooterProps) {
   return (
-      <div style={{position: "relative"}} >
+      <div className={`${part === "left" ? `${navbarstyles.leftbarPos}` : `${navbarstyles.rightbarPos}`} ${part === "left" ? "leftHidden" : ""}`} style={{position: "relative", width: "100%"}} >
         <PageControls 
           part={part}
           clickNext={clickNext}

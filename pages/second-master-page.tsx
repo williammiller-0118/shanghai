@@ -15,10 +15,10 @@ interface HistoryPageProps {
 
 export default function SecondMasterPage() {
     return (
-        <div className="flex lg:flex-row md: flex-col h-screen p-[1rem] gap-[1rem]" style={{height: "100%", width: "100dvw"}}>
+        <div className="flex lg:flex-row md: flex-col h-screen p-[2rem] gap-[1rem]" style={{height: "100%", overflowY: "auto"}}>
             {/* Left Column */}
             <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{gap: "1rem"}}>
-                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
+                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
                             <span className={styles.firstLetter}>
@@ -48,7 +48,7 @@ export default function SecondMasterPage() {
 
                     </div>
                 </div>
-                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] md:h-[dvh)]">
+                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] h-[calc(100dvw * 9 / 16)]">
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                         <div>
                             <div className="videoWrapper" style={{ height: "100%" }}>
@@ -59,8 +59,8 @@ export default function SecondMasterPage() {
                 </div>
             </div>
 
-            <div className="flex-1 items-center justify-center text-2xl text-center lg:col-2">
-                <div className={styles.mainBody} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
+            <div className="flex-1 items-center justify-center text-2xl text-center">
+                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
                     Political and cultural influences from
                     many parts of Asia, brought by waves of immigration, periods of expansion and cultural assimilation,
                     formed the modern culture of China.
@@ -128,7 +128,7 @@ export default function SecondMasterPage() {
 
             {/* Right Column */}
             <div className="flex flex-col justify-between lg:w-1/4" style={{gap: "1rem"}}>
-                <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)]" style={{ overflow: "auto" }}>
+                <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)] h-[calc(100% - 100dvw * 9 / 16)]" style={{ overflow: "auto" }}>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
                         overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
@@ -150,7 +150,7 @@ export default function SecondMasterPage() {
                         <br /><br />
                     </div>
                 </div>
-                <div className="flex items-center justify-center" style={{ height: "calc(25dvw * 9 / 16)" }}>
+                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] h-[calc(100dvw * 9 / 16)]">
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                         <div>
                             <div className="videoWrapper" style={{ height: "100%" }}>

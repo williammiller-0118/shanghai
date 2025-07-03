@@ -15,7 +15,7 @@ interface PageControllerProps {
 const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevious, click10Previous, click10Next, part }: PageControllerProps) => {
   return (
     <div 
-      className={`${part === "left" ? `${styles.leftbarPos}` : `${styles.rightbarPos}`} ${part === "left" ? "leftHidden" : ""} w-[30dvw] bottom-4 transition-opacity duration-300 py-1 flex gap-3 z-100`}
+      className={`bottom-4 transition-opacity duration-300 py-1 flex gap-3 z-100`}
     >
       {/* Center Controls */}
       <div className={`flex m-auto justify-evenly items-center`}>

@@ -6,11 +6,11 @@
 }
 
 .leftbarPos {
-    translate: 25dvw;
+    translate: 50%;
 }
 
 .rightbarPos {
-    translate: -25dvw;
+    translate: -50%;
 }
 
 .leftHidden {

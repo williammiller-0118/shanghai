@@ -169,10 +169,10 @@ export default function Home() {
         </div>
         {
           part === "left" ? 
-          <div style={{ height: "90dvh", overflow: "auto", width: "200dvw" }}>
+          <div style={{ height: "90dvh", width: "200%" }}>
             <Page linkClick={setSpecPage} />
           </div> : 
-          <div style={{ height: "90dvh", overflow: "auto", width: "200dvw", clipPath: 'inset(0 0 0 50dvw)', transform: 'translateX(-50dvw)' }}>
+          <div style={{ height: "90dvh", width: "200%", clipPath: 'inset(0 0 0 50%)', transform: 'translateX(-50%)' }}>
             <Page linkClick={setSpecPage} />
           </div>
         }
@@ -194,7 +194,7 @@ export default function Home() {
       <div style={{ height: "5dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "90dvh", overflow: "auto" }}>
+      <div style={{ height: "90dvh" }}>
         <Page linkClick={setSpecPage} />
       </div>
       <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
@@ -218,7 +218,7 @@ export default function Home() {
       </div>
       <div style={{ height: "88dvh", overflow: "auto" }}>
         {
-          type === "master" ? <>
+          type !== "master" ? <>
             <LeftPage linkClick={setSpecPage} />
             <RightPage linkClick={setSpecPage} />
           </> : 
@@ -252,7 +252,7 @@ export default function Home() {
       let div = []
       for(let index = 0 ; index < BookList.length ; index += 2){
         div.push(<SinglePage number={`${index / 2}`} key={index / 2}>
-          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, index / 2, "left")}
+          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, index / 2, "left", BookList[index].type)}
         </SinglePage>)
       }
       return div
