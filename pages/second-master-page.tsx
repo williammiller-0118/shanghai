@@ -4,9 +4,9 @@ import styles from "@/styles/second-master-page.module.css"
 
 export default function SecondMasterPage() {
     return (
-        <div className="flex lg:flex-row md: flex-col h-screen p-[2rem] gap-[1rem]" style={{height: "100%", overflowY: "auto"}}>
+        <div className="flex lg:flex-row md: flex-col h-screen p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
-            <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{gap: "1rem"}}>
+            <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem" }}>
                 <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
@@ -79,7 +79,7 @@ export default function SecondMasterPage() {
                     After Mao's death in 1976, reformers led by Deng Xiaoping gained prominence and most of the Maoist
                     'reforms' associated with the Cultural Revolution had been abandoned by 1978. The economy proceeded to
                     blossom under open market reforms and the welcoming of foreign investment.
-                    <br /><br />
+                    <br />
 
                     Shanghai emerged as a popular export center for the British East India Company in the 18th century as
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
@@ -106,17 +106,22 @@ export default function SecondMasterPage() {
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
-                    <br />
+                    <br /><br />
+
                     In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the 
-                    <br />
+                    River the Bund, which was later consolidated with the
+                    <br /><br />
 
+                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+                    River the Bund, which was later consolidated with the
+                    <br /><br />
                 </div>
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-col justify-between lg:w-1/4" style={{gap: "1rem"}}>
+            <div className="flex flex-col justify-between lg:w-1/4" style={{ gap: "1rem" }}>
                 <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)] h-[calc(100% - 100dvw * 9 / 16)]" style={{ overflow: "auto" }}>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was

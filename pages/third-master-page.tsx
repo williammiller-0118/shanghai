@@ -59,7 +59,7 @@ export default function ThirdMasterPage() {
             </div>
 
             <div className="flex-1 items-center justify-center text-2xl text-center">
-                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
+                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto", overflow: "auto" }}>
                     Political and cultural influences from
                     many parts of Asia, brought by waves of immigration, periods of expansion and cultural assimilation,
                     formed the modern culture of China.
@@ -89,7 +89,7 @@ export default function ThirdMasterPage() {
                     After Mao's death in 1976, reformers led by Deng Xiaoping gained prominence and most of the Maoist
                     'reforms' associated with the Cultural Revolution had been abandoned by 1978. The economy proceeded to
                     blossom under open market reforms and the welcoming of foreign investment.
-                    <br /><br />
+                    <br />
 
                     Shanghai emerged as a popular export center for the British East India Company in the 18th century as
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
@@ -116,8 +116,18 @@ export default function ThirdMasterPage() {
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
-                    <br />
+                    <br /><br />
 
+                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+                    River the Bund, which was later consolidated with the American community to form the International
+                    Settlement.
+                    <br /><br />
+
+                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+                    River the Bund
+                    <br /><br />
                 </div>
             </div>
 

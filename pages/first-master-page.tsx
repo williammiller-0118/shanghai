@@ -85,7 +85,7 @@ export default function FirstMasterPage() {
                     After Mao's death in 1976, reformers led by Deng Xiaoping gained prominence and most of the Maoist
                     'reforms' associated with the Cultural Revolution had been abandoned by 1978. The economy proceeded to
                     blossom under open market reforms and the welcoming of foreign investment.
-                    <br /><br />
+                    <br />
 
                     Shanghai emerged as a popular export center for the British East India Company in the 18th century as
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
@@ -112,7 +112,19 @@ export default function FirstMasterPage() {
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
-                    <br />
+                    <br /><br />
+                    
+                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+                    River the Bund, which was later consolidated with the American community to form the International
+                    Settlement.
+                    <br /><br />
+                    
+                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
+                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
+                    River
+                    <br /><br />
+                    
 
                 </div>
             </div>
@@ -136,9 +148,6 @@ export default function FirstMasterPage() {
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
                         In 1966, Mao and his
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        <br /><br />
-                        In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from
                         <br /><br />
                     </div>
                 </div>
