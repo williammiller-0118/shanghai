@@ -1,13 +1,29 @@
 "use client"
 
-import styles from "@/styles/second-master-page.module.css"
+import styles from "@/styles/first-master-page.module.css"
+import { BookOpen } from "lucide-react"
 
-export default function SecondMasterPage() {
+export default function FirstMasterPage() {
     return (
-        <div className="flex lg:flex-row md: flex-col h-screen p-[2rem] gap-[1rem]" style={{height: "100%", overflowY: "auto"}}>
+        <div className="flex lg:flex-row flex-col h-screen p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
-            <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{gap: "1rem"}}>
-                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
+            <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem", textAlign: "left" }}>
+                <div className={styles.sectionHeader}>
+                    <div className={styles.sectionIcon}>
+                        <BookOpen size={16} />
+                    </div>
+                    <h1 style={{ fontSize: "2rem", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
+                </div>
+                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] md:h-[dvh)]">
+                    <div className={`${styles.videoArea} ${styles.videoArea1}`}>
+                        <div>
+                            <div className="videoWrapper" style={{ height: "100%" }}>
+                                <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
                             <span className={styles.firstLetter}>
@@ -33,17 +49,7 @@ export default function SecondMasterPage() {
                         <br /><br />
 
                         Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
-                        Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
 
-                    </div>
-                </div>
-                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] h-[calc(100dvw * 9 / 16)]">
-                    <div className={`${styles.videoArea} ${styles.videoArea1}`}>
-                        <div>
-                            <div className="videoWrapper" style={{ height: "100%" }}>
-                                <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -107,17 +113,13 @@ export default function SecondMasterPage() {
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
                     <br />
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the 
-                    <br />
 
                 </div>
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-col justify-between lg:w-1/4" style={{gap: "1rem"}}>
-                <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)] h-[calc(100% - 100dvw * 9 / 16)]" style={{ overflow: "auto" }}>
+            <div className="flex flex-col justify-between lg:w-1/4" style={{ gap: "1rem" }}>
+                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
                         overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
@@ -132,14 +134,15 @@ export default function SecondMasterPage() {
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
+                        In 1966, Mao and his
+                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
                         <br /><br />
-                        Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
-                        the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                        allies launched the Cultural Revolution
+                        In 1966, Mao and his
+                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from
                         <br /><br />
                     </div>
                 </div>
-                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] h-[calc(100dvw * 9 / 16)]">
+                <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] md:h-[calc(100dvw * 9 / 16)]">
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                         <div>
                             <div className="videoWrapper" style={{ height: "100%" }}>

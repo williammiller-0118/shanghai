@@ -8,11 +8,6 @@ import { ChevronLeft, ChevronRight, Play, BookOpen, Info } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
-interface HistoryPageProps {
-  // onBackClick: () => void
-  // onNextClick: () => void
-}
-
 export default function HistoryLeftPage() {
   return (
     <div className={styles.historyWrapper} style={{ padding: "1rem", color: "black" }}>

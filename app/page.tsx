@@ -42,14 +42,17 @@ import Header from "@/components/header"
 import educationMainPage from "@/pages/education-main-page"
 import SecondMasterPage from "@/pages/second-master-page"
 import ThirdMasterPage from "@/pages/third-master-page"
+import FirstMasterPage from "@/pages/first-master-page"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
   { page: RightTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "87" },
   // { page: BookIntroductionLeftPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "28" },
   // { page: BookIntroductionRightPage, sectionTitle: "PREPARATIONS", subTitle: "", pageNubmer: "29" },
-  { page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30" },
-  { page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31" },
+  // { page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30" },
+  // { page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31" },
+  { page: FirstMasterPage, sectionTitle: "MASTER PAGES", subTitle: "First Style", pageNubmer: "30", type: "master" },
+  { page: FirstMasterPage, sectionTitle: "MASTER PAGES", subTitle: "First Style", pageNubmer: "31", type: "master"},
   // { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
   // { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
   // { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
