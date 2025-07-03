@@ -9,9 +9,6 @@ export default function FirstMasterPage() {
             {/* Left Column */}
             <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem", textAlign: "left" }}>
                 <div className={styles.sectionHeader}>
-                    <div className={styles.sectionIcon}>
-                        <BookOpen size={16} />
-                    </div>
                     <h1 style={{ fontSize: "1.5rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
                 </div>
                 <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] md:h-[dvh)]">
@@ -89,7 +86,7 @@ export default function FirstMasterPage() {
                     <br /><br />
 
                     <h2 className={styles.paragraphSubheading}>A Brief History of Shanghai</h2>
-                    <br /><br />
+                    <br />
                     <div className={styles.dropCap}>
                         <span className={styles.firstLetter}>S</span>
                         hanghai's historical evolution from a sleepy fishing and textile port on the Yangtze Delta to a fully
@@ -97,14 +94,20 @@ export default function FirstMasterPage() {
                         plentiful labor from impoverished rural areas and the city's relative peace compared with the rest of
                         China in the 19th and 20th centuries.
                     </div>
+                    <br />
+                    Shanghai emerged as a popular export center for the British East India Company in the 18th century as
+                    Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
+                    had no desire for Western goods, thus creating an unsustainable trade imbalance.
+                    <br /><br />
+                    Shanghai emerged as a popular export center for the British East India Company in the 18th century as
+                    Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
+                    had no desire
                     
-                    Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
-                    overthrown by several factions united
                 </div>
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-col justify-between lg:w-1/4" style={{ gap: "1rem" }}>
+            <div className="flex flex-col justify-between lg:w-1/4" style={{ gap: "1rem", marginBottom: "1.5rem" }}>
                 <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
