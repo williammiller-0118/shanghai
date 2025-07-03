@@ -341,7 +341,7 @@
   column-fill: auto;
   /* flex-direction: row; */
   height: calc(100% - 50dvw * 9 / 16);
-  gap: 1rem;
+  gap: 1%;
 }
 
 /* Column 1 - Below image */
@@ -420,8 +420,8 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 0.25rem;
-  padding: 0.25rem 0;
+  margin-top: 0.5%;
+  padding: 0.5% 0;
   cursor: pointer;
   transition: all 0.2s ease;
   border-radius: 2px;
@@ -432,9 +432,9 @@
 }
 
 .entryTitle {
-  font-size: 0.9rem;
+  font-size: 80%;
   color: #2d3748;
-  line-height: 1rem;
+  line-height: 1%;
   flex: 1;
   margin-right: 0.5rem;
 }

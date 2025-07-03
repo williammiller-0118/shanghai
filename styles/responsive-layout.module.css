@@ -89,7 +89,7 @@
 /* Power Button Styles */
 .powerButton {
   position: absolute;
-  top: 4rem;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;

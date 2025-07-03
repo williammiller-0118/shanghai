@@ -7,7 +7,7 @@ export default function SecondMasterPage() {
         <div className="flex lg:flex-row md: flex-col h-screen p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
             <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem" }}>
-                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
+                <div className="text-sm text-center" style={{ height: "calc(95% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
                             <span className={styles.firstLetter}>
@@ -29,11 +29,6 @@ export default function SecondMasterPage() {
                         The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
                         which are still pervasive throughout modern Chinese society. Emperor Wu, the seventh of the Han
                         emperors, extended the Chinese empire by pushing the invading Huns back into what is now Inner Mongolia.
-                        This enabled the first opening of trade connections between China and the West along the Silk Road.
-                        <br /><br />
-
-                        Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
-                        Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
 
                     </div>
                 </div>
@@ -49,7 +44,7 @@ export default function SecondMasterPage() {
             </div>
 
             <div className="flex-1 items-center justify-center text-2xl text-center">
-                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto", overflow: "auto" }}>
+                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
                     Political and cultural influences from
                     many parts of Asia, brought by waves of immigration, periods of expansion and cultural assimilation,
                     formed the modern culture of China.
@@ -66,7 +61,7 @@ export default function SecondMasterPage() {
                     overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
                     1925, Chiang Kai-shek seized control of the Kuomintang (Nationalist Party or KMT) and brought most of
                     China under his control, eventually turning on the Communist Party.
-                    <br /><br />
+                    <br />
                     This drove them across China's most desolate terrain to Yan'an on the Long March. From there, the
                     Communist Party regrouped under the leadership of a young Mao Zedong, returned north and succeeded in
                     toppling the KMT and forcing them to the island of Taiwan in 1949 where they remain an active political
@@ -84,7 +79,7 @@ export default function SecondMasterPage() {
                     Shanghai emerged as a popular export center for the British East India Company in the 18th century as
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
                     had no desire for Western goods, thus creating an unsustainable trade imbalance.
-                    <br />
+                    <br /><br />
 
                     <h2 className={styles.paragraphSubheading}>A Brief History of Shanghai</h2>
                     <div className={styles.dropCap}>
@@ -94,26 +89,17 @@ export default function SecondMasterPage() {
                         plentiful labor from impoverished rural areas and the city's relative peace compared with the rest of
                         China in the 19th and 20th centuries.
                     </div>
-                    <br />
-
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
                     <br /><br />
 
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
-                    <br /><br />
+                    Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
+                    the country.
 
                 </div>
             </div>
 
             {/* Right Column */}
             <div className="flex flex-col justify-between lg:w-1/4" style={{ gap: "1rem" }}>
-                <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)] h-[calc(100% - 100dvw * 9 / 16)]" style={{ overflow: "auto" }}>
+                <div className="text-sm text-center lg:h-[calc(100% - 25dvw * 9 / 16)] h-[calc(100% - 100dvw * 9 / 16)]">
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
                         overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
@@ -127,8 +113,8 @@ export default function SecondMasterPage() {
                         <br /><br />
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        <br /><br />
+                        allies launched
+                        
                     </div>
                 </div>
                 <div className="flex items-center justify-center lg:h-[calc(25dvw * 9 / 16)] h-[calc(100dvw * 9 / 16)]">

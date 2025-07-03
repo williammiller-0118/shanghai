@@ -18,7 +18,7 @@ export default function ThirdMasterPage() {
         <div className="flex lg:flex-row flex-col h-screen p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
             <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem" }}>
-                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
+                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         <div className={styles.dropCap}>
                             <span className={styles.firstLetter}>
@@ -41,9 +41,7 @@ export default function ThirdMasterPage() {
                         which are still pervasive throughout modern Chinese society. Emperor Wu, the seventh of the Han
                         emperors, extended the Chinese empire by pushing the invading Huns back into what is now Inner Mongolia.
                         This enabled the first opening of trade connections between China and the West along the Silk Road.
-                        <br /><br />
-
-                        Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
+                        <br />
 
                     </div>
                 </div>
@@ -59,7 +57,7 @@ export default function ThirdMasterPage() {
             </div>
 
             <div className="flex-1 items-center justify-center text-2xl text-center">
-                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto", overflow: "auto" }}>
+                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
                     Political and cultural influences from
                     many parts of Asia, brought by waves of immigration, periods of expansion and cultural assimilation,
                     formed the modern culture of China.
@@ -81,7 +79,7 @@ export default function ThirdMasterPage() {
                     Communist Party regrouped under the leadership of a young Mao Zedong, returned north and succeeded in
                     toppling the KMT and forcing them to the island of Taiwan in 1949 where they remain an active political
                     party to this day.
-                    <br /><br />
+                    <br />
                     Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                     the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
                     allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
@@ -94,7 +92,7 @@ export default function ThirdMasterPage() {
                     Shanghai emerged as a popular export center for the British East India Company in the 18th century as
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
                     had no desire for Western goods, thus creating an unsustainable trade imbalance.
-                    <br />
+                    <br /><br />
 
                     <h2 className={styles.paragraphSubheading}>A Brief History of Shanghai</h2>
                     <div className={styles.dropCap}>
@@ -106,17 +104,9 @@ export default function ThirdMasterPage() {
                     </div>
                     <br />
 
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
-                    <br /><br />
-
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
-                    <br />
+                    Shanghai emerged as a popular export center for the British East India Company in the 18th century as
+                    Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
+                    had no desire
                 </div>
             </div>
 
@@ -131,7 +121,7 @@ export default function ThirdMasterPage() {
                         </div>
                     </div>
                 </div>
-                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)", overflow: "auto" }}>
+                <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                     <div className={styles.mainBody}>
                         Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
                         overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
@@ -145,9 +135,7 @@ export default function ThirdMasterPage() {
                         <br /><br />
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
+                        allies launched the Cultural Revolution
                         <br /><br />
                     </div>
                 </div>
