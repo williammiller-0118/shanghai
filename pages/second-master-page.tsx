@@ -49,7 +49,7 @@ export default function SecondMasterPage() {
             </div>
 
             <div className="flex-1 items-center justify-center text-2xl text-center">
-                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto" }}>
+                <div className={`${styles.mainBody} lg:columns-2`} style={{ height: "100%", gap: "2rem", columnFill: "auto", overflow: "auto" }}>
                     Political and cultural influences from
                     many parts of Asia, brought by waves of immigration, periods of expansion and cultural assimilation,
                     formed the modern culture of China.
@@ -108,15 +108,6 @@ export default function SecondMasterPage() {
                     Settlement.
                     <br /><br />
 
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the
-                    <br /><br />
-
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the
-                    <br /><br />
                 </div>
             </div>
 
@@ -137,10 +128,6 @@ export default function SecondMasterPage() {
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        <br /><br />
-                        Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
-                        the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                        allies launched the Cultural Revolution
                         <br /><br />
                     </div>
                 </div>

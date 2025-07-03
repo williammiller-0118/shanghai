@@ -46,9 +46,7 @@ export default function FirstMasterPage() {
                         which are still pervasive throughout modern Chinese society. Emperor Wu, the seventh of the Han
                         emperors, extended the Chinese empire by pushing the invading Huns back into what is now Inner Mongolia.
                         This enabled the first opening of trade connections between China and the West along the Silk Road.
-                        <br /><br />
-
-                        Successive Chinese dynasties used their sophisticated bureaucratic systems to control vast territories.
+                        <br />
 
                     </div>
                 </div>
@@ -112,17 +110,6 @@ export default function FirstMasterPage() {
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
-                    <br /><br />
-                    
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
-                    <br /><br />
-                    
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River
                     <br /><br />
                     
 

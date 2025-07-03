@@ -116,18 +116,7 @@ export default function ThirdMasterPage() {
                     five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
                     River the Bund, which was later consolidated with the American community to form the International
                     Settlement.
-                    <br /><br />
-
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund, which was later consolidated with the American community to form the International
-                    Settlement.
-                    <br /><br />
-
-                    In the resulting 1842 Treaty of Nanking, the Chinese ceded Hong Kong and extraterritorial concessions in
-                    five cities, including Shanghai. The British named their new autonomous settlement along the Huangpu
-                    River the Bund
-                    <br /><br />
+                    <br />
                 </div>
             </div>
 
@@ -159,9 +148,6 @@ export default function ThirdMasterPage() {
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
                         In 1966, Mao and his
                         allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from Chinese society.
-                        <br /><br />
-                        In 1966, Mao and his
-                        allies launched the Cultural Revolution, which sought to eradicate all traditional and capitalist elements from
                         <br /><br />
                     </div>
                 </div>
