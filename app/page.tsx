@@ -211,14 +211,19 @@ export default function Home() {
     </div>
   }
 
-  const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string) => {
+  const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string, type?: string) => {
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
       <div style={{ height: "6dvh"}}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
       <div style={{ height: "88dvh", overflow: "auto" }}>
-        <LeftPage linkClick={setSpecPage} />
-        <RightPage linkClick={setSpecPage} />
+        {
+          type === "master" ? <>
+            <LeftPage linkClick={setSpecPage} />
+            <RightPage linkClick={setSpecPage} />
+          </> : 
+          <LeftPage />
+        }
       </div>
       <div style={{ height: "6dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
         <Footer

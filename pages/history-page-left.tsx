@@ -87,6 +87,8 @@ export default function HistoryLeftPage() {
               Communist Party regrouped under the leadership of a young Mao Zedong, returned north and succeeded in
               toppling the KMT and forcing them to the island of Taiwan in 1949 where they remain an active political
               party to this day.
+
+              This drove them across China's most desolate terrain to Yan'an on the Long March.
             </div>
           </div>
         </div>
