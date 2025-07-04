@@ -5,7 +5,7 @@ import { BookOpen } from "lucide-react"
 
 export default function EducationMasterPageC() {
     return (
-        <div className="lg:text-base md:text-lg sm:text-sm flex lg:flex-row flex-col lg:p-[1rem] p-[2rem] gap-[2rem]">
+        <div className="lg:text-base md:text-lg sm:text-sm flex lg:flex-row flex-col lg:p-[1rem] p-[2rem] gap-[2rem] lg:h-[100%]">
             {/* Left Column */}
             <div className="flex lg:flex-row flex-col flex-1 justify-between lg:w-1/2 gap-[1rem]">
                 <div className={`flex flex-col lg:w-[50%]  gap-[1rem] ${styles.bottomFixedParent}`}>
