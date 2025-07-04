@@ -15,12 +15,12 @@ export default function EducationMasterPageA() {
                         </h1>
                         <div className={`${styles.dropCap}`}>
                             <span className={styles.firstLetter}>
-                                C
+                                A
                             </span>
-                            <p style={{fontSize: "1.2rem"}}>
-                                oncerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                                especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
-                                arrived children adapt to their new environment.
+                            <p style={{ fontSize: "1.2rem" }}>
+                                s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that 
+                                arise during your search for a school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of 
+                                their children; and the quality of their children's education.
                             </p>
                         </div>
                     </div>
