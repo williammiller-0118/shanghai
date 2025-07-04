@@ -15,9 +15,6 @@ export default function EducationMasterPageC() {
                         </h1>
                     </div>
                     <div>
-                        <div className="text-2xl text-center">
-                            Article Title
-                        </div>
                         <div className="text-justify">
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
@@ -27,7 +24,6 @@ export default function EducationMasterPageC() {
                             arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
                             programs are specifically designed to meet the challenges of moving to an international environment.
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                            especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
 
                         </div>
                     </div>
@@ -91,15 +87,14 @@ export default function EducationMasterPageC() {
                             programs are specifically designed to meet the challenges of moving to an international environment.
                         </div>
                         <div className={`border-t-4 border-b-4 border-r-0 border-l-0 ${styles.bottomFixed}`}>
-                            <div className={`flex-1 text-center`} style={{ position: "relative" }}>
+                            <div className={`flex-1 text-center`} style={{ position: "relative", fontFamily: "auto" }}>
                                 <p
                                     style={{
                                         position: "absolute",
                                         top: "60%",
                                         left: "50%",
-                                        fontFamily: "fantasy",
-                                        transform: "translate(-50%, -30%)",  // centers the element exactly in the middle
-                                        fontSize: "240px",  // big size for background effect
+                                        transform: "translate(-50%, -40%)",  // centers the element exactly in the middle
+                                        fontSize: "450px",  // big size for background effect
                                         color: "rgba(0,0,0,0.2)",  // light and subtle
                                         zIndex: 1,
                                         margin: 0,

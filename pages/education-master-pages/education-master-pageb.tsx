@@ -11,14 +11,11 @@ export default function EducationMasterPageB() {
                 <div className="flex flex-col lg:w-[50%]  gap-[1rem]" style={{position: "relative"}}>
                     <div className={`${styles.bottomFixedAbove}`}>
                         <div>
-                            <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "1.5rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                            <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "2rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                                 Education
                             </h1>
                         </div>
-                        <div className="text-2xl text-center">
-                            Article Title
-                        </div>
-                        <div className="text-justify">
+                        <div className="text-justify mt-[1rem]">
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
                             arrived children adapt to their new environment.
@@ -64,15 +61,14 @@ export default function EducationMasterPageB() {
                 >
                     <div className="flex flex-col lg:w-[50%] gap-[1rem]">
                         <div className="border-t-4 border-b-4 border-r-0 border-l-0">
-                            <div className={`flex-1 text-center`} style={{ position: "relative" }}>
+                            <div className={`flex-1 text-center`} style={{ position: "relative", fontFamily: "auto" }}>
                                 <p
                                     style={{
                                         position: "absolute",
                                         top: "60%",
                                         left: "50%",
-                                        fontFamily: "fantasy",
-                                        transform: "translate(-50%, -30%)",  // centers the element exactly in the middle
-                                        fontSize: "240px",  // big size for background effect
+                                        transform: "translate(-50%, -40%)",  // centers the element exactly in the middle
+                                        fontSize: "450px",  // big size for background effect
                                         color: "rgba(0,0,0,0.2)",  // light and subtle
                                         zIndex: 1,
                                         margin: 0,
