@@ -8,7 +8,7 @@ export default function EducationMasterPageA() {
         <div className="lg:text-base md:text-lg sm:text-sm flex lg:flex-row flex-col lg:p-[1rem] p-[2rem] gap-[2rem] lg:h-[100%]">
             {/* Left Column */}
             <div className="flex flex-col flex-1 justify-between lg:w-1/2 gap-[1rem]">
-                <div className="flex flex-col h-[60%]  gap-[1rem]">
+                <div className="flex flex-col h-[50%]  gap-[1rem]">
                     <div>
                         <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "2rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
@@ -18,28 +18,17 @@ export default function EducationMasterPageA() {
                                 A
                             </span>
                             <p style={{ fontSize: "1.2rem" }}>
-                                s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that 
-                                arise during your search for a school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of 
+                                s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that
+                                arise during your search for a school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of
                                 their children; and the quality of their children's education.
+                                Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
+                                especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
+                                arrived children adapt to their new environment.
                             </p>
                         </div>
                     </div>
-                    <div>
-                        <div className="text-justify">
-                            Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                            especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
-                            arrived children adapt to their new environment.
-                            Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                            especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
-                            arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
-                            programs are specifically designed to meet the challenges of moving to an international environment.
-                            Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                            especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
-                            Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                        </div>
-                    </div>
                 </div>
-                <div className="flex lg:flex-row h-[40%] flex-col gap-[1rem]">
+                <div className="flex lg:flex-row h-[50%] flex-col gap-[1rem]">
                     <div className="flex flex-row lg:w-[50%] text-justify">
                         Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                         especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
