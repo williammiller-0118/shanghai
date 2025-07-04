@@ -44,6 +44,8 @@ import SecondMasterPage from "@/pages/history-master-pages/second-master-page"
 import ThirdMasterPage from "@/pages/history-master-pages/third-master-page"
 import FirstMasterPage from "@/pages/history-master-pages/first-master-page"
 import EducationMasterPageA from "@/pages/education-master-pages/education-master-pagea"
+import EducationMasterPageB from "@/pages/education-master-pages/education-master-pageb"
+import EducationMasterPageC from "@/pages/education-master-pages/education-master-pagec"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -68,6 +70,10 @@ const BookList = [
   { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Education", subTitle: "Article", pageNubmer: "224", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Education", subTitle: "Article", pageNubmer: "225", type: "master" },
+  { page: EducationMasterPageB, sectionTitle: "Education", subTitle: "Article", pageNubmer: "224", type: "master" },
+  { page: EducationMasterPageB, sectionTitle: "Education", subTitle: "Article", pageNubmer: "225", type: "master" },
+  { page: EducationMasterPageC, sectionTitle: "Education", subTitle: "Article", pageNubmer: "224", type: "master" },
+  { page: EducationMasterPageC, sectionTitle: "Education", subTitle: "Article", pageNubmer: "225", type: "master" },
   { page: educationMainPage, sectionTitle: "Education", subTitle: "Education Main", pageNubmer: "224", link: 10 },
   { page: educationMainPage, sectionTitle: "Education", subTitle: "Education Main", pageNubmer: "225", link: 10 },
   { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
