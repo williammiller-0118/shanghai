@@ -4,11 +4,33 @@
   height: 85dvh;
 }
 
+.quoteSection {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10%;
+  font-weight: 600;
+}
+
 .videoWrapper {
   width: 100dvh;
   height: calc(100dvh * 16 / 9);
   max-width: 100%;
   overflow: hidden;
+}
+
+.bottomFixedAbove {
+  height: calc(100% - 25dvw * 9 / 16)
+}
+
+.bottomFixedParent {
+  position: relative;
+}
+
+.bottomFixed {
+  bottom: 0;
+  position: absolute;
 }
 
 .historyWrapper {
@@ -239,7 +261,6 @@
 
 /* Video Area - Bottom of last 2 columns */
 .videoArea {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +269,6 @@
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  bottom: 0;
 }
 
 .videoBackground {
@@ -415,7 +435,7 @@
   }
 
   .column4 {
-    grid-column: 2; 
+    grid-column: 2;
     grid-row: 2;
   }
 
@@ -549,5 +569,19 @@
     display: flex;
     justify-content: left;
     margin: 0.5rem;
+  }
+
+  .bottomFixed {
+    bottom: 0;
+    position: unset;
+  }
+
+  .quoteSection {
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10%;
+    font-weight: 600;
   }
 }
