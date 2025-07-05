@@ -4,14 +4,52 @@
   height: 85dvh;
 }
 
-.quoteSection {
+.aspect-16-9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-16-7 {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+}
+
+.dropCap {
   position: relative;
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.firstLetter {
+  float: left;
+  font-size: 3.5rem;
+  line-height: 2rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+.quoteSection {
   z-index: 2;
   font-size: 1.5rem;
-  text-align: center;
-  padding: 7%;
   font-weight: 100;
   font-family: 'QuoteFont', sans-serif;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.videoArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .videoWrapper {
@@ -46,82 +84,6 @@
   color: #2d3748;
   position: relative;
   overflow: hidden;
-}
-
-.firstLetter {
-  float: left;
-  font-size: 3.5rem;
-  line-height: 2rem;
-  padding-right: 0.5rem;
-  padding-top: 0.2rem;
-}
-
-.dropCap {
-  position: relative;
-  margin-top: 2.2rem;
-  margin-bottom: 1.2rem;
-}
-
-/* Main Content Layout - 4 Columns */
-.contentLayout {
-  display: flex;
-  flex-direction: row;
-  overflow-y: auto;
-  gap: 1rem;
-}
-
-.historyPage {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  display: flex;
-  height: calc(100vh - 110px);
-  flex-direction: column;
-  overflow-y: auto;
-  gap: 1rem;
-}
-
-.globeLogo {
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: left;
-  margin-top: 0.5rem;
-}
-
-.globeText {
-  color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-}
-
-/* Column 1 - Text content */
-.column1 {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-/* Column 2 - Text content */
-.column2 {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-}
-
-/* Column 3 - Text content */
-.column3 {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-}
-
-/* Column 4 - Text content */
-.column4 {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
 }
 
 .leftinfoSection {
