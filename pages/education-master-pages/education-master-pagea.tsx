@@ -7,7 +7,7 @@ export default function EducationMasterPageA() {
     return (
         <div className="lg:text-base md:text-lg sm:text-sm flex lg:flex-row flex-col lg:p-[1rem] p-[2rem] gap-[2rem] lg:h-[100%]">
             {/* Left Column */}
-            <div className="flex flex-col flex-1 justify-between lg:w-1/2 gap-[1rem] mt-[3rem]">
+            <div className="flex flex-col flex-1 justify-between lg:w-1/2 gap-[1rem] mt-[12rem]">
                 <div className="flex flex-col h-[40%]  gap-[1rem]">
                     <div>
                         <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "4rem", color: "black", padding: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
@@ -28,7 +28,7 @@ export default function EducationMasterPageA() {
                         </div>
                     </div>
                 </div>
-                <div className="flex lg:flex-row h-[60%] flex-col gap-[1rem]">
+                <div className="flex lg:flex-row h-[60%] flex-col gap-[1rem] mt-[6rem]">
                     <div className="flex flex-row lg:w-[50%] text-justify">
                         Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                         especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
