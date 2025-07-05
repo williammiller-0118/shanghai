@@ -27,7 +27,10 @@ export default function EducationLeftPage() {
         {/* Main Text Content */}
         <div className={styles.textContent}>
           <p className={styles.dropCap}>
-            <span className={styles.firstLetter}>A</span>s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that arise during your search for a school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of their children; and the quality of their children's education.
+            <span className={styles.firstLetter}>
+              A
+            </span>
+            s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that arise during your search for a school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of their children; and the quality of their children's education.
           </p>
 
           <div className={styles.sectionHeader}>

@@ -86,7 +86,7 @@ export default function EducationMasterPageC() {
                             arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
                             programs are specifically designed to meet the challenges of moving to an international environment.
                         </div>
-                        <div className={`border-t-4 border-b-4 border-r-0 border-l-0 ${styles.bottomFixed}`}>
+                        <div className={`border-t-4 border-b-4 border-r-0 border-l-0 ${styles.bottomFixed}`} style={{margin: "auto"}}>
                             <div className={`flex-1 text-center`} style={{ position: "relative", fontFamily: "auto" }}>
                                 <p
                                     style={{
