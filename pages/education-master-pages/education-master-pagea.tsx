@@ -10,7 +10,7 @@ export default function EducationMasterPageA() {
             <div className="flex flex-col flex-1 justify-between lg:w-1/2">
                 <div className="flex flex-col flex-1" style={{width: "100%", height: "calc(100% - 1rem)"}}>
                 </div>
-                <div className="flex flex-col gap-[1rem]" style={{width: "100%", aspectRatio: "16/9"}}>
+                <div className="flex flex-col gap-[1rem]" style={{width: "100%", aspectRatio: "16/9.3"}}>
                     <div className="flex flex-col gap-[1rem]">
                         <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "4rem", color: "black", paddingLeft: "0", padding: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
@@ -69,7 +69,7 @@ export default function EducationMasterPageA() {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:w-[50%] text-justify">
+                    <div className="flex flex-col lg:w-[50%] text-justify m-auto">
                         Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                         As a result, children often experience less culture shock than their parents in many cases as school
                         programs are specifically designed to meet the challenges of moving to an international environment.
