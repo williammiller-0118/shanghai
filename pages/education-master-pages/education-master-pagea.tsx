@@ -12,7 +12,7 @@ export default function EducationMasterPageA() {
                 </div>
                 <div className="flex flex-col gap-[1rem]" style={{width: "100%", aspectRatio: "16/9.3"}}>
                     <div className="flex flex-col gap-[1rem]">
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "4rem", color: "black", paddingLeft: "0", padding: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", color: "black", paddingTop: "1rem",paddingBottom: "1rem" , fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black", textAlign: "center"}}>
                             Education
                         </h1>
                         <div className={`${styles.dropCap}`}>

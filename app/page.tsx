@@ -46,6 +46,7 @@ import FirstMasterPage from "@/pages/history-master-pages/first-master-page"
 import EducationMasterPageA from "@/pages/education-master-pages/education-master-pagea"
 import EducationMasterPageB from "@/pages/education-master-pages/education-master-pageb"
 import EducationMasterPageC from "@/pages/education-master-pages/education-master-pagec"
+import AsianMasterPage from "@/pages/asianescape-master-pages/asian-master-page"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -70,6 +71,8 @@ const BookList = [
   { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
+  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageC, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
@@ -276,6 +279,7 @@ export default function Home() {
     // <HistoryLeftPage />
     // <SecondMasterPage />
     // <EducationMasterPageA />
+    // <AsianMasterPage />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"
