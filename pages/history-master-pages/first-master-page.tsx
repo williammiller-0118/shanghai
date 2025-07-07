@@ -5,7 +5,7 @@ import { BookOpen } from "lucide-react"
 
 export default function FirstMasterPage() {
     return (
-        <div className="flex lg:flex-row flex-col h-screen p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
+        <div className="flex lg:flex-row flex-col h-[100%] p-[2rem] gap-[1rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
             <div className="flex flex-col justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem", textAlign: "left" }}>
                 <div className={styles.sectionHeader}>
@@ -39,6 +39,9 @@ export default function FirstMasterPage() {
                         of the Great Wall.
                         <br /><br />
 
+                        The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
+                        which are still pervasive throughout modern Chinese society.
+                        <br /><br />
                         The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
                         which are still pervasive throughout modern Chinese society.
                         <br />
@@ -84,6 +87,9 @@ export default function FirstMasterPage() {
                     Chinese silk, porcelain and tea became popular in Great Britain. However, the isolationist Qing Dynasty
                     had no desire for Western goods, thus creating an unsustainable trade imbalance.
                     <br /><br />
+                    had no desire for Western goods, thus creating an unsustainable trade imbalance.
+                    had no desire for Western goods, thus creating an unsustainable trade imbalance.
+                    <br /><br />
 
                     <h2 className={styles.paragraphSubheading}>A Brief History of Shanghai</h2>
                     <br />
@@ -121,6 +127,8 @@ export default function FirstMasterPage() {
                         party to this day.
                         <br /><br />
                         Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
+                        the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
+                        the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
                         the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
                         allies launched
                         <br /><br />

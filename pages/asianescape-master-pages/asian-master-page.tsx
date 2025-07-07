@@ -1,6 +1,18 @@
 import styles from "@/styles/asian-master-page.module.css";
+import { splitTextToColumns } from "@/lib/text-split";
+import { useEffect } from "react";
 
 export default function AsianMasterPage() {
+    useEffect(() => {
+        // const col1 = document.getElementById("col1");
+        const col2 = document.getElementById("col2");
+        // const col3 = document.getElementById("col3");
+        // const col4 = document.getElementById("col4");
+
+        const fullText = "Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...";
+        const columns = [col2].filter((el): el is HTMLElement => el !== null);
+        splitTextToColumns({ fullText, columnElements: columns });
+    }, [])
     return (
         <div className={styles.pageContainer}>
             {/* Left Column */}
@@ -12,21 +24,27 @@ export default function AsianMasterPage() {
                         </h1>
                     </div>
                     <div className={styles.leftText}>
-                        <div className={`${styles.dropCap}`}>
-                            <span className={styles.firstLetter}>
-                                O
-                            </span>
-                            <p style={{ fontSize: "1.3rem" }}>
-                                <strong>ne of the best fringe benefits of moving to Hong Kong is its proximity to some of the best vacation spots and most exotic adventure destinations in the world.</strong>
-                            </p>
-                        </div>
-                        <div className={styles.textContent}>
-                            <p>
-                            </p>
-                            <br />
-                            <p>
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                            </p>
+                        <div style={{maxHeight: "100px"}}>
+                            <div className={`${styles.dropCap}`}>
+                                <span className={styles.firstLetter}>
+                                    O
+                                </span>
+                                <p style={{ fontSize: "1.3rem" }}>
+                                    <strong>ne of the best fringe benefits of moving to Hong Kong is its proximity to some of the best vacation spots and most exotic adventure destinations in the world.</strong>
+                                </p>
+                            </div>
+                            <div className={styles.textContent}>
+                                <p>
+                                    The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
+                                </p>
+                                <br />
+                                <p>
+                                    The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
+                                </p>
+                                <p>
+                                    The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div className={`${styles.leftVideo} ${styles.aspect16x9}`}>
@@ -39,33 +57,25 @@ export default function AsianMasterPage() {
                 </div>
                 {/* Center Column */}
                 <div className={styles.centerColumn}>
-                    <div className={styles.centerText}>
-                        <p>
-                            We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        </p>
+                    <div className={styles.centerText} id="col2">
+                        We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
                         <br />
-                        <p>
-                            We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        </p>
+                        We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
                         <br />
-                        <p>
-                            We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        </p>
+                        We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
                         <br />
-                        <p>
-                            We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        </p>
+                        We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
                         <br />
-                        <p>
-                            We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        </p>
+                        We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
                         <br />
-                        <p>
-                            We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        </p>
-                        <p>
-                            We chose our primary sponsor carefully and with our
-                        </p>
+                        We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
+                        We chose our primary sponsor carefully and with our
                     </div>
                 </div>
             </div>

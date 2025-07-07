@@ -47,6 +47,8 @@ import EducationMasterPageA from "@/pages/education-master-pages/education-maste
 import EducationMasterPageB from "@/pages/education-master-pages/education-master-pageb"
 import EducationMasterPageC from "@/pages/education-master-pages/education-master-pagec"
 import AsianMasterPage from "@/pages/asianescape-master-pages/asian-master-page"
+import MultiColumnText from "@/pages/temp"
+import TextSplitter from "@/pages/temp"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -276,7 +278,6 @@ export default function Home() {
 
   return (
     // <RightTableOfContents colorMode={""} />
-    // <HistoryLeftPage />
     // <SecondMasterPage />
     // <EducationMasterPageA />
     // <AsianMasterPage />
@@ -314,12 +315,6 @@ export default function Home() {
                 >
                   {
                     chooseView()
-                    // BookList.map((page, index) => {
-                    //   console.log(window.innerWidth)
-                    //   return <SinglePage number={`${index + 1}`} key={index}>
-                    //     {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "left") : PageLayout(page.page, page.sectionTitle, page.subTitle, page.pageNubmer, "right")}
-                    //   </SinglePage>
-                    // })
                   }
                 </HTMLFlipBook>
               </div>
