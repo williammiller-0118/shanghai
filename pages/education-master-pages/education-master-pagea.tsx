@@ -11,8 +11,8 @@ export default function EducationMasterPageA() {
                 <div className="flex flex-col flex-1" style={{ width: "100%", height: "calc(100% - 1rem)" }}>
                 </div>
                 <div className="flex flex-col gap-[1rem]" style={{ width: "100%", aspectRatio: "16/9.3" }}>
-                    <div className="w-[50%]">
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", color: "black", paddingTop: "1rem", paddingBottom: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                    <div>
+                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", letterSpacing: "1.5rem", color: "black", paddingTop: "1rem", paddingBottom: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
                         </h1>
 
