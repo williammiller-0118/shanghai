@@ -8,19 +8,22 @@ export default function EducationMasterPageA() {
         <div className="lg:text-base md:text-lg sm:text-sm flex lg:flex-row flex-col lg:p-[1rem] p-[2rem] gap-[2rem] lg:h-[100%]">
             {/* Left Column */}
             <div className="flex flex-col flex-1 justify-between lg:w-1/2">
-                <div className="flex flex-col flex-1" style={{width: "100%", height: "calc(100% - 1rem)"}}>
+                <div className="flex flex-col flex-1" style={{ width: "100%", height: "calc(100% - 1rem)" }}>
                 </div>
-                <div className="flex flex-col gap-[1rem]" style={{width: "100%", aspectRatio: "16/9.3"}}>
-                    <div className="flex flex-col gap-[1rem]">
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", color: "black", paddingTop: "1rem",paddingBottom: "1rem" , fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black", textAlign: "center"}}>
+                <div className="flex flex-col gap-[1rem]" style={{ width: "100%", aspectRatio: "16/9.3" }}>
+                    <div className="w-[50%]">
+                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", color: "black", paddingTop: "1rem", paddingBottom: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
                         </h1>
+
+                    </div>
+                    <div className="flex flex-col gap-[1rem]">
                         <div className={`${styles.dropCap}`}>
                             <span className={styles.firstLetter}>
                                 A
                             </span>
                             <p style={{ fontSize: "1.2rem" }}>
-                                s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that arise during your search for a 
+                                s a soon-to-be expat, one of the most important and difficult decisions you will make is where your child will go to school. While there will be a host of concerns and questions that arise during your search for a
                                 school for your child in Shanghai, generally speaking, international assignees have three main concerns: the safety of their children; the happiness of their children; and the quality of their children's education.
                             </p>
                         </div>
@@ -29,12 +32,15 @@ export default function EducationMasterPageA() {
                         <div className="flex flex-row lg:w-[50%] text-justify">
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
+                            arrived children adapt to their new environment. It should be noted, however, that international schools are uniquely skilled in helping newly
+                            arrived children adapt to their new environment.It should be noted, however, that international schools are uniquely skilled in helping newly
                             arrived children adapt to their new environment.
                         </div>
                         <div className="flex flex-row lg:w-[50%] text-justify">
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
                             arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
+                            programs are specifically designed As a result, children often experience less culture shock than their parents in many cases as school
                             programs are specifically designed
                         </div>
                     </div>

@@ -5,6 +5,7 @@
   padding: 1.5rem;
   height: 100%;
   box-sizing: border-box;
+  font-family: 'MyFont', serif;
 }
 
 .leftColumn {
@@ -12,17 +13,11 @@
   flex-direction: column;
   flex: 1.2;
   gap: 1.5rem;
-}
-
-.leftTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
+  flex: 1;
 }
 
 .leftText {
   flex: 2;
-  font-size: 1.2rem;
   display: flex;
   flex-direction: column; 
   text-align: justify;
@@ -39,13 +34,12 @@
   flex-direction: column;
   flex: 1.5;
   gap: 1.5rem;
+  flex: 1;
 }
 
 .centerText {
   flex: 1;
-  font-size: 1.2rem;
   display: flex;
-  height: 100px;
   flex-direction: column;
   text-align: justify;
 }
@@ -67,7 +61,6 @@
 .rightText {
   flex: 1;
   flex-direction: column;
-  font-size: 1.2rem;
   display: flex;
   text-align: justify;
 }
@@ -79,13 +72,6 @@
   justify-content: center;
   position: relative;
   flex-direction: column;
-}
-
-.thickLine {
-  width: 100%;
-  height: 8px;
-  background: #bbb;
-  margin: 0.5rem 0;
 }
 
 .rightBottomVideo {
@@ -149,7 +135,6 @@
   }
   .leftTitle h1 {
     font-size: 1.5rem !important;
-    padding: 0.5rem !important;
     border-top-width: 3px !important;
     border-bottom-width: 1px !important;
   }

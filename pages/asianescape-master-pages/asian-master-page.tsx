@@ -1,35 +1,31 @@
 import styles from "@/styles/asian-master-page.module.css";
 import { splitTextToColumns } from "@/lib/text-split";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function AsianMasterPage() {
+    const divref = useRef(null);
     useEffect(() => {
-        // const col1 = document.getElementById("col1");
-        const col2 = document.getElementById("col2");
-        // const col3 = document.getElementById("col3");
-        // const col4 = document.getElementById("col4");
-
-        const fullText = "Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...Your very long string of text...";
-        const columns = [col2].filter((el): el is HTMLElement => el !== null);
-        splitTextToColumns({ fullText, columnElements: columns });
-    }, [])
+        // divref.current.scrollHeight = 100;
+        console.log(divref.current)
+    })
+    
     return (
         <div className={styles.pageContainer}>
             {/* Left Column */}
             <div className={`${styles.leftpage} flex flex-row flex-1 gap-[1.5rem]`}>
                 <div className={styles.leftColumn}>
                     <div className={styles.leftTitle}>
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", color: "black", paddingLeft: "0", padding: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                        <h1 style={{ fontSize: "3rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Asian Escape
                         </h1>
                     </div>
                     <div className={styles.leftText}>
-                        <div style={{maxHeight: "100px"}}>
+                        <div>
                             <div className={`${styles.dropCap}`}>
                                 <span className={styles.firstLetter}>
                                     O
                                 </span>
-                                <p style={{ fontSize: "1.3rem" }}>
+                                <p style={{ fontSize: "1.2rem" }}>
                                     <strong>ne of the best fringe benefits of moving to Hong Kong is its proximity to some of the best vacation spots and most exotic adventure destinations in the world.</strong>
                                 </p>
                             </div>
@@ -40,8 +36,6 @@ export default function AsianMasterPage() {
                                 <br />
                                 <p>
                                     The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                </p>
-                                <p>
                                     The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
                                 </p>
                             </div>
@@ -57,7 +51,7 @@ export default function AsianMasterPage() {
                 </div>
                 {/* Center Column */}
                 <div className={styles.centerColumn}>
-                    <div className={styles.centerText} id="col2">
+                    <div className={styles.centerText} ref={divref}>
                         We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
                         <br />
                         We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
@@ -69,9 +63,6 @@ export default function AsianMasterPage() {
                         We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
                         <br />
                         We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        We chose our primary sponsor carefully and with our
-                        We chose our primary sponsor carefully and with our
-                        We chose our primary sponsor carefully and with our
                         We chose our primary sponsor carefully and with our
                         We chose our primary sponsor carefully and with our
                         We chose our primary sponsor carefully and with our
