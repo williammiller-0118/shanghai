@@ -59,7 +59,7 @@ const BookList = [
   // { page: HistoryLeftPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "30" },
   // { page: HistoryRightPage, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "31" },
   { page: FirstMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "30", type: "master" },
-  { page: FirstMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "31", type: "master"},
+  { page: FirstMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "31", type: "master" },
   // { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
   // { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
   // { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
@@ -143,8 +143,8 @@ export default function Home() {
 
   useEffect(() => {
     if (!bookRef1.current?.pageFlip()) return;
-    
-    if(specificPage > 0) {
+
+    if (specificPage > 0) {
       bookRef1.current?.pageFlip().turnToPage(specificPage);
       console.log("specific page:", specificPage, bookRef1.current?.pageFlip)
       setSpecPage(-1)
@@ -180,21 +180,21 @@ export default function Home() {
   }
 
   const PageLayout = (Page: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string, type?: string) => {
-    if(type === "master") {
+    if (type === "master") {
       return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-        <div style={{ height: "5dvh"}}>
+        <div style={{ height: "5dvh" }}>
           <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
         </div>
         {
-          part === "left" ? 
-          <div style={{ height: "90dvh", width: "200%" }}>
-            <Page linkClick={setSpecPage} />
-          </div> : 
-          <div style={{ height: "90dvh", width: "200%", clipPath: 'inset(0 0 0 50%)', transform: 'translateX(-50%)' }}>
-            <Page linkClick={setSpecPage} />
-          </div>
+          part === "left" ?
+            <div style={{ height: "90dvh", width: "200%" }}>
+              <Page linkClick={setSpecPage} />
+            </div> :
+            <div style={{ height: "90dvh", width: "200%", clipPath: 'inset(0 0 0 50%)', transform: 'translateX(-50%)' }}>
+              <Page linkClick={setSpecPage} />
+            </div>
         }
-        <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+        <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center" }}>
           <Footer
             part={part}
             clickNext={setNext}
@@ -208,14 +208,14 @@ export default function Home() {
       </div>
     }
     // return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc" }} className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xs:h-[100vh] h-[calc(100vh-50px)]">
-    else return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-      <div style={{ height: "5dvh"}}>
+    else return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }}>
+      <div style={{ height: "5dvh" }}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
       <div style={{ height: "90dvh" }}>
         <Page linkClick={setSpecPage} />
       </div>
-      <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+      <div style={{ height: "5dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center" }}>
         <Footer
           part={part}
           clickNext={setNext}
@@ -231,19 +231,19 @@ export default function Home() {
 
   const PageMobileLayout = (LeftPage: ComponentType<any>, RightPage: ComponentType<any>, sectionTitle: string, subTitle: string, pageNubmer: number, part: string, type?: string) => {
     return <div style={{ display: "flex", flexDirection: "column", border: "1px solid #ccc", height: "100dvh" }} className="h-dvh">
-      <div style={{ height: "6dvh"}}>
+      <div style={{ height: "6dvh" }}>
         <Header sectionTitle={sectionTitle} subTitle={subTitle} pageNumber={pageNubmer} part={part} />
       </div>
-      <div style={{ height: "88dvh", overflow: "auto" }}>
+      <div style={{ height: "100%", overflow: "auto" }}>
         {
           type !== "master" ? <>
             <LeftPage linkClick={setSpecPage} />
             <RightPage linkClick={setSpecPage} />
-          </> : 
-          <LeftPage />
+          </> :
+            <LeftPage />
         }
       </div>
-      <div style={{ height: "6dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center"}}>
+      <div style={{ height: "6dvh", overflow: "hidden", display: "flex", backgroundColor: "black", justifyContent: "center" }}>
         <Footer
           part={part}
           clickNext={setNext}
@@ -258,7 +258,7 @@ export default function Home() {
   }
 
   const chooseView = () => {
-    if(window.innerWidth > 768){
+    if (window.innerWidth > 768) {
       return BookList.map((page, index) => {
         console.log(window.innerWidth)
         return <SinglePage number={`${index + 1}`} key={index}>
@@ -268,9 +268,9 @@ export default function Home() {
     } else {
       console.log(window.innerWidth)
       let div = []
-      for(let index = 0 ; index < BookList.length ; index += 2){
+      for (let index = 0; index < BookList.length; index += 2) {
         div.push(<SinglePage number={`${index / 2}`} key={index / 2}>
-          {PageMobileLayout(BookList[index].page, BookList[index+1].page, BookList[index].sectionTitle, BookList[index].subTitle, index / 2, "left", BookList[index].type)}
+          {PageMobileLayout(BookList[index].page, BookList[index + 1].page, BookList[index].sectionTitle, BookList[index].subTitle, index / 2, "left", BookList[index].type)}
         </SinglePage>)
       }
       return div
@@ -281,48 +281,47 @@ export default function Home() {
     // <RightTableOfContents colorMode={""} />
     // <SecondMasterPage />
     // <EducationMasterPageA />
-    <AsianMasterPage />
-    // <ThemeProvider
-    //   attribute="class"
-    //   defaultTheme="light"
-    //   enableSystem
-    //   disableTransitionOnChange
-    // >
-    //   <SidebarProvider defaultOpen={false} >
-    //     <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
-    //     <SidebarInset>
-    //       <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "1.4rem 96dvh"}}>
-    //         <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
-    //       </div>
-    //       <div className="overflow-hidden">
-    //         <div className={`w-full h-full`}>
-    //           <div className="mx-auto">
-    //             <HTMLFlipBook
-    //               width={400}
-    //               height={1500}
-    //               size="stretch"
-    //               minWidth={315}
-    //               maxWidth={1000}
-    //               minHeight={400}
-    //               maxHeight={1533}
-    //               mobileScrollSupport={true}
-    //               disableFlipByClick={false}
-    //               className="mx-auto"
-    //               onChangeOrientation={e => setViewMode(e.data)}
-    //               flippingTime={1000}
-    //               usePortrait={true}
-    //               useMouseEvents={false}
-    //               ref={bookRef1}
-    //             >
-    //               {
-    //                 chooseView()
-    //               }
-    //             </HTMLFlipBook>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </SidebarInset>
-    //   </SidebarProvider>
-    // </ThemeProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <SidebarProvider defaultOpen={false} >
+        <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
+        <SidebarInset>
+          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "1.4rem 96dvh"}}>
+            <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
+          </div>
+          <div className="overflow-hidden">
+            <div className={`w-full h-full`}>
+              <div className="mx-auto">
+                <HTMLFlipBook
+                  width={400}
+                  height={1500}
+                  size="stretch"
+                  minWidth={315}
+                  maxWidth={1000}
+                  minHeight={400}
+                  maxHeight={1533}
+                  mobileScrollSupport={true}
+                  disableFlipByClick={false}
+                  className="mx-auto"
+                  onChangeOrientation={e => setViewMode(e.data)}
+                  flippingTime={1000}
+                  usePortrait={true}
+                  useMouseEvents={false}
+                  ref={bookRef1}
+                >
+                  {
+                    chooseView()
+                  }
+                </HTMLFlipBook>
+              </div>
+            </div>
+          </div>
+        </SidebarInset>
+      </SidebarProvider>
+    </ThemeProvider>
   )
 }

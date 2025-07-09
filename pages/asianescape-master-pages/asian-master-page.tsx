@@ -1,5 +1,5 @@
 import styles from "@/styles/asian-master-page.module.css";
-import { splitTextByHeight } from "@/lib/text-split";
+import { splitTextByLetterCount } from "@/lib/text-split";
 import { useEffect, useRef, useState } from "react";
 
 const text = `
@@ -95,15 +95,15 @@ export default function AsianMasterPage() {
             return hidden.scrollHeight;
         };
 
-        let result = splitTextByHeight(text, 400, measure);
+        let result = splitTextByLetterCount(text, 700);
         let text1 = result[1];
         // setPart([result[0]])
         
-        let res1 = splitTextByHeight(text1, 900, measure);
+        let res1 = splitTextByLetterCount(text1, 1800);
         let text2 = result[1];
         // setPart([result[0], res1[0]])
 
-        let res2 = splitTextByHeight(text2, 200, measure);
+        let res2 = splitTextByLetterCount(text2, 600);
         setPart([result[0], res1[0], res2[0]])
 
         console.log("part1: ", result[0], "\npart2: ", res1[0])
