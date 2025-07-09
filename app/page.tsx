@@ -50,6 +50,7 @@ import AsianMasterPage from "@/pages/asianescape-master-pages/asian-master-page"
 import MultiColumnText from "@/pages/temp"
 import TextSplitter from "@/pages/temp"
 import SplitText from "@/components/SplitText"
+import AsianMasterPage2 from "@/pages/asianescape-master-pages/asian-master-page2"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -74,8 +75,10 @@ const BookList = [
   // { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
-  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
-  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  // { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  // { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageC, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
@@ -281,6 +284,7 @@ export default function Home() {
     // <RightTableOfContents colorMode={""} />
     // <SecondMasterPage />
     // <EducationMasterPageA />
+    // <AsianMasterPage2 />
     <ThemeProvider
       attribute="class"
       defaultTheme="light"
