@@ -1,26 +1,42 @@
-export function splitTextToColumns({ fullText, columnElements }: { fullText: string; columnElements: HTMLElement[] }) {
-  let remaining = fullText;
+// utils/splitText.ts
 
-  for (const col of columnElements) {
-    col.textContent = "";
-    let content = "";
-    let i = 0;
+export function splitTextByHeight(
+  text: string,
+  height: number| undefined,
+  measureText: (text: string) => number
+): string[] {
+  const words = text.split(' ');
+  if(!height) height = 300;
 
-    while (i < remaining.length) {
-      content += remaining[i];
-      col.textContent = content;
+  // Binary search helper
+  const fitWords = (wordList: string[]): [string, string] => {
+    let low = 0;
+    let high = wordList.length;
+    let bestFit = 0;
 
-      if (col.scrollHeight > col.clientHeight) {
-        // Go back one char to fit
-        content = content.slice(0, -1);
-        col.textContent = content;
-        remaining = remaining.slice(content.length);
-        break;
+    while (low <= high) {
+      const mid = Math.floor((low + high) / 2);
+      const testStr = wordList.slice(0, mid).join(' ');
+      const measuredHeight = measureText(testStr);
+
+      if (measuredHeight <= height) {
+        bestFit = mid;
+        low = mid + 1;
+      } else {
+        high = mid - 1;
       }
-
-      i++;
     }
 
-    if (remaining.length === 0) break;
-  }
+    const fit = wordList.slice(0, bestFit).join(' ');
+    const rest = wordList.slice(bestFit).join(' ');
+    return [fit, rest];
+  };
+
+  const [first, remaining] = fitWords(words);
+  console.log("First1: ", first, "\nRemaining: ", remaining)
+  
+  return [first, remaining];
+  // const [second] = fitWords(remaining.split(' '));
+
+  // return [first, second];
 }

@@ -49,6 +49,7 @@ import EducationMasterPageC from "@/pages/education-master-pages/education-maste
 import AsianMasterPage from "@/pages/asianescape-master-pages/asian-master-page"
 import MultiColumnText from "@/pages/temp"
 import TextSplitter from "@/pages/temp"
+import SplitText from "@/components/SplitText"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -280,48 +281,48 @@ export default function Home() {
     // <RightTableOfContents colorMode={""} />
     // <SecondMasterPage />
     // <EducationMasterPageA />
-    // <AsianMasterPage />
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="light"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <SidebarProvider defaultOpen={false} >
-        <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
-        <SidebarInset>
-          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "1.4rem 96dvh"}}>
-            <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
-          </div>
-          <div className="overflow-hidden">
-            <div className={`w-full h-full`}>
-              <div className="mx-auto">
-                <HTMLFlipBook
-                  width={400}
-                  height={1500}
-                  size="stretch"
-                  minWidth={315}
-                  maxWidth={1000}
-                  minHeight={400}
-                  maxHeight={1533}
-                  mobileScrollSupport={true}
-                  disableFlipByClick={false}
-                  className="mx-auto"
-                  onChangeOrientation={e => setViewMode(e.data)}
-                  flippingTime={1000}
-                  usePortrait={true}
-                  useMouseEvents={false}
-                  ref={bookRef1}
-                >
-                  {
-                    chooseView()
-                  }
-                </HTMLFlipBook>
-              </div>
-            </div>
-          </div>
-        </SidebarInset>
-      </SidebarProvider>
-    </ThemeProvider>
+    <AsianMasterPage />
+    // <ThemeProvider
+    //   attribute="class"
+    //   defaultTheme="light"
+    //   enableSystem
+    //   disableTransitionOnChange
+    // >
+    //   <SidebarProvider defaultOpen={false} >
+    //     <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
+    //     <SidebarInset>
+    //       <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "1.4rem 96dvh"}}>
+    //         <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
+    //       </div>
+    //       <div className="overflow-hidden">
+    //         <div className={`w-full h-full`}>
+    //           <div className="mx-auto">
+    //             <HTMLFlipBook
+    //               width={400}
+    //               height={1500}
+    //               size="stretch"
+    //               minWidth={315}
+    //               maxWidth={1000}
+    //               minHeight={400}
+    //               maxHeight={1533}
+    //               mobileScrollSupport={true}
+    //               disableFlipByClick={false}
+    //               className="mx-auto"
+    //               onChangeOrientation={e => setViewMode(e.data)}
+    //               flippingTime={1000}
+    //               usePortrait={true}
+    //               useMouseEvents={false}
+    //               ref={bookRef1}
+    //             >
+    //               {
+    //                 chooseView()
+    //               }
+    //             </HTMLFlipBook>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </SidebarInset>
+    //   </SidebarProvider>
+    // </ThemeProvider>
   )
 }
