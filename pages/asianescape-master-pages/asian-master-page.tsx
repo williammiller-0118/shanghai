@@ -95,7 +95,7 @@ export default function AsianMasterPage() {
             return hidden.scrollHeight;
         };
 
-        let result = splitTextByLetterCount(text, 700);
+        let result = splitTextByLetterCount(text, 550);
         let text1 = result[1];
         // setPart([result[0]])
         
@@ -103,7 +103,7 @@ export default function AsianMasterPage() {
         let text2 = result[1];
         // setPart([result[0], res1[0]])
 
-        let res2 = splitTextByLetterCount(text2, 600);
+        let res2 = splitTextByLetterCount(text2, 550);
         setPart([result[0], res1[0], res2[0]])
 
         console.log("part1: ", result[0], "\npart2: ", res1[0])
@@ -117,7 +117,7 @@ export default function AsianMasterPage() {
                 <div className={styles.leftColumn}>
                     <div className={styles.leftTitle}>
                         <h1 style={{ fontSize: "3rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
-                            {/* Asian Escape */}
+                            Asian Escape
                         </h1>
                     </div>
                     <div className={styles.leftText}>
