@@ -100,13 +100,13 @@ export default function AsianMasterPage() {
         // setPart([result[0]])
         
         let res1 = splitTextByLetterCount(text1, 1820);
-        let text2 = result[1];
+        let text2 = res1[1];
         // setPart([result[0], res1[0]])
 
         let res2 = splitTextByLetterCount(text2, 570);
         setPart([result[0], res1[0], res2[0]])
 
-        console.log("part1: ", result[0], "\npart2: ", res1[0])
+        // console.log("part1: ", result[0], "\npart2: ", res1[0])
         // console.log(result)
     }, [])
 

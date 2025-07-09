@@ -32,6 +32,7 @@
 .centerColumn {
   display: flex;
   flex-direction: column;
+  text-align: justify;
   flex: 1.5;
   gap: 1.5rem;
   flex: 1;

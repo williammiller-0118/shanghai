@@ -75,10 +75,10 @@ const BookList = [
   // { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
-  // { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
-  // { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
-  { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
-  { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   // { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   // { page: EducationMasterPageC, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
@@ -283,6 +283,7 @@ export default function Home() {
   return (
     // <RightTableOfContents colorMode={""} />
     // <SecondMasterPage />
+    // <FirstMasterPage />
     // <EducationMasterPageA />
     // <AsianMasterPage2 />
     <ThemeProvider
