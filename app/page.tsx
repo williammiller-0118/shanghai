@@ -51,6 +51,7 @@ import MultiColumnText from "@/pages/temp"
 import TextSplitter from "@/pages/temp"
 import SplitText from "@/components/SplitText"
 import AsianMasterPage2 from "@/pages/asianescape-master-pages/asian-master-page2"
+import { Menu } from "lucide-react"
 
 const BookList = [
   { page: LeftTableOfContents, sectionTitle: "PREPARATIONS", subTitle: "Table of contents", pageNubmer: "86" },
@@ -65,14 +66,6 @@ const BookList = [
   { page: SecondMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
   { page: ThirdMasterPage, sectionTitle: "Preparations", subTitle: "History", pageNubmer: "223", type: "master" },
-  // { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
-  // { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
-  // { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
-  // { page: PeopleCultureRightPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "37" },
-  // { page: AsianEscapesLeftPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "412" },
-  // { page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413" },
-  // { page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86" },
-  // { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
   { page: EducationMasterPageA, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   { page: EducationMasterPageB, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "224", type: "master" },
@@ -81,12 +74,20 @@ const BookList = [
   { page: EducationMasterPageC, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
   { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  // { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
+  // { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
+  // { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
+  // { page: PeopleCultureRightPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "37" },
+  // { page: AsianEscapesLeftPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "412" },
+  // { page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413" },
+  // { page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86" },
+  // { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
   // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
   // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
-  // { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "224", link: 10 },
-  // { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "225", link: 10 },
-  // { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
-  // { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
+  { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "224", link: 10 },
+  { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "225", link: 10 },
+  { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
+  { page: EducationListRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "223" },
   // { page: MapLeftPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "220" },
   // { page: MapRightPage, sectionTitle: "SOFT LANDING", subTitle: "Former French Concession", pageNubmer: "221" },
 ]
@@ -295,8 +296,14 @@ export default function Home() {
       <SidebarProvider defaultOpen={false} >
         <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
         <SidebarInset>
-          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{zIndex: 100, translate: "1.4rem 96dvh"}}>
-            <SidebarTrigger className="-ml-1 bg-blue-500 p-[1rem] text-white" />
+          <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{ zIndex: 100, translate: "1.4rem 96dvh" }}>
+            <SidebarTrigger className="-ml-1 bg-transparent p-2 rounded-full shadow-md hover:opacity-80 transition">
+              <img
+                src="images/btn/side_btn.jpg" // <-- Update with your actual image path
+                alt="Toggle Sidebar"
+                className="w-[300px] h-[300px] object-contain"
+              />
+            </SidebarTrigger>
           </div>
           <div className="overflow-hidden">
             <div className={`w-full h-full`}>
