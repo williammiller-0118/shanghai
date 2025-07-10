@@ -50,7 +50,7 @@ import AsianMasterPage from "@/pages/asianescape-master-pages/asian-master-page"
 import MultiColumnText from "@/pages/temp"
 import TextSplitter from "@/pages/temp"
 import SplitText from "@/components/SplitText"
-import AsianMasterPage2 from "@/pages/asianescape-master-pages/asian-master-page2"
+import AsianMasterCityPage from "@/pages/asianescape-master-pages/asian-master-city-page"
 import { Menu } from "lucide-react"
 
 const BookList = [
@@ -74,6 +74,8 @@ const BookList = [
   { page: EducationMasterPageC, sectionTitle: "Preparations", subTitle: "Education", pageNubmer: "225", type: "master" },
   { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
   { page: AsianMasterPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
+  { page: AsianMasterCityPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
+  { page: AsianMasterCityPage, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
   // { page: HistoryLeftPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "32" },
   // { page: HistoryRightPage2, sectionTitle: "PREPARATIONS", subTitle: "History", pageNubmer: "33" },
   // { page: PeopleCultureLeftPage, sectionTitle: "PREPARATIONS", subTitle: "People and culture", pageNubmer: "36" },
@@ -82,8 +84,6 @@ const BookList = [
   // { page: AsianEscapesRightPage, sectionTitle: "LIVING THE LIFE", subTitle: "Asian escapes", pageNubmer: "413" },
   // { page: EducationLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "86" },
   // { page: EducationRightPage, sectionTitle: "PREPARATIONS", subTitle: "Education", pageNubmer: "87" },
-  // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "224", type: "master" },
-  // { page: AsianMasterPage2, sectionTitle: "Preparations", subTitle: "Asian Escapes", pageNubmer: "225", type: "master" },
   { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "224", link: 10 },
   { page: educationMainPage, sectionTitle: "Preparations", subTitle: "Education Main", pageNubmer: "225", link: 10 },
   { page: EducationListLeftPage, sectionTitle: "PREPARATIONS", subTitle: "Education Listing", pageNubmer: "222" },
@@ -297,7 +297,7 @@ export default function Home() {
         <AppSidebar onNavigateToContents={handleNavigateToContents} getColorMode={setContentColor} />
         <SidebarInset>
           <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{ zIndex: 100, translate: "1.4rem 96dvh" }}>
-            <SidebarTrigger className="-ml-1 bg-transparent p-2 rounded-full shadow-md hover:opacity-80 transition">
+            <SidebarTrigger size={"lg"} className="-ml-1 w-12 h-12 bg-transparent p-2 rounded-full shadow-md hover:opacity-80 transition">
               <img
                 src="images/btn/side_btn.jpg" // <-- Update with your actual image path
                 alt="Toggle Sidebar"

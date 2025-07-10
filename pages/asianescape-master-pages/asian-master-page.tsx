@@ -116,7 +116,7 @@ export default function AsianMasterPage() {
             <div className={`${styles.leftpage} flex flex-row flex-1 gap-[1.5rem]`}>
                 <div className={styles.leftColumn}>
                     <div className={styles.leftTitle}>
-                        <h1 style={{ fontSize: "3rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                        <h1 style={{ fontSize: "3rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid white", borderBottom: "1px solid white" }}>
                             Asian Escape
                         </h1>
                     </div>
@@ -130,14 +130,7 @@ export default function AsianMasterPage() {
                                     <strong>ne of the best fringe benefits of moving to Hong Kong is its proximity to some of the best vacation spots and most exotic adventure destinations in the world.</strong>
                                 </p>
                             </div>
-                            <div className="overflow-hidden border rounded bg-white text-black" id="textdiv" ref={divref}>
-                                {/* The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times.
-                                The fact that the cost you a lot of time and money had you decided to make the trip from your home country can be expensive, but it doesn't have to break in travel times. */}
+                            <div className="overflow-hidden" id="textdiv" ref={divref}>
                                 {part[0]}
                             </div>
                         </div>
@@ -152,22 +145,7 @@ export default function AsianMasterPage() {
                 </div>
                 {/* Center Column */}
                 <div className={styles.centerColumn}>
-                    <div className="overflow-hidden border rounded bg-white text-black">
-                        {/* We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        <br />
-                        We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        <br />
-                        We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        <br />
-                        We chose our primary sponsor carefully and with our reader in mind. <strong>Banyan Tree offers</strong>
-                        <br />
-                        We also have a few recommendations for people who want the experience of a lifetime in Asia. In fact, if you follow our suggestions exactly, you'll probably arrive back at home in better shape than you were before you departed. Asia has some of the most remote and extreme destinations on the planet.
-                        <br />
-                        We chose our primary sponsor carefully and with our reader in mind. Banyan Tree offers
-                        We chose our primary sponsor carefully and with our
-                        We chose our primary sponsor carefully and with our
-                        We chose our primary sponsor carefully and with our
-                        We chose our primary sponsor carefully and with our */}
+                    <div className="overflow-hidden">
                         {part[1]}
                     </div>
                 </div>

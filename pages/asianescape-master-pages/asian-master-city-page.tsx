@@ -1,7 +1,8 @@
-import styles from '../../styles/asian-master-page2.module.css';
+import Link from 'next/link';
+import styles from '../../styles/asian-master-city-page.module.css';
 import React from 'react';
 
-const AsianMasterPage2: React.FC = () => {
+const AsianMasterCityPage: React.FC = () => {
     return (
         <div className={styles.container} style={{ height: "100%" }}>
             <div className={styles.contentRow}>
@@ -17,10 +18,22 @@ const AsianMasterPage2: React.FC = () => {
                             <p><b>If you can afford it:</b> The Peninsula Beijing</p>
                         </div>
                         <div className={styles.iconsRow}>
-                            <span role="img" aria-label="hotel">🏨</span>
-                            <span role="img" aria-label="food">🍜</span>
-                            <span role="img" aria-label="museum">🏛️</span>
-                            <span role="img" aria-label="park">🏞️</span>
+                            <a href='#' className="inline-block text-white transition">
+                                <img src="images/btn/tripadvisor_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                            </a>
+                            <a href='#' className="inline-block text-white transition">
+                                <img src="images/btn/youtube_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                            </a>
+                            <a href='#' className="inline-block text-white transition">
+                                <img src="images/btn/phone_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                            </a>
+                            <a href='#' className="inline-block text-white transition">
+                                <img src="images/btn/globe_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+
+                            </a>
+                            <a href='#' className="inline-block text-white transition">
+                                <img src="images/btn/point_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -67,4 +80,4 @@ const AsianMasterPage2: React.FC = () => {
     );
 };
 
-export default AsianMasterPage2; 
+export default AsianMasterCityPage; 

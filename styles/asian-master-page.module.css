@@ -1,6 +1,8 @@
 .pageContainer {
   display: flex;
   flex-direction: row;
+  background: #111;
+  color: white;
   gap: 3rem;
   padding: 1.5rem;
   height: 100%;
