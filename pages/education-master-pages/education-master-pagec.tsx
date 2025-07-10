@@ -49,7 +49,7 @@ export default function EducationMasterPageC() {
                     arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
                     programs are specifically designed to meet the challenges of moving to an international environment.
                     Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
-                    especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
+                    especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly 
                 </div>
             </div>
 
@@ -68,7 +68,8 @@ export default function EducationMasterPageC() {
                     especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
                     arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
                     programs are specifically designed to meet the challenges of moving to an international environment.
-                    Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
+                    Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging, 
+                    especially when combined with a move abroad. It should be noted, however, that international schools
                 </div>
                 
                 <div className="flex flex-col lg:w-[50%]  gap-[1rem]" style={{ position: "relative" }}>
@@ -86,8 +87,8 @@ export default function EducationMasterPageC() {
                             arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
                             programs are specifically designed to meet the challenges of moving to an international environment.
                         </div>
-                        <div className={`border-t-4 border-b-4 border-r-0 border-l-0 ${styles.bottomFixed}`} style={{margin: "auto"}}>
-                            <div className={`flex-1 text-center`} style={{ position: "relative", fontFamily: "auto" }}>
+                        <div className={`border-t-4 border-b-4 border-r-0 border-l-0 p-[1.5rem] ${styles.bottomFixed}`} style={{margin: "auto"}}>
+                            <div className={`flex-1 text-center p-[1.5rem]`} style={{ position: "relative", fontFamily: "auto" }}>
                                 <p
                                     style={{
                                         position: "absolute",

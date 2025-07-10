@@ -133,29 +133,6 @@ export default function FirstMasterPage() {
                     </div>
                     <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                         <div className={styles.mainBody}>
-                            {/* <div className={styles.dropCap}>
-                                <span className={styles.firstLetter}>
-                                    C
-                                </span>
-                                hina is one of the world's oldest civilizations, with thousands of years of continuous history. The
-                                first concrete evidence of civilization, dating back to the Neolithic era, was discovered in various
-                                regional centres along the Yangtze River and Yellow River valleys, although the Yellow River is said to
-                                be the cradle of Chinese civilization.
-                            </div>
-                            <br />
-
-                            In between eras of multiple kingdoms and warlords, Chinese dynasties, or more recently republics, have
-                            ruled a China of varying shapes and sizes. This began with the Qin Dynasty in 221 BC, when Qinshihuang
-                            united the various warring kingdoms, thus creating the first Chinese empire and beginning construction
-                            of the Great Wall.
-                            <br /><br />
-
-                            The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
-                            which are still pervasive throughout modern Chinese society.
-                            <br /><br />
-                            The Han Dynasty (202 BC-220 AD) was the first to embrace the philosophy of Confucianism, the tenets of
-                            which are still pervasive throughout modern Chinese society.
-                            <br /> */}
                             <div className={styles.dropCap}>
                                 <span className={styles.firstLetter}>
                                     C
@@ -179,7 +156,7 @@ export default function FirstMasterPage() {
                         <div className="h-[50%]">
                             {part[2]}
                         </div>
-                        <h2 className={`${styles.paragraphSubheading} text-center pb-[3rem]`}>A Brief History of Shanghai</h2>
+                        <h2 className={`${styles.paragraphSubheading} pb-[3rem]`}>A Brief History of Shanghai</h2>
                         <div className="h-[40%]">
                             <div className={styles.dropCap}>
                                 <span className={styles.firstLetter}>
@@ -195,22 +172,6 @@ export default function FirstMasterPage() {
                     <div className="text-sm text-center" style={{ height: "calc(100% - 25dvw * 9 / 16)" }}>
                         <div className={styles.mainBody}>
                             {part[4]}
-                            {/* Subsequent civil wars and military defeats to outsiders continually weakened the government until it was
-                            overthrown by several factions united under the revolutionary ideas of Sun Yat-sen. After Sun's death in
-                            1925, Chiang Kai-shek seized control of the Kuomintang (Nationalist Party or KMT) and brought most of
-                            China under his control, eventually turning on the Communist Party.
-                            <br /><br />
-                            This drove them across China's most desolate terrain to Yan'an on the Long March. From there, the
-                            Communist Party regrouped under the leadership of a young Mao Zedong, returned north and succeeded in
-                            toppling the KMT and forcing them to the island of Taiwan in 1949 where they remain an active political
-                            party to this day.
-                            <br /><br />
-                            Chairman Mao's original social and economic plan, the Great Leap Forward, was a complete disaster for
-                            the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                            the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                            the country. It resulted in an estimated 45 million deaths, mostly from starvation. In 1966, Mao and his
-                            allies launched
-                            <br /><br /> */}
                         </div>
                     </div>
                     <div className="flex items-center justify-center">

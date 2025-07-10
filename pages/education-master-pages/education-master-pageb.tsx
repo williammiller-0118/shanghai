@@ -60,7 +60,7 @@ export default function EducationMasterPageB() {
                     style={{ height: "calc(100% - 50dvw * 9 / 16)" }}
                 >
                     <div className="flex flex-col lg:w-[50%] gap-[1rem]" style={{margin: "auto"}}>
-                        <div className="border-t-4 border-b-4 border-r-0 border-l-0">
+                        <div className="border-t-4 border-b-4 border-r-0 border-l-0 p-[2.5rem]">
                             <div className={`flex-1 text-center`} style={{ position: "relative", fontFamily: "auto" }}>
                                 <p
                                     style={{

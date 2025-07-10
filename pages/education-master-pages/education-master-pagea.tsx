@@ -12,7 +12,7 @@ export default function EducationMasterPageA() {
                 </div>
                 <div className="flex flex-col gap-[1rem]" style={{ width: "100%", aspectRatio: "16/9.3" }}>
                     <div>
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "3rem", letterSpacing: "1.5rem", color: "black", paddingTop: "1rem", paddingBottom: "1rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "5rem", color: "black", paddingTop: "2rem", paddingBottom: "2rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
                         </h1>
 
@@ -33,15 +33,13 @@ export default function EducationMasterPageA() {
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
                             arrived children adapt to their new environment. It should be noted, however, that international schools are uniquely skilled in helping newly
-                            arrived children adapt to their new environment.It should be noted, however, that international schools are uniquely skilled in helping newly
-                            arrived children adapt to their new environment.
+                            arrived children adapt to their new environment.It should be noted, however, that international schools are uniquely skilled
                         </div>
                         <div className="flex flex-row lg:w-[50%] text-justify">
                             Concerns about your child's happiness are certainly warranted, as the adjustment to a new school is often stressful and challenging,
                             especially when combined with a move abroad. It should be noted, however, that international schools are uniquely skilled in helping newly
                             arrived children adapt to their new environment. As a result, children often experience less culture shock than their parents in many cases as school
-                            programs are specifically designed As a result, children often experience less culture shock than their parents in many cases as school
-                            programs are specifically designed
+                            programs are specifically designed As a result, children often experience less culture shock than their parents
                         </div>
                     </div>
                 </div>
