@@ -26,8 +26,9 @@ export default function VideoAnimation() {
         preload="auto"
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
+        controls
       >
-        <source src="/videos/going-global-intro.mp4" type="video/mp4" />
+        <source src="shanghai_master/videos/going-global-intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

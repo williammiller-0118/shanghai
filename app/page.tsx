@@ -139,7 +139,7 @@ export default function Home() {
       setPrevious10(false)
     }
     if (next10 === true) {
-      console.log("fast10Next", mobPageNum, lapPageNum)
+      // console.log("fast10Next", mobPageNum, lapPageNum)
       bookRef1.current?.pageFlip().turnToPage(lapPageNum + 10);
       setNext10(false)
     }
@@ -150,7 +150,7 @@ export default function Home() {
 
     if (specificPage > 0) {
       bookRef1.current?.pageFlip().turnToPage(specificPage);
-      console.log("specific page:", specificPage, bookRef1.current?.pageFlip)
+      // console.log("specific page:", specificPage, bookRef1.current?.pageFlip)
       setSpecPage(-1)
     }
   }, [specificPage])
@@ -264,13 +264,13 @@ export default function Home() {
   const chooseView = () => {
     if (window.innerWidth > 768) {
       return BookList.map((page, index) => {
-        console.log(window.innerWidth)
+        // console.log(window.innerWidth)
         return <SinglePage number={`${index + 1}`} key={index}>
           {index % 2 == 0 ? PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "left", page.type) : PageLayout(page.page, page.sectionTitle, page.subTitle, index + 1, "right", page.type)}
         </SinglePage>
       })
     } else {
-      console.log(window.innerWidth)
+      // console.log(window.innerWidth)
       let div = []
       for (let index = 0; index < BookList.length; index += 2) {
         div.push(<SinglePage number={`${index / 2}`} key={index / 2}>
@@ -299,7 +299,7 @@ export default function Home() {
           <div className={`flex h-2 items-center gap-2 px-4 pt-4 absolute ${sidebarStyle.sidebarForMob}`} style={{ zIndex: 100, translate: "1.4rem 96dvh" }}>
             <SidebarTrigger size={"lg"} className="-ml-1 w-12 h-12 bg-transparent p-2 rounded-full shadow-md hover:opacity-80 transition">
               <img
-                src="images/btn/side_btn.jpg" // <-- Update with your actual image path
+                src="shanghai_master/images/btn/side_btn.jpg" // <-- Update with your actual image path
                 alt="Toggle Sidebar"
                 className="w-[300px] h-[300px] object-contain"
               />

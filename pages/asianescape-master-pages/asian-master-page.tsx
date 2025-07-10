@@ -138,7 +138,7 @@ export default function AsianMasterPage() {
                     <div className={`${styles.leftVideo} ${styles.aspect16x9}`}>
                         <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                             <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                                <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ export default function AsianMasterPage() {
                     <div className={`${styles.rightVideo} ${styles.aspect16x9}`}>
                         <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                             <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                                <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ export default function AsianMasterPage() {
                 <div className={`${styles.rightBottomVideo} ${styles.aspect16x9}`}>
                     <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                         <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                            <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                            <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                         </div>
                     </div>
                 </div>

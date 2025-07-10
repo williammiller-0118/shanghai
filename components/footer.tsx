@@ -27,8 +27,8 @@ export default function Footer({part, clickNext, clickPrevious, clickFastPreviou
           click10Next={click10Next}
         />
         <div style={{position: "absolute"}}>
-          <img src="images/Going Global Footer white.png" style={{backgroundColor: ""}} />
-          <img src="images/Going Global Footer white.png" style={{backgroundColor: "blue"}} />
+          <img src="shanghai_master/images/Going Global Footer white.png" style={{backgroundColor: ""}} />
+          <img src="shanghai_master/images/Going Global Footer white.png" style={{backgroundColor: "blue"}} />
         </div>
       </div>
   )

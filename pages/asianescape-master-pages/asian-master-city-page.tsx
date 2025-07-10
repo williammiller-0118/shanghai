@@ -131,27 +131,27 @@ export default function AsianMasterCityPage() {
                         </div>
                         <div className="flex flex-row flex-1 gap-1">
                             <a href='#' className="inline-block text-white transition">
-                                <img src="images/btn/tripadvisor_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                                <img src="shanghai_master/images/btn/tripadvisor_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
                             </a>
                             <a href='#' className="inline-block text-white transition">
-                                <img src="images/btn/youtube_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                                <img src="shanghai_master/images/btn/youtube_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
                             </a>
                             <a href='#' className="inline-block text-white transition">
-                                <img src="images/btn/phone_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                                <img src="shanghai_master/images/btn/phone_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
                             </a>
                             <a href='#' className="inline-block text-white transition">
-                                <img src="images/btn/globe_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                                <img src="shanghai_master/images/btn/globe_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
 
                             </a>
                             <a href='#' className="inline-block text-white transition">
-                                <img src="images/btn/point_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
+                                <img src="shanghai_master/images/btn/point_btn.jpg" alt="TripAdvisor" className='w-[40px] h-[40px]' />
                             </a>
                         </div>
                     </div>
                     <div className={`${styles.leftVideo} ${styles.aspect16x9}`}>
                         <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                             <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                                <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@ export default function AsianMasterCityPage() {
                     <div className={`${styles.rightVideo} ${styles.aspect16x9}`}>
                         <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                             <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                                <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@ export default function AsianMasterCityPage() {
                 <div className={`${styles.rightBottomVideo} ${styles.aspect16x9}`}>
                     <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                         <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                            <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                            <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                         </div>
                     </div>
                 </div>

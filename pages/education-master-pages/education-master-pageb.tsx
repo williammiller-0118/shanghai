@@ -30,7 +30,7 @@ export default function EducationMasterPageB() {
                     <div className="flex flex-row h-[calc(100dvw * 9 / 16)] gap-[1rem]">
                         <div className={`${styles.videoArea} ${styles.bottomFixed}`}>
                             <div className="bg-black" style={{ height: "", bottom: 0 }}>
-                                <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ export default function EducationMasterPageB() {
                 <div className="flex flex-row h-[calc(50dvw * 9 / 16)] gap-[1rem]">
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                         <div className="bg-black" style={{ height: "100%" }}>
-                            <video src="videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
+                            <video src="shanghai_master/videos/cover.mp4" style={{ width: "100%", height: "100dvw * 9 / 16", margin: "auto" }} controls></video>
                         </div>
                     </div>
                 </div>

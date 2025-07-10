@@ -57,7 +57,7 @@ export default function EducationListLeftPage() {
   }
 
   return (
-    <div className={styles.mainContent} style={{color: "black"}}>
+    <div className={styles.mainContent} style={{ color: "black" }}>
       <div style={{ flex: "1" }}>
         <div className="max-w-4xl mx-auto mb-6">
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -65,7 +65,7 @@ export default function EducationListLeftPage() {
             <div className="flex items-center space-x-4 mb-3">
               <div className="w-12 h-12 rounded">
                 <a href="#">
-                  <img src="/images/westernSchool.png" alt="no image" />
+                  <img src="shanghai_master/images/westernSchool.png" alt="no image" />
                 </a>
               </div>
               <h1 className="text-l font-semibold">
@@ -87,21 +87,41 @@ export default function EducationListLeftPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-5 gap-2 text-2xl mb-3" style={{ borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem" }}>
+            <div className="flex flex-row gap-1 text-2xl mb-3" style={{ borderBottom: "1px solid gray", paddingTop: "1rem", paddingBottom: "1rem" }}>
               <Link href="https://shanghai.wellingtoncollege.cn/" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Globe size={20} /></div></a>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div>
+                    <img src="shanghai_master/images/btn/globe_btn.jpg"  width={40} height={40} alt="no image" />
+                  </div>
+                </a>
               </Link>
               <Link href="https://www.youtube.com/channel/UC4y-7qy59mkS-Xf949Mecdg" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Youtube size={20} /></div></a>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div>
+                    <img src="shanghai_master/images/btn/youtube_btn.jpg"  width={40} height={40} alt="no image" />
+                  </div>
+                </a>
               </Link>
               <Link href="https://www.facebook.com/WellingtonCollegeShanghai" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Facebook size={20} /></div></a>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div>
+                    <img src="shanghai_master/images/btn/facebook_btn.jpg"  width={40} height={40} alt="no image" />
+                  </div>
+                </a>
               </Link>
               <Link href="https://www.linkedin.com/school/wellington-college-international-shanghai/" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Linkedin size={20} /></div></a>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div>
+                    <img src="shanghai_master/images/btn/linkedin_btn.jpg"  width={40} height={40} alt="no image" />
+                  </div>
+                </a>
               </Link>
               <Link href="https://www.instagram.com/wellingtoncollegeshanghai/" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer"><div className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded justify-center flex"><Instagram size={20} /></div></a>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div>
+                    <img src="shanghai_master/images/btn/instagram_btn.jpg" width={40} height={40} alt="no image" />
+                  </div>
+                </a>
               </Link>
             </div>
 

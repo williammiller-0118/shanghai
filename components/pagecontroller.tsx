@@ -20,24 +20,24 @@ const PageControls = ({ clickNext, clickFastNext, clickPrevious, clickFastPrevio
       {/* Center Controls */}
       <div className={`flex m-auto justify-evenly items-center`}>
         <div style={{cursor: "pointer"}} className={styles.btnSize} onClick={() => click10Previous(true)}>
-          <img src="images/btn/-10.png" />
+          <img src="shanghai_master/images/btn/-10.png" />
         </div>
         <div style={{cursor: "pointer"}} className={styles.btnSize} onClick={() => clickFastPrevious(true)}>
-          <img src="images/btn/-5.png" />
+          <img src="shanghai_master/images/btn/-5.png" />
         </div>
         <div style={{ cursor: "pointer"}} className={styles.btnSize} onClick={() => clickPrevious(true)}>
-          <img src="images/btn/previous.png" />
+          <img src="shanghai_master/images/btn/previous.png" />
         </div>
         <div style={{cursor: "pointer"}} className={styles.btnSize} onClick={() => clickNext(true)}>
-          <img src="images/btn/next.png" />
+          <img src="shanghai_master/images/btn/next.png" />
         </div>
         
         <div style={{cursor: "pointer"}} className={styles.btnSize} onClick={() => clickFastNext(true)}>
-          <img src="images/btn/+5.png" />
+          <img src="shanghai_master/images/btn/+5.png" />
         </div>
         
         <div style={{cursor: "pointer"}} className={styles.btnSize} onClick={() => click10Next(true)}>
-          <img src="images/btn/+10.png" />
+          <img src="shanghai_master/images/btn/+10.png" />
         </div>
       </div>
     </div>

@@ -120,14 +120,14 @@ export default function ThirdMasterPage() {
         setPart([result[0], res1[0], res2[0], res3[0], res4[0]])
 
         // console.log("part1: ", result[0], "\npart2: ", res1[0])
-        console.log("part1: ", result[0], "\npart3: ", res3[0])
+        // console.log("part1: ", result[0], "\npart3: ", res3[0])
         // console.log(result)
     }, [])
 
     return (
         <div className="flex lg:flex-row flex-col h-screen p-[2rem] gap-[2rem]" style={{ height: "100%", overflowY: "auto" }}>
             {/* Left Column */}
-            <div className="flex flex-row flex-1 gap-[1rem] lg:w-1/2">
+            <div className="flex lg:flex-row flex-col flex-1 gap-[1rem] lg:w-1/2">
                 <div className="flex flex-col flex-1 justify-between lg:w-1/4 text-2xl text-center" style={{ gap: "1rem" }}>
                     <div className="flex flex-1 text-center">
                         <div className={styles.mainBody}>
@@ -143,7 +143,7 @@ export default function ThirdMasterPage() {
                         <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                             <div>
                                 <div className="videoWrapper" style={{ height: "100%" }}>
-                                    <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
+                                    <video src="shanghai_master/videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@ export default function ThirdMasterPage() {
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-row flex-1 gap-[1rem] lg:w-1/2">
+            <div className="flex lg:flex-row flex-col flex-1 gap-[1rem] lg:w-1/2">
                 <div className="flex flex-col justify-between flex-1" style={{ gap: "1rem" }}>
                     <div className="text-justify">
                         <div className="h-[50%]">
@@ -184,7 +184,7 @@ export default function ThirdMasterPage() {
                     <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                         <div>
                             <div className="videoWrapper" style={{ height: "100%" }}>
-                                <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
+                                <video src="shanghai_master/videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
                             </div>
                         </div>
                     </div>

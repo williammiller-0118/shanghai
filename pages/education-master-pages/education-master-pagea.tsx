@@ -12,7 +12,7 @@ export default function EducationMasterPageA() {
                 </div>
                 <div className="flex flex-col gap-[1rem]" style={{ width: "100%", aspectRatio: "16/9.3" }}>
                     <div>
-                        <h1 className="pt-[0.5rem] pb-[0.5rem]" style={{ fontSize: "5rem", color: "black", paddingTop: "2rem", paddingBottom: "2rem", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
+                        <h1 className="lg:pt-[2.5rem] lg:pb-[2.5rem] pt-[1rem] pb-[1rem] lg:text-7xl text-3xl" style={{ color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }}>
                             Education
                         </h1>
 
@@ -84,7 +84,7 @@ export default function EducationMasterPageA() {
                 <div className={`flex lg:flex-row flex-col gap-[1rem] aspect-16-9`}>
                     <div className={`${styles.videoArea}`}>
                         <div className="bg-black">
-                            <video src="videos/cover.mp4" controls></video>
+                            <video src="shanghai_master/videos/cover.mp4" controls></video>
                         </div>
                     </div>
                 </div>

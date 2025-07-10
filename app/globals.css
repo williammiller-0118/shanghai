@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url('/fonts/change/FrutigerLT55Roman.ttf') format('truetype');
+  src: url('/shanghai_master/fonts/change/FrutigerLT55Roman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'QuoteFont';
-  src: url('/fonts/FRUTIGER_CE_45_LIGHT.TTF') format('truetype');
+  src: url('/shanghai_master/fonts/FRUTIGER_CE_45_LIGHT.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

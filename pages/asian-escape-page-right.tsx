@@ -49,8 +49,9 @@ export default function AsianEscapesRightPage() {
               className={styles.video}
               // poster="/images/introduction.png"
               onClick={handlePlayPause}
+              controls
             >
-              <source src="/videos/cover.mp4" type="video/mp4" />
+              <source src="/shanghai_master/videos/cover.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             

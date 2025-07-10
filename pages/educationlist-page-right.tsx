@@ -270,8 +270,9 @@ export default function EducationListRightPage() {
                   preload="auto"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
+                  controls
                 >
-                  <source src="/videos/cover_laptop_final.mp4" type="video/mp4" />
+                  <source src="shanghai_master/videos/cover.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </section>
@@ -288,7 +289,7 @@ export default function EducationListRightPage() {
               <div className="flex items-center space-x-4 mb-3">
                 <div className="w-12 h-12 rounded">
                   <a href="#">
-                    <img src="/images/westernSchool.png" alt="no image" />
+                    <img src="shanghai_master/images/westernSchool.png" alt="no image" />
                   </a>
                 </div>
                 <h1 className="text-l font-semibold">
@@ -339,7 +340,7 @@ export default function EducationListRightPage() {
               </div>
             </div>
             <div>
-              <img src={"images/world.jpg"} />
+              <img src={"shanghai_master/images/world.jpg"} />
             </div>
           </div>
         </div>

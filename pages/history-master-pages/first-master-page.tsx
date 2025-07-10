@@ -110,14 +110,14 @@ export default function FirstMasterPage() {
         setPart([result[0], res1[0], res2[0], res3[0], res4[0]])
 
         // console.log("part1: ", result[0], "\npart2: ", res1[0])
-        console.log("part1: ", result[0], "\npart3: ", res3[0])
+        // console.log("part1: ", result[0], "\npart3: ", res3[0])
         // console.log(result)
     }, [])
 
     return (
         <div className="flex lg:flex-row flex-col h-[100%] p-[2rem] gap-[2rem]" style={{ height: "100%", overflowY: "auto", fontSize: "1rem" }}>
             {/* Left Column */}
-            <div className="flex flex-row flex-1 lg:w-1/2 gap-[2rem]">
+            <div className="flex lg:flex-row flex-col flex-1 lg:w-1/2 gap-[2rem]">
                 <div className="flex flex-col flex-1 justify-between text-2xl text-center" style={{ gap: "1rem", textAlign: "left" }}>
                     <div className={styles.sectionHeader}>
                         <h1 style={{ fontSize: "1.5rem", color: "black", fontWeight: "700", textTransform: "uppercase", borderTop: "5px solid black", borderBottom: "1px solid black" }} className={styles.sectionHeaderTitle}>History</h1>
@@ -126,7 +126,7 @@ export default function FirstMasterPage() {
                         <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                             <div>
                                 <div className="videoWrapper" style={{ height: "100%" }}>
-                                    <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
+                                    <video src="shanghai_master/videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +150,7 @@ export default function FirstMasterPage() {
                 </div>
             </div>
             {/* Right Column */}
-            <div className="flex flex-row flex-1 lg:w-1/2 gap-[1rem]">
+            <div className="flex lg:flex-row flex-col flex-1 lg:w-1/2 gap-[1rem]">
                 <div className="flex flex-1 flex-row text-justify">
                     <div style={{ height: "100%", gap: "2rem", fontSize: "1rem" }}>
                         <div className="h-[50%]">
@@ -178,7 +178,7 @@ export default function FirstMasterPage() {
                         <div className={`${styles.videoArea} ${styles.videoArea1}`}>
                             <div>
                                 <div className="videoWrapper" style={{ height: "100%" }}>
-                                    <video src="videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
+                                    <video src="shanghai_master/videos/cover.mp4" style={{ height: "100%", margin: "auto", bottom: "1rem" }} controls></video>
                                 </div>
                             </div>
                         </div>
