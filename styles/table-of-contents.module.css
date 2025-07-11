@@ -340,7 +340,7 @@
   column-fill: auto;
   /* flex-direction: row; */
   height: calc(100% - 50dvw * 9 / 16);
-  gap: 1%;
+  gap: 1rem;
 }
 
 /* Column 1 - Below image */
