@@ -17,7 +17,7 @@ export default (phase) => {
    * @type {import('next').NextConfig}
    */
   const nextConfig = {
-    basePath: '/shanghai_master',
+    // basePath: '/shanghai_master',
     output: 'export',
     eslint: {
       ignoreDuringBuilds: true,
